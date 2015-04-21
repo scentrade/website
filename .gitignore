@@ -1,0 +1,14 @@
+*.pyc
+node_modules/
+*.idea
+*.DS_Store
+local_settings.py
+bower_components/
+*.pem
+generated/
+media/
+# Server folders
+conf/
+logs/
+.htpasswd
+
