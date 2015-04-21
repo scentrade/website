@@ -1,0 +1,33 @@
+header#scentrade-header {
+  nav.navbar {
+    min-height: @header-height;
+    background-color: white;
+  }
+
+  a.navbar-brand {
+    display: block;
+    height: @header-height - 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    img {
+      height: @header-height - 20px;
+      width: auto;
+    }
+  }
+
+  .navbar-nav {
+    > li {
+      > a {
+        display: block;
+        line-height: @header-height;
+        padding-top: 0;
+        padding-bottom: 0;
+        text-transform: uppercase;
+        // TODO add as app color
+        color: #404041;
+        font-size: @font-size-small;
+      }
+    }
+  }
+}
