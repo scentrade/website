@@ -1,0 +1,17 @@
+{
+  "name": "scentrade",
+  "version": "0.0.0",
+  "authors": [
+    "Cristian Rojas <cristianguillermorojas@gmail.com>"
+  ],
+  "description": "scentrade",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "scentrade/static/bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "scentrade",
+  "version": "0.0.1",
+  "description": "scentrade",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:cristiangrojas/scentrade.git"
+  },
+  "author": "Cristian Rojas <cristianguillermorojas@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-django-compressor": "^0.2.72",
+    "grunt": "^0.4.5",
+    "assemble-less": "^0.7.0"
+  }
+}
