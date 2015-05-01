@@ -4,3 +4,48 @@ body {
   line-height: @line-height-base;
   color: @text-color;
 }
+
+// Headings
+// -----------------------------------------------------------------------------
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: @headings-font-family;
+  font-weight: @headings-font-weight;
+  line-height: @headings-line-height;
+}
+
+h1, .h1 {
+  &.gb {
+    font-size: round(@font-size-h1 * 1.7);
+
+    @media (min-width: @screen-md-min) and (max-width: @screen-md-max){
+      font-size: round(@font-size-h1 * 1.5);
+    }
+
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
+      font-size: round(@font-size-h1 * 1);
+    }
+
+    @media (max-width: @screen-xs-max){
+      font-size: @font-size-h1;
+    }
+  }
+}
+
+// Misc
+// -----------------------------------------------------------------------------
+strong {
+  font-weight: @font-weight-bold;
+}
+.regular {
+  font-weight: @font-weight-regular;
+}
+.medium {
+  font-weight: @font-weight-medium;
+}
+.bold {
+  font-weight: @font-weight-bold;
+}
+.bebas {
+  font-family: @headings-font-family;
+}

@@ -1,0 +1,13 @@
+// Homepage specific mixins
+// -----------------------------------------------------------------------------
+.box-square-diamond(@radius){
+  content: "";
+  display: block;
+  .square(@radius);
+  .rotate(45deg);
+  position: absolute;
+  left: (100% - @radius) / 2;
+  top: (100% - @radius) / 2;
+  background-color: white;
+  z-index: 0;
+}

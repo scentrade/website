@@ -3,16 +3,22 @@
 {% get_current_language as CURRENT_LANGUAGE %}
 
 <!DOCTYPE html>
-<html lang="{{ CURRENT_LANGUAGE }}">
+<html lang="{{ CURRENT_LANGUAGE }}" ng-app="scentrade">
 <head>
     <base href="{% url 'home' %}">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Scentrade</title>
+    <title ng-bind="$root.title + ' | Scentrade - Marketing olfativo'">Scentrade - Marketing olfativo</title>
+    {% verbatim %}
+    <meta name="description" content="{{ $root.metaDescription }}" ng-if="$root.metaDescription">
+    {% endverbatim %}
     <link href="{% static 'bower_components/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'bower_components/boost-bootstrap/dist/boost-bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'bower_components/fontawesome/css/font-awesome.css' %}" rel="stylesheet">
     <link href="{% static 'fonts/asap/stylesheet.css' %}" rel="stylesheet">
+    <link href="{% static 'fonts/bebas/stylesheet.css' %}" rel="stylesheet">
+    <link href="{% static 'bower_components/owl-carousel/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
     <link href="{% static 'stylesheets/scentrade.css' %}" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -22,7 +28,7 @@
     <![endif]-->
 </head>
 
-<body ng-app="scentrade" data-current-language="{{ CURRENT_LANGUAGE }}">
+<body data-current-language="{{ CURRENT_LANGUAGE }}" data-debug="{{ DEBUG }}" ng-class="$root.bodyClass">
 
 <header id="scentrade-header">
     <nav class="navbar navbar-default">
@@ -54,12 +60,48 @@
     </nav>
 </header>
 
-<main>
+<main ng-view></main>
 
-</main>
+<footer id="scentrade-footer">
+    <div class="container ptgw">
+        <div id="footer-branches" class="row ptgw pbgw">
+            {% for x in 'abc' %}
+                <div class="col-sm-4 text-center">
+                    <h2>Bogotá</h2>
+                    <p class="gray-light">
+                        Carrera 11 # 96 - 43 Oficina 501<br>
+                        Tel: (571) 8050100<br>
+                        Cel: (57) 321 4973074
+                    </p>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="block clearfix">
+            <nav id="footer-links">
+                <a ng-href="inicio">{% trans 'Inicio' %}</a>
+                <a ng-href="#">{% trans 'Nosotros' %}</a>
+                <a ng-href="#">{% trans 'Productos' %}</a>
+                <a ng-href="#">{% trans 'Servicios' %}</a>
+                <a ng-href="#">{% trans 'Hogar' %}</a>
+                <a ng-href="#">{% trans 'Blog' %}</a>
+                <a ng-href="#">{% trans 'Contacto' %}</a>
+            </nav>
+        </div>
+        <hr>
+        <div class="row mbgw-2x">
+            <div class="col-sm-3">
+                <nav id="footer-social-links">
+                    <a ng-href="#"><i class="fa fa-facebook"></i></a>
+                    <a ng-href="#"><i class="fa fa-twitter"></i></a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <script src="{% static 'bower_components/jquery/dist/jquery.js' %}"></script>
 <script src="{% static 'bower_components/bootstrap/dist/js/bootstrap.js' %}"></script>
+<script src="{% static 'bower_components/owl-carousel/owl-carousel/owl.carousel.js' %}"></script>
 <script src="{% static 'bower_components/angular/angular.js' %}"></script>
 <script src="{% static 'bower_components/angular-route/angular-route.js' %}"></script>
 <script src="{% static 'bower_components/angular-sanitize/angular-sanitize.js' %}"></script>
@@ -67,6 +109,7 @@
 <script src="{% static 'ng_app/js/scentrade.config.js' %}"></script>
 <script src="{% static 'ng_app/js/constants.js' %}"></script>
 <script src="{% static 'ng_app/js/scentrade.routes.js' %}"></script>
+<script src="{% static 'ng_app/js/directives/owl.carousel.directive.js' %}"></script>
 <script src="{% static 'ng_app/js/controllers/homepage.controller.js' %}"></script>
 
 </body>

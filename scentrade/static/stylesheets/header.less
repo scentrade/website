@@ -1,8 +1,11 @@
+// Basic header styles
+// -----------------------------------------------------------------------------
 header#scentrade-header {
   nav.navbar {
     min-height: @header-height;
     background-color: white;
-    border-bottom: none;
+    border: none;
+    margin-bottom: 0;
   }
 
   a.navbar-brand {
@@ -28,6 +31,47 @@ header#scentrade-header {
         // TODO add as app color
         color: #404041;
         font-size: @font-size-small;
+      }
+    }
+  }
+}
+
+// @responsive: header
+// -----------------------------------------------------------------------------
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
+  header#scentrade-header {
+    ul.navbar-nav {
+      > li {
+        > a {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+// Other header styles
+// /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+// Homepage header style
+// -----------------------------------------------------------------------------
+body.homepage {
+  position: relative;
+
+  header#scentrade-header {
+    position: relative;
+    z-index: @zindex-navbar-fixed;
+
+    nav.navbar {
+      background-color: transparent;
+    }
+
+    .navbar-nav {
+      > li {
+        > a {
+          color: white;
+        }
       }
     }
   }

@@ -1,0 +1,160 @@
+{% load i18n staticfiles %}
+
+<section id="homepage-hero">
+    <div class="wrapper-full-absolute">
+        <div id="homepage-hero-text">
+            <div class="container">
+                <div class="text-center">
+                    <h1 class="gb nmt mbgw">{% trans 'Creamos experiencias olfativas memorables' %}</h1>
+                    <nav>
+                        <a href="#" class="btn btn-white-transparent btn-lg bebas mrgw">{% trans 'Para tu empresa' %}</a>
+                        <a href="#" class="btn btn-white-transparent btn-lg bebas">{% trans 'Para tu hogar' %}</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="homepage-top-clients-logos">
+    <div class="container ptgw pbgw">
+        <owl-carousel items="6" items-desktop="[1400,6]" items-mobile="[479,2]" auto-play="true">
+            {% for x in 'abcdefghi' %}
+                <div class="logo">
+                    <img ng-src="http://placehold.it/195x80" alt="[Company name here]" class="img-responsive"/>
+                </div>
+            {% endfor %}
+        </owl-carousel>
+    </div>
+</section>
+<section id="what-we-do">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4 left text-center white">
+                <div class="wrapper">
+                    <div class="vcw">
+                        <div class="vci">
+                            <h1>{% trans 'Estrategias comerciales' %}</h1>
+                            <a ng-href="#" class="btn btn-white-bordered">
+                                &nbsp;&nbsp;&nbsp;&nbsp;{% trans 'Ver +' %}&nbsp;&nbsp;&nbsp;&nbsp;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 center">
+                <div class="box-square">
+                    <div class="wrapper-full-absolute">
+                        <div class="vcw">
+                            <div class="vci">
+                                <div class="block text-center">
+                                    <h1>{% trans '¿Qué hacemos?' %}</h1>
+                                    <p>
+                                        <i>
+                                            {% blocktrans %}
+                                                A través de los <strong>aromas</strong> impactamos el sentido<br>
+                                                del olfato para provocar estímulos positivos que<br>
+                                                perduren en el tiempo. Hacemos uso del<br>
+                                                <strong>marketing olfativo</strong> como estrategia<br>
+                                                comercial y personalizamos su hogar<br>
+                                                con <strong>olores exclusivos</strong>.
+                                            {% endblocktrans %}
+                                        </i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 right text-center white">
+                <div class="wrapper">
+                    <div class="vcw">
+                        <div class="vci">
+                            <h1>{% trans 'Hogares con puro sentido' %}</h1>
+                            <a ng-href="#" class="btn btn-white-bordered">
+                                &nbsp;&nbsp;&nbsp;&nbsp;{% trans 'Ver +' %}&nbsp;&nbsp;&nbsp;&nbsp;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="homepage-testimonials">
+    <div class="container text-center ptgw-2x pbgw-2x">
+        <h1 class="gb mtgw mbgw">{% trans '¿Qué opinan nuestros clientes?' %}</h1>
+        <div class="row">
+            {% for x in 'abc' %}
+                <div class="col-sm-4 testimonial text-center">
+                    <p>
+                        <i class="fa fa-quote-left"></i>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                        <i class="fa fa-quote-right"></i>
+                    </p>
+                    <p>
+                        <i>
+                            <strong>
+                                Cristian Rojas, 22 años,<br>
+                                Desarrollador web
+                            </strong>
+                        </i>
+                    </p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section id="free-trial">
+    <img src="{% static 'img/temp/chambonada.jpg' %}" alt="" style="width: 100%;"/>
+</section>
+<section id="olfactory-marketing">
+    <div class="container text-center ptgw-2x pbgw-2x">
+        <h1 class="gb blue mtgw mbgw-2x">
+            {% blocktrans %}
+                Hacemos marketing olfativo, pero<br>
+                lo hacemos diferente.
+            {% endblocktrans %}
+        </h1>
+        <div class="row mbgw">
+            {% for x in 'abc' %}
+                <div class="col-sm-4">
+                    <h2 class="blue">{% trans '¿Cómo funciona?' %}</h2>
+                    <p>
+                        {% blocktrans %}
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="block text-center">
+            <a ng-href="#" class="btn btn-blue-bordered">
+                &nbsp;&nbsp;&nbsp;&nbsp;{% trans 'Ver +' %}&nbsp;&nbsp;&nbsp;&nbsp;
+            </a>
+        </div>
+    </div>
+</section>
+<section id="our-products">
+    <div class="container">
+        <div id="our-products-picture"></div>
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-6 ptgw-2x pbgw-2x text-center white">
+                <h1 class="gb mtgw-2x mbgw-2x">{% trans 'Nuestros <br> productos' %}</h1>
+                <p class="mbgw-2x prgw-2x plgw-2x">
+                    {% blocktrans %}
+                        Contamos con difusores que se adaptan a diferentes tamaños
+                        y tipo de espacio.<br>
+                        Hemos desarrollado diversidad de fragancias que transmitirán
+                        la sensación que desees.
+                    {% endblocktrans %}
+                </p>
+                <a ng-href="productos" class="btn btn-white-bordered btn-lg mbgw-2x">
+                    {% trans 'Conócelos' %}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

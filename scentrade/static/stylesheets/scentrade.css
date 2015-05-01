@@ -666,15 +666,271 @@
   }
 }
 body {
-  font-family: 'asapregular', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 14px;
+  font-family: 'Asap', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
   line-height: 1.42857143;
   color: #333333;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'bebas', sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+}
+h1.gb,
+.h1.gb {
+  font-size: 70px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  h1.gb,
+  .h1.gb {
+    font-size: 62px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  h1.gb,
+  .h1.gb {
+    font-size: 41px;
+  }
+}
+@media (max-width: 767px) {
+  h1.gb,
+  .h1.gb {
+    font-size: 41px;
+  }
+}
+strong {
+  font-weight: 700;
+}
+.regular {
+  font-weight: 400;
+}
+.medium {
+  font-weight: 500;
+}
+.bold {
+  font-weight: 700;
+}
+.bebas {
+  font-family: 'bebas', sans-serif;
+}
+.purple {
+  color: #70174a;
+}
+.green {
+  color: #b9d050;
+}
+.red {
+  color: #df1d3a;
+}
+.red-dark {
+  color: #b81f3a;
+}
+.blue {
+  color: #1d84be;
+}
+.white {
+  color: white;
+}
+.gray {
+  color: #555555;
+}
+.gray-light {
+  color: #777777;
+}
+.gray-lighter {
+  color: #eeeeee;
+}
+.gray-dark {
+  color: #333333;
+}
+.gray-darker {
+  color: #222222;
+}
+.bg-purple {
+  background-color: #70174a;
+}
+.bg-green {
+  background-color: #b9d050;
+}
+.bg-red {
+  background-color: #df1d3a;
+}
+.bg-red-dar {
+  background-color: #b81f3a;
+}
+.bg-blue {
+  background-color: #1d84be;
+}
+.bg-white {
+  background-color: white;
+}
+.wrapper-full-absolute {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.btn {
+  border-radius: 0;
+  font-weight: 700;
+}
+.btn.bebas {
+  font-family: 'bebas', sans-serif;
+  font-weight: 400;
+}
+.btn-white-transparent {
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-color: transparent;
+}
+.btn-white-transparent:hover,
+.btn-white-transparent:focus,
+.btn-white-transparent.focus,
+.btn-white-transparent:active,
+.btn-white-transparent.active,
+.open > .dropdown-toggle.btn-white-transparent {
+  color: #000000;
+  background-color: rgba(230, 230, 230, 0.7);
+  border-color: rgba(0, 0, 0, 0);
+}
+.btn-white-transparent:active,
+.btn-white-transparent.active,
+.open > .dropdown-toggle.btn-white-transparent {
+  background-image: none;
+}
+.btn-white-transparent.disabled,
+.btn-white-transparent[disabled],
+fieldset[disabled] .btn-white-transparent,
+.btn-white-transparent.disabled:hover,
+.btn-white-transparent[disabled]:hover,
+fieldset[disabled] .btn-white-transparent:hover,
+.btn-white-transparent.disabled:focus,
+.btn-white-transparent[disabled]:focus,
+fieldset[disabled] .btn-white-transparent:focus,
+.btn-white-transparent.disabled.focus,
+.btn-white-transparent[disabled].focus,
+fieldset[disabled] .btn-white-transparent.focus,
+.btn-white-transparent.disabled:active,
+.btn-white-transparent[disabled]:active,
+fieldset[disabled] .btn-white-transparent:active,
+.btn-white-transparent.disabled.active,
+.btn-white-transparent[disabled].active,
+fieldset[disabled] .btn-white-transparent.active {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-color: transparent;
+}
+.btn-white-transparent .badge {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: #000000;
+}
+.btn-white-bordered {
+  color: #ffffff;
+  background-color: transparent;
+  border-color: #ffffff;
+}
+.btn-white-bordered:hover,
+.btn-white-bordered:focus,
+.btn-white-bordered.focus,
+.btn-white-bordered:active,
+.btn-white-bordered.active,
+.open > .dropdown-toggle.btn-white-bordered {
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #e0e0e0;
+}
+.btn-white-bordered:active,
+.btn-white-bordered.active,
+.open > .dropdown-toggle.btn-white-bordered {
+  background-image: none;
+}
+.btn-white-bordered.disabled,
+.btn-white-bordered[disabled],
+fieldset[disabled] .btn-white-bordered,
+.btn-white-bordered.disabled:hover,
+.btn-white-bordered[disabled]:hover,
+fieldset[disabled] .btn-white-bordered:hover,
+.btn-white-bordered.disabled:focus,
+.btn-white-bordered[disabled]:focus,
+fieldset[disabled] .btn-white-bordered:focus,
+.btn-white-bordered.disabled.focus,
+.btn-white-bordered[disabled].focus,
+fieldset[disabled] .btn-white-bordered.focus,
+.btn-white-bordered.disabled:active,
+.btn-white-bordered[disabled]:active,
+fieldset[disabled] .btn-white-bordered:active,
+.btn-white-bordered.disabled.active,
+.btn-white-bordered[disabled].active,
+fieldset[disabled] .btn-white-bordered.active {
+  background-color: transparent;
+  border-color: #ffffff;
+}
+.btn-white-bordered .badge {
+  color: transparent;
+  background-color: #ffffff;
+}
+.btn-blue-bordered {
+  color: #1d84be;
+  background-color: transparent;
+  border-color: #1d84be;
+}
+.btn-blue-bordered:hover,
+.btn-blue-bordered:focus,
+.btn-blue-bordered.focus,
+.btn-blue-bordered:active,
+.btn-blue-bordered.active,
+.open > .dropdown-toggle.btn-blue-bordered {
+  color: #1d84be;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #155f89;
+}
+.btn-blue-bordered:active,
+.btn-blue-bordered.active,
+.open > .dropdown-toggle.btn-blue-bordered {
+  background-image: none;
+}
+.btn-blue-bordered.disabled,
+.btn-blue-bordered[disabled],
+fieldset[disabled] .btn-blue-bordered,
+.btn-blue-bordered.disabled:hover,
+.btn-blue-bordered[disabled]:hover,
+fieldset[disabled] .btn-blue-bordered:hover,
+.btn-blue-bordered.disabled:focus,
+.btn-blue-bordered[disabled]:focus,
+fieldset[disabled] .btn-blue-bordered:focus,
+.btn-blue-bordered.disabled.focus,
+.btn-blue-bordered[disabled].focus,
+fieldset[disabled] .btn-blue-bordered.focus,
+.btn-blue-bordered.disabled:active,
+.btn-blue-bordered[disabled]:active,
+fieldset[disabled] .btn-blue-bordered:active,
+.btn-blue-bordered.disabled.active,
+.btn-blue-bordered[disabled].active,
+fieldset[disabled] .btn-blue-bordered.active {
+  background-color: transparent;
+  border-color: #1d84be;
+}
+.btn-blue-bordered .badge {
+  color: transparent;
+  background-color: #1d84be;
 }
 header#scentrade-header nav.navbar {
   min-height: 76px;
   background-color: white;
-  border-bottom: none;
+  border: none;
+  margin-bottom: 0;
 }
 header#scentrade-header a.navbar-brand {
   display: block;
@@ -693,5 +949,248 @@ header#scentrade-header .navbar-nav > li > a {
   padding-bottom: 0;
   text-transform: uppercase;
   color: #404041;
-  font-size: 12px;
+  font-size: 14px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  header#scentrade-header ul.navbar-nav > li > a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+body.homepage {
+  position: relative;
+}
+body.homepage header#scentrade-header {
+  position: relative;
+  z-index: 1030;
+}
+body.homepage header#scentrade-header nav.navbar {
+  background-color: transparent;
+}
+body.homepage header#scentrade-header .navbar-nav > li > a {
+  color: white;
+}
+footer#scentrade-footer hr {
+  border-color: #949597;
+}
+footer#scentrade-footer nav#footer-links {
+  float: right;
+}
+footer#scentrade-footer nav#footer-links a {
+  margin: 0 10px;
+  text-transform: uppercase;
+  color: black;
+}
+footer#scentrade-footer nav#footer-social-links a {
+  display: inline-block;
+  width: 41px;
+  height: 41px;
+  margin-right: 15px;
+  text-align: center;
+  color: black;
+}
+footer#scentrade-footer nav#footer-social-links a i {
+  font-size: 41px;
+}
+section#homepage-hero {
+  display: block;
+  height: 0px;
+  width: 100%;
+  padding-bottom: 42.1%;
+  position: relative;
+  background: url('../img/temp/homepage-hero.png') no-repeat center center transparent;
+  background-size: cover;
+  margin-top: -76px;
+  z-index: 10;
+}
+section#homepage-hero div#homepage-hero-text {
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 100px;
+  color: white;
+}
+section#homepage-hero div#homepage-hero-text h1 {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 767px) {
+  section#homepage-hero {
+    padding-bottom: 80%;
+  }
+  section#homepage-hero div#homepage-hero-text {
+    bottom: 50px;
+  }
+}
+section#homepage-top-clients-logos div.owl-item {
+  text-align: center;
+}
+section#homepage-top-clients-logos div.owl-item div.logo {
+  display: inline-block;
+  margin: 0 auto;
+}
+section#what-we-do div.container-fluid {
+  position: relative;
+  overflow: hidden;
+}
+section#what-we-do div.container-fluid:after,
+section#what-we-do div.container-fluid:before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+section#what-we-do div.container-fluid:before {
+  background-color: #70174a;
+  left: 0;
+}
+section#what-we-do div.container-fluid:after {
+  background-color: #b9d050;
+  right: 0;
+}
+section#what-we-do div.row div.center {
+  padding-left: 0;
+  padding-right: 0;
+}
+section#what-we-do div.row div.center div.box-square {
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+}
+section#what-we-do div.row div.center div.box-square:after {
+  content: "";
+  display: block;
+  width: 71%;
+  height: 71%;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  left: 14.5%;
+  top: 14.5%;
+  background-color: white;
+  z-index: 0;
+}
+section#what-we-do div.row div.center div.box-square div.wrapper-full-absolute {
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  section#what-we-do div.row div.left,
+  section#what-we-do div.row div.right {
+    position: absolute;
+    height: 100%;
+    text-align: center;
+  }
+  section#what-we-do div.row div.left > div.wrapper,
+  section#what-we-do div.row div.right > div.wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  section#what-we-do div.row div.left {
+    left: 0;
+  }
+  section#what-we-do div.row div.left > div.wrapper {
+    padding: 0 40% 0 10%;
+  }
+  section#what-we-do div.row div.right {
+    right: 0;
+  }
+  section#what-we-do div.row div.right > div.wrapper {
+    padding: 0 10% 0 40%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  section#what-we-do div.row div.center div.box-square:after {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 80%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    background-color: white;
+    z-index: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section#what-we-do div.row div.center div.box-square:after {
+    content: "";
+    display: block;
+    width: 71%;
+    height: 71%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    left: 14.5%;
+    top: 14.5%;
+    background-color: white;
+    z-index: 0;
+  }
+}
+@media (max-width: 767px) {
+  section#what-we-do div.container-fluid:before,
+  section#what-we-do div.container-fluid:after {
+    width: 100%;
+    height: 50%;
+    left: 0;
+    right: auto;
+  }
+  section#what-we-do div.container-fluid:before {
+    top: 0;
+    bottom: auto;
+  }
+  section#what-we-do div.container-fluid:after {
+    top: auto;
+    bottom: 0;
+  }
+  section#what-we-do div.row div.left,
+  section#what-we-do div.row div.right {
+    padding: 60px 15px;
+  }
+  section#what-we-do div.row div.center div.box-square:after {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 80%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    background-color: white;
+    z-index: 0;
+  }
+}
+section#homepage-testimonials div.row div[class*="col"] {
+  padding: 30px;
+}
+section#our-products {
+  background-color: #df1d3a;
+  position: relative;
+}
+section#our-products div#our-products-picture {
+  display: block;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url('../img/temp/productos.jpg') no-repeat center center transparent;
+  background-size: cover;
 }

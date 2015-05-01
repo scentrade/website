@@ -1,0 +1,22 @@
+.btn {
+  border-radius: 0;
+  font-weight: @font-weight-bold;
+
+  // with bebas font
+  &.bebas {
+    font-family: @headings-font-family;
+    font-weight: @font-weight-regular;
+  }
+}
+
+.btn-white-transparent {
+  .button-variant(black, rgba(255,255,255,0.7), transparent);
+}
+
+.btn-white-bordered {
+  .button-variant(white, transparent, white);
+}
+
+.btn-blue-bordered {
+  .button-variant(@blue, transparent, @blue);
+}
