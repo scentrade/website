@@ -244,4 +244,20 @@ section#our-products {
     background: url('@{img}temp/productos.jpg') no-repeat center center transparent;
     background-size: cover;
   }
+
+  // @responsive: our products
+  // -----------------------------------------------------------------------------
+  @media (max-width: @screen-xs-max){
+    div#our-products-picture {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 120%;
+      padding-left: @grid-gutter-width-half;
+      padding-right: @grid-gutter-width-half;
+      margin-left: @grid-gutter-width-half * -1;
+      box-sizing: content-box;
+    }
+  }
 }
