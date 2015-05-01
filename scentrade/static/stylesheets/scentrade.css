@@ -674,6 +674,7 @@ body {
 header#scentrade-header nav.navbar {
   min-height: 76px;
   background-color: white;
+  border-bottom: none;
 }
 header#scentrade-header a.navbar-brand {
   display: block;

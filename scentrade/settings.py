@@ -1,3 +1,4 @@
+# encoding: utf-8
 """
 Django settings for scentrade project.
 
@@ -12,6 +13,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from django.utils.translation import ugettext, ugettext_lazy as _
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -39,8 +41,14 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'scentrade',
+    'api',
+    'ng_app',
     'easy_thumbnails',
     'django_extensions',
+    'hvad',
+    'django_autoslug',
+    'rest_framework',
+    'djrill',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -89,7 +97,12 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
+
+LANGUAGES = (
+    ('es', _(u'Español')),
+    ('en', _(u'Inglés')),
+)
 
 TIME_ZONE = 'UTC'
 
@@ -103,4 +116,39 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'generated').replace('\\', '/')
+
 STATIC_URL = '/static/'
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media').replace('\\', '/')
+
+MEDIA_URL = '/media/'
+
+
+# Django rest framework settings
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 10,
+}
+
+
+# email configuration
+
+EMAIL_BACKEND = "djrill.mail.backends.djrill.DjrillBackend"
+
+EMAIL_HOST = 'smtp.mandrillapp.com'
+
+EMAIL_PORT = 587
+
+EMAIL_USE_TLS = True
+
+DEFAULT_FROM_EMAIL = u'scentrade <info@scentrade.com.co>'
+
+
+from local_settings import *

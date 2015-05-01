@@ -1,8 +1,11 @@
-{% load staticfiles %}
+{% load staticfiles i18n %}
+
+{% get_current_language as CURRENT_LANGUAGE %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ CURRENT_LANGUAGE }}">
 <head>
+    <base href="{% url 'home' %}">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,42 +21,53 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+
+<body ng-app="scentrade" data-current-language="{{ CURRENT_LANGUAGE }}">
 
 <header id="scentrade-header">
     <nav class="navbar navbar-default">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#scentrade-navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" ng-href="inicio">
                     <img src="{% static 'img/main/header-logo-green.svg' %}" alt="Scentrade.com"/>
                 </a>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="scentrade-navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Hogar</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a ng-href="inicio">{% trans 'Inicio' %}</a></li>
+                    <li><a ng-href="#">{% trans 'Nosotros' %}</a></li>
+                    <li><a ng-href="#">{% trans 'Productos' %}</a></li>
+                    <li><a ng-href="#">{% trans 'Servicios' %}</a></li>
+                    <li><a ng-href="#">{% trans 'Hogar' %}</a></li>
+                    <li><a ng-href="#">{% trans 'Blog' %}</a></li>
+                    <li><a ng-href="#">{% trans 'Contacto' %}</a></li>
                 </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+            </div>
+        </div>
     </nav>
 </header>
 
+<main>
+
+</main>
+
 <script src="{% static 'bower_components/jquery/dist/jquery.js' %}"></script>
 <script src="{% static 'bower_components/bootstrap/dist/js/bootstrap.js' %}"></script>
+<script src="{% static 'bower_components/angular/angular.js' %}"></script>
+<script src="{% static 'bower_components/angular-route/angular-route.js' %}"></script>
+<script src="{% static 'bower_components/angular-sanitize/angular-sanitize.js' %}"></script>
+<script src="{% static 'ng_app/js/scentrade.js' %}"></script>
+<script src="{% static 'ng_app/js/scentrade.config.js' %}"></script>
+<script src="{% static 'ng_app/js/constants.js' %}"></script>
+<script src="{% static 'ng_app/js/scentrade.routes.js' %}"></script>
+<script src="{% static 'ng_app/js/controllers/homepage.controller.js' %}"></script>
 
 </body>
 </html>
