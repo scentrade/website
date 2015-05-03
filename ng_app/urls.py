@@ -5,7 +5,8 @@ from ng_app.views import (PartialGroupView)
 templates = [
     'homepage.html',
     'sections/about-us.html',
-    'sections/products.html']
+    'sections/products.html',
+    'sections/services.html']
 
 partial_patterns = patterns('')
 

@@ -15,6 +15,24 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .h1 {
+  // Megabyte
+  &.mb {
+    font-size: round(@font-size-h1 * 1.4);
+
+    @media (min-width: @screen-md-min) and (max-width: @screen-md-max){
+      font-size: round(@font-size-h1 * 1.2);
+    }
+
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
+      font-size: round(@font-size-h1 * 1);
+    }
+
+    @media (max-width: @screen-xs-max){
+      font-size: @font-size-h1;
+    }
+  }
+
+  // Gigabyte
   &.gb {
     font-size: round(@font-size-h1 * 1.7);
 

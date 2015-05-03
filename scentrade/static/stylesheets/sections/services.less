@@ -1,0 +1,33 @@
+// @section make an strategy
+// /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+section#services-make-an-strategy {
+  div.bg-image {
+    background: url('http://placehold.it/800x800') no-repeat center center transparent;
+    background-size: cover;
+  }
+}
+
+// @section how it works
+// /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+section#services-how-it-works {
+
+  // @responsive how it works
+  // -----------------------------------------------------------------------------
+  @media (max-width: @screen-xs-max){
+    div.row {
+      div[class*="col"] {
+        &:first-child {
+          padding-bottom: @grid-gutter-width * 3;
+        }
+
+        &:last-child {
+          padding-top: @grid-gutter-width * 2;
+        }
+      }
+    }
+
+    img#difuser-picture {
+      width: 100%;
+    }
+  }
+}

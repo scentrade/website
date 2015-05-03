@@ -1,0 +1,140 @@
+{% extends 'ng_app/partials/sections/base_sections.html' %}
+
+{% load i18n staticfiles %}
+
+{% block header_title %}{% trans 'Servicios' %}{% endblock %}
+
+{% block content %}
+    <section id="services-make-an-strategy">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 text-center bg-purple">
+                    <div class="box-square">
+                        <div class="wrapper-full-absolute">
+                            <div class="vcw">
+                                <div class="vci">
+                                    <h1 class="mb white plgw prgw">
+                                        {% blocktrans %}
+                                            Crea una estrategia que a través del marketing olfativo
+                                            te lleve a cumplir tus metas.
+                                        {% endblocktrans %}
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 bg-image">
+                    <div class="box-square">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="what-is-olfactory-marketing">
+        <div class="container ptgw-2x pbgw-2x">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text-center">
+                    <h1 class="purple">{% trans '¿Qué es marketing olfativo?' %}</h1>
+                    <p>
+                        {% blocktrans %}
+                            Es el concepto de relacionar una marca, un producto o una campaña con un
+                            aroma específico. Al hacerlo se crea una experiencia sensorial que impacte
+                            directamente el cerebro emocional de las personas, fundando una memoria
+                            y un deseo de compra.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services-how-it-works">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="box-square">
+                        <div class="wrapper-full-absolute">
+                            <div class="vcw">
+                                <div class="vci text-center">
+                                    <img id="difuser-picture" ng-src="{% static 'img/temp/difusor.jpg' %}" alt="Difusor Zephyr" class="img-responsive centered"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 text-center bg-purple white">
+                    {# I put it here to position relative to the col in xs devices #}
+                    <img id="scentrade-diamond-logo" ng-src="{% static 'img/homepage/our-products-logo.svg' %}" alt=""/>
+                    <div class="box-square">
+                        <div class="wrapper-full-absolute">
+                            <div class="vcw">
+                                <div class="vci">
+                                    <h1 class="mb">{% trans '¿Cómo funciona?' %}</h1>
+                                    <p class="mbgw plgw-2x prgw-2x">
+                                        {% blocktrans %}
+                                            Ofrecemos diferentes tipos de difusores que brindan la solución
+                                            olfativa que require su espacio, además contamos con la modalidad
+                                            de venta y arriendo que se ajustan a sus necesidades.
+                                        {% endblocktrans %}
+                                    </p>
+                                    <a ng-href="#" class="btn btn-white-bordered btn-lg">
+                                        {% trans 'Conócelos' %}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container text-center ptgw-2x pbgw">
+            <div class="row">
+                <div class="col-sm-3 mbgw">
+                    <h2>{% trans 'Logo olfativo' %}</h2>
+                    <p>
+                        {% blocktrans %}
+                            Desarrollamos un aroma especialmente pensado para representar
+                            tu marca, así creamos una experiencia comercial única que genera
+                            mayor atención hacia los productos, alta recordación,
+                            incrementando tus ventas hasta en un 20%.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+                <div class="col-sm-3 mbgw">
+                    <h2>{% trans 'Exclusividad' %}</h2>
+                    <p>
+                        {% blocktrans %}
+                            Descrubre nuestro portafolio de fragancias y disfruta de sensaciones
+                            aromáticas que jamás imaginaste. Te garantizamos que de parte
+                            de nosotros la fragancia será comercializada y distribuida
+                            exclusivamente para quien obtenga este derecho.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+                <div class="col-sm-3 mbgw">
+                    <h2>{% trans 'Fragancias memorables' %}</h2>
+                    <p>
+                        {% blocktrans %}
+                            Somos creadores de aromas, hacemos perfumes constantemente,
+                            jugamos con los olores para llevar al sentido del olfato a un
+                            éxtasis de sensaciones, mezclamos fragancias para transmitir emociones,
+                            con cada esencia hacemos una obra de arte.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+                <div class="col-sm-3 mbgw">
+                    <h2>{% trans 'Servicio continuo' %}</h2>
+                    <p>
+                        {% blocktrans %}
+                            Su estrategia tendrá soporte continuo. Bien sea con equipos en arriendo
+                            o comprados eres nuestra prioridad, por eso estaremos acompañándote
+                            durante todo el proceso tanto técnico como conceptual.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

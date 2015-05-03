@@ -687,6 +687,28 @@ h6,
   font-weight: 700;
   line-height: 1.1;
 }
+h1.mb,
+.h1.mb {
+  font-size: 57px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  h1.mb,
+  .h1.mb {
+    font-size: 49px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  h1.mb,
+  .h1.mb {
+    font-size: 41px;
+  }
+}
+@media (max-width: 767px) {
+  h1.mb,
+  .h1.mb {
+    font-size: 41px;
+  }
+}
 h1.gb,
 .h1.gb {
   font-size: 70px;
@@ -864,12 +886,30 @@ body.about-us header#section-hero {
 body.products header#section-hero {
   background-image: url('../img/temp/image-productos.jpg');
 }
+body.services header#section-hero {
+  background-image: url('../img/temp/image-servicios.jpg');
+}
 .box-square {
   display: block;
   width: 100%;
   height: 0;
   padding-bottom: 100%;
   position: relative;
+}
+img#scentrade-diamond-logo {
+  display: block;
+  position: absolute;
+  width: 150px;
+  top: 50%;
+  left: 0;
+  margin-top: -75px;
+  margin-left: -75px;
+}
+@media (max-width: 767px) {
+  img#scentrade-diamond-logo {
+    left: 50%;
+    top: 0;
+  }
 }
 .btn {
   border-radius: 0;
@@ -1106,6 +1146,9 @@ body.homepage header#scentrade-header nav.navbar {
 body.homepage header#scentrade-header .navbar-nav > li > a {
   color: white;
 }
+footer#scentrade-footer {
+  background-color: #e6e7e8;
+}
 footer#scentrade-footer hr {
   border-color: #949597;
 }
@@ -1320,15 +1363,6 @@ section#our-products div#our-products-picture {
   background: url('../img/temp/productos.jpg') no-repeat center center transparent;
   background-size: cover;
 }
-section#our-products img#our-products-logo {
-  display: block;
-  position: absolute;
-  width: 160px;
-  top: 50%;
-  left: 0;
-  margin-top: -80px;
-  margin-left: -80px;
-}
 section#our-products p {
   padding: 0 90px;
 }
@@ -1346,10 +1380,6 @@ section#our-products p {
   }
   section#our-products div[class*="col"] {
     position: relative;
-  }
-  section#our-products div[class*="col"] img#our-products-logo {
-    left: 50%;
-    top: 0;
   }
   section#our-products div[class*="col"] p {
     padding: 0 60px;
@@ -1378,4 +1408,19 @@ section#products-nav nav a:focus {
 }
 section#products-listing div.product a {
   display: block;
+}
+section#services-make-an-strategy div.bg-image {
+  background: url('http://placehold.it/800x800') no-repeat center center transparent;
+  background-size: cover;
+}
+@media (max-width: 767px) {
+  section#services-how-it-works div.row div[class*="col"]:first-child {
+    padding-bottom: 90px;
+  }
+  section#services-how-it-works div.row div[class*="col"]:last-child {
+    padding-top: 60px;
+  }
+  section#services-how-it-works img#difuser-picture {
+    width: 100%;
+  }
 }

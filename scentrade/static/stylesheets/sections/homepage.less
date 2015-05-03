@@ -243,18 +243,6 @@ section#our-products {
     background-size: cover;
   }
 
-  img#our-products-logo {
-    @radius: 160px;
-
-    display: block;
-    position: absolute;
-    width: @radius;
-    top: 50%;
-    left: 0;
-    margin-top: (@radius / 2) * -1;
-    margin-left: (@radius / 2) * -1;
-  }
-
   p {
     padding: 0 round(@grid-gutter-width * 3);
   }
@@ -276,11 +264,6 @@ section#our-products {
 
     div[class*="col"] {
       position: relative;
-
-      img#our-products-logo {
-        left: 50%;
-        top: 0;
-      }
 
       p {
         padding: 0 @grid-gutter-width * 2;

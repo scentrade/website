@@ -112,6 +112,10 @@ body.products header#section-hero {
   background-image: url('@{img}temp/image-productos.jpg');
 }
 
+body.services header#section-hero {
+  background-image: url('@{img}temp/image-servicios.jpg');
+}
+
 // box-square inside bootstrap cols
 // -----------------------------------------------------------------------------
 .box-square {
@@ -120,4 +124,25 @@ body.products header#section-hero {
   height: 0;
   padding-bottom: 100%; // a square
   position: relative; // for the wrapper and the diamond
+}
+
+// Scentrade diamond logo
+// -----------------------------------------------------------------------------
+img#scentrade-diamond-logo {
+  @radius: 150px;
+
+  display: block;
+  position: absolute;
+  width: @radius;
+  top: 50%;
+  left: 0;
+  margin-top: (@radius / 2) * -1;
+  margin-left: (@radius / 2) * -1;
+}
+
+@media (max-width: @screen-xs-max){
+  img#scentrade-diamond-logo {
+    left: 50%;
+    top: 0;
+  }
 }
