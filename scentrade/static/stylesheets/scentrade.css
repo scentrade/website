@@ -739,6 +739,12 @@ strong {
 .blue {
   color: #1d84be;
 }
+.blue-light {
+  color: #73c9ed;
+}
+.blue-dark {
+  color: #034e78;
+}
 .white {
   color: white;
 }
@@ -772,6 +778,12 @@ strong {
 .bg-blue {
   background-color: #1d84be;
 }
+.bg-blue-light {
+  background-color: #73c9ed;
+}
+.bg-blue-dark {
+  background-color: #034e78;
+}
 .bg-white {
   background-color: white;
 }
@@ -782,6 +794,78 @@ strong {
   position: absolute;
   left: 0;
   top: 0;
+}
+header#section-hero {
+  position: relative;
+  height: 0;
+  padding-bottom: 40%;
+  background: no-repeat center center transparent;
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+header#section-hero:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+header#section-hero div.container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+header#section-hero h1,
+header#section-hero h2 {
+  text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+}
+header#section-hero h1 {
+  font-size: 164px;
+}
+header#section-hero h2 {
+  font-size: 41px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  header#section-hero {
+    padding-bottom: 50%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  header#section-hero {
+    padding-bottom: 60%;
+  }
+  header#section-hero h1 {
+    font-size: 123px;
+  }
+  header#section-hero h2 {
+    font-size: 34px;
+  }
+}
+@media (max-width: 767px) {
+  header#section-hero {
+    padding-bottom: 70%;
+  }
+  header#section-hero h1 {
+    font-size: 62px;
+  }
+  header#section-hero h2 {
+    font-size: 34px;
+  }
+}
+.box-square {
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+}
+body.about-us header#section-hero {
+  background-image: url('../img/temp/image-nosotros.jpg');
 }
 .btn {
   border-radius: 0;
@@ -1053,13 +1137,6 @@ section#what-we-do div.container-fluid:after {
 section#what-we-do div.row div.center {
   padding-left: 0;
   padding-right: 0;
-}
-section#what-we-do div.row div.center div.box-square {
-  display: block;
-  width: 100%;
-  height: 0;
-  padding-bottom: 100%;
-  position: relative;
 }
 section#what-we-do div.row div.center div.box-square img#scentrade-blue-logo {
   width: 90px;

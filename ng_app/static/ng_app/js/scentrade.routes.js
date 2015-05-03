@@ -20,11 +20,11 @@
       .when('/inicio', {
         redirectTo: '/'
       })
-      /*.when('/sobre-buho', {
-        templateUrl: currentLanguage + '/partials/about-us.html',
+      .when('/nosotros', {
+        templateUrl: currentLanguage + '/partials/sections/about-us.html',
         controller: 'AboutUsController',
         controllerAs: 'vm'
-      })*/
+      })
       .otherwise({
         redirectTo: '/'
       });

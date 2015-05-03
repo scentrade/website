@@ -1,0 +1,155 @@
+{% extends 'ng_app/partials/sections/base_sections.html' %}
+
+{% load i18n staticfiles %}
+
+{% block header_title %}{% trans 'Nosotros' %}{% endblock %}
+
+{% block header_subtitle %}
+    {% blocktrans %}
+        Creamos un estilo de vida, transformamos ambientes<br>
+        a través del olfato.
+    {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 text-center">
+                    <div class="box-square bg-blue-dark">
+                        <div class="wrapper-full-absolute">
+                            <div class="vcw">
+                                <div class="vci">
+                                    <img ng-src="{% static 'img/about-us/scentrade-s-white.svg' %}" alt="Scentrade" width="100"/>
+                                    <h1 class="gb white">
+                                        {% blocktrans %}
+                                            Lo que nos<br>
+                                            <span class="blue-light">mueve</span>
+                                        {% endblocktrans %}
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <div class="box-square">
+                        <div class="wrapper-full-absolute">
+                            <div class="vcw">
+                                <div class="vci">
+                                    <h1 class="blue">{% trans 'Puro sentido sensorial' %}</h1>
+                                    <p>
+                                        {% blocktrans %}
+                                            Concebido al son de samba y forró, Scentrade exalta el aprecio a la belleza,
+                                            esa que se plasma en las formas, la música, la literatura… las sonrisas, esa
+                                            que nace cuando disfrutas de una caipirinha en la playa, de una fiesta en el
+                                            último piso de la torre Montparnasse en París, de una taza de chocolate en el
+                                            centro de Bogotá o de la maginitud de las piramides mayas.
+                                            <br><br>
+                                            Nos mueven la idea de crear vidas con Puro Sentido, donde las personas se
+                                            deleitan con el placer de percibir el mundo que los envuelve, un universo
+                                            que se respira, que se inhala, que se llena de espirítu para impregnarnos
+                                            de recuerdos… de memorias imborrables.
+                                        {% endblocktrans %}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container text-center ptgw-2x pbgw-2x">
+            <h1 class="mtgw mbgw">
+                {% blocktrans %}
+                    Generamos empatía con lo que nos rodea, proponemos soluciones,<br>
+                    creativas a sus necesidades, resonamos con el olfato, el sentido<br>
+                    emocional que más impregna la memoria.
+                {% endblocktrans %}
+            </h1>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 text-center">
+                    <div class="box-square">
+                        <div class="wrapper-full-absolute">
+                            <div class="vcw">
+                                <div class="vci">
+                                    <h1 class="blue">{% trans '¿Cómo lo hacemos?' %}</h1>
+                                    <p class="prgw-2x plgw-2x">
+                                        {% blocktrans %}
+                                            Todo lo que hacemos tiene una estrategia que lo soporta, profundizamos
+                                            en la esencia de cada marca, de cada persona, para crear una experiencia
+                                            que lo lleve a expresar su máximo potencial, para entablar relaciones a
+                                            largo plazo. Vamos más allá de un buen olor, posicionamos marcas y creamos
+                                            ambientes que te hacen sentir.
+                                        {% endblocktrans %}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <div class="box-square bg-blue-dark">
+                        <div class="wrapper-full-absolute">
+                            <div class="vcw">
+                                <div class="vci">
+                                    <h1 class="gb white prgw-2x plgw-2x">
+                                        {% blocktrans %}
+                                            Puro sentido, es hacer todo con conocimiento por una razón.
+                                        {% endblocktrans %}
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="olfactory-marketing">
+        <div class="container text-center ptgw-2x pbgw-2x">
+            <div class="row">
+                <div class="col-sm-4 mbgw">
+                    <img ng-src="{% static 'img/about-us/icon-hands.svg' %}" alt="{% trans '¿Cómo funciona?' %}" width="70"/>
+                    <h2 class="blue">{% trans 'Conectamos' %}</h2>
+                    <p class="plgw prgw">
+                        {% blocktrans %}
+                            Profundizamos en los valores que definen tu marca, encontramos su
+                            esencia y allí, desde lo más íntimo, creamos un aroma que la conecta
+                            con el mundo, con los clientes.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+                <div class="col-sm-4 mbgw">
+                    <img ng-src="{% static 'img/about-us/icon-sound.svg' %}" alt="{% trans 'Importancia del olfato' %}" width="70"/>
+                    <h2 class="blue">{% trans 'Resonamos' %}</h2>
+                    <p class="plgw prgw">
+                        {% blocktrans %}
+                            Vibramos con la creatividad, con el placer, con la elegancia,
+                            resonamos con las emociones de los seres humanos, construimos
+                            experiencias que nos hacen sentir vivos.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+                <div class="col-sm-4 mbgw">
+                    <img ng-src="{% static 'img/about-us/icon-flower.svg' %}" alt="{% trans 'En la práctica' %}" width="70"/>
+                    <h2 class="blue">{% trans 'Respetamos' %}</h2>
+                    <p class="plgw prgw">
+                        {% blocktrans %}
+                            Adoramos la naturaleza, sus aromas, reconocemos que es nuestra
+                            fuente de inspiración, es ella quien nos muestra el camino y nos
+                            enseña el valor de la vida. Por eso cuidamos el medio ambiente y
+                            construimos relaciones de respeto con nuestros clientes.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
