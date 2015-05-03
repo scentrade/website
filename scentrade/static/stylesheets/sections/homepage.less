@@ -29,7 +29,7 @@ section#homepage-hero {
 @media (max-width: @screen-xs-max){
   section#homepage-hero {
     // TODO rethink this padding
-    padding-bottom: 80%;
+    padding-bottom: 100%;
 
     div#homepage-hero-text {
       bottom: 50px;
@@ -94,6 +94,11 @@ section#what-we-do {
         padding-bottom: 100%; // a square
         position: relative; // for the wrapper and the diamond
 
+        img#scentrade-blue-logo {
+          width: 90px;
+          margin-top: -50px;
+        }
+
         // the diamond
         &:after {
           .box-square-diamond(71%);
@@ -144,29 +149,28 @@ section#what-we-do {
     }
   }
 
-  // Fixes for md
-  // -----------------------------------------------------------------------------
-  @media (min-width: @screen-md-min) and (max-width: @screen-md-max){
-    div.row {
-      div.center {
-        div.box-square {
-          &:after {
-            .box-square-diamond(80%);
-          }
-        }
-      }
-    }
-  }
-
   // Fixes for sm
   // -----------------------------------------------------------------------------
   @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
     div.row {
       div.center {
         div.box-square {
+          img#scentrade-blue-logo {
+            margin-top: -60px;
+            width: 50px;
+          }
+
+          h1 {
+            margin-top: 10px;
+          }
+
+          p {
+            font-size: @font-size-base - 1px;
+          }
+
           &:after {
             // this is a col-sm-6 instead of 4
-            .box-square-diamond(71%);
+            .box-square-diamond(75%);
           }
         }
       }
@@ -245,6 +249,22 @@ section#our-products {
     background-size: cover;
   }
 
+  img#our-products-logo {
+    @radius: 160px;
+
+    display: block;
+    position: absolute;
+    width: @radius;
+    top: 50%;
+    left: 0;
+    margin-top: (@radius / 2) * -1;
+    margin-left: (@radius / 2) * -1;
+  }
+
+  p {
+    padding: 0 round(@grid-gutter-width * 3);
+  }
+
   // @responsive: our products
   // -----------------------------------------------------------------------------
   @media (max-width: @screen-xs-max){
@@ -258,6 +278,19 @@ section#our-products {
       padding-right: @grid-gutter-width-half;
       margin-left: @grid-gutter-width-half * -1;
       box-sizing: content-box;
+    }
+
+    div[class*="col"] {
+      position: relative;
+
+      img#our-products-logo {
+        left: 50%;
+        top: 0;
+      }
+
+      p {
+        padding: 0 @grid-gutter-width * 2;
+      }
     }
   }
 }

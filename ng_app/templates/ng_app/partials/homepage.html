@@ -20,7 +20,7 @@
         <owl-carousel items="6" items-desktop="[1400,6]" items-mobile="[479,2]" auto-play="true">
             {% for x in 'abcdefghi' %}
                 <div class="logo">
-                    <img ng-src="http://placehold.it/195x80" alt="[Company name here]" class="img-responsive"/>
+                    <img ng-src="http://placehold.it/190x90" alt="[Company name here]" class="img-responsive"/>
                 </div>
             {% endfor %}
         </owl-carousel>
@@ -41,14 +41,15 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 center">
+            <div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 center">
                 <div class="box-square">
                     <div class="wrapper-full-absolute">
                         <div class="vcw">
                             <div class="vci">
                                 <div class="block text-center">
+                                    <img id="scentrade-blue-logo" ng-src="{% static 'img/homepage/scentrade-logo-blue.svg' %}" alt="Scentrade"/>
                                     <h1>{% trans '¿Qué hacemos?' %}</h1>
-                                    <p>
+                                    <p class="gray-light">
                                         <i>
                                             {% blocktrans %}
                                                 A través de los <strong>aromas</strong> impactamos el sentido<br>
@@ -106,7 +107,7 @@
     </div>
 </section>
 <section id="free-trial">
-    <img src="{% static 'img/temp/chambonada.jpg' %}" alt="" style="width: 100%;"/>
+    <img ng-src="{% static 'img/temp/chambonada.jpg' %}" alt="" style="width: 100%;"/>
 </section>
 <section id="olfactory-marketing">
     <div class="container text-center ptgw-2x pbgw-2x">
@@ -117,18 +118,51 @@
             {% endblocktrans %}
         </h1>
         <div class="row mbgw">
-            {% for x in 'abc' %}
-                <div class="col-sm-4 mbgw">
-                    <h2 class="blue">{% trans '¿Cómo funciona?' %}</h2>
-                    <p>
-                        {% blocktrans %}
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
-                        {% endblocktrans %}
-                    </p>
-                </div>
-            {% endfor %}
+            <div class="col-sm-4 mbgw">
+                <img ng-src="{% static 'img/homepage/icon-question.svg' %}" alt="{% trans '¿Cómo funciona?' %}" width="70"/>
+                <h2 class="blue">{% trans '¿Cómo funciona?' %}</h2>
+                <p>
+                    {% blocktrans %}
+                        El ser humano es impresionable a través de los sentidos, recibe estímulos
+                        externos y éstos le producen emociones que dependiendo del nivel de impacto
+                        quedarán en la memoria para siempre. En Scentrade usamos el marketing
+                        olfativo con Puro Sentido, quiere decir que nos servimos de esta función
+                        cerebral para crear una experiencia positiva, que afecte las emociones
+                        de los clientes y que con los aromas se establezca un vínculo profundo
+                        entre la marca y los consumidores.
+                    {% endblocktrans %}
+                </p>
+            </div>
+            <div class="col-sm-4 mbgw">
+                <img ng-src="{% static 'img/homepage/icon-nose.svg' %}" alt="{% trans 'Importancia del olfato' %}" width="70"/>
+                <h2 class="blue">{% trans 'Importancia del olfato' %}</h2>
+                <p>
+                    {% blocktrans %}
+                        El olfato es el único de los cinco sentidos que recibe sus estímulos en
+                        la parte límbica del cerebro, los mismos centros de las emociones, la
+                        toma de decisiones y la memoria. Así, los perfumes se convierten en
+                        los protagonistas sensoriales, pues son capaces de capturar a los
+                        individuos desde sus sentimientos y conectarlos con la naturaleza
+                        instintiva que les mueve el corazón.
+                    {% endblocktrans %}
+                </p>
+            </div>
+            <div class="col-sm-4 mbgw">
+                <img ng-src="{% static 'img/homepage/icon-cog.svg' %}" alt="{% trans 'En la práctica' %}" width="70"/>
+                <h2 class="blue">{% trans 'En la práctica' %}</h2>
+                <p>
+                    {% blocktrans %}
+                        Para ver los efectos de esta técnica es importante crear una estrategia
+                        de mercadeo integral donde la marca debe definir el tipo de impresión que
+                        quiere provocar en sus clientes. Así, se encuentra la fragancia que por
+                        sus componentes, aromaterapia y arquetipos olfativos remonte a los sujetos
+                        a unas emociones determinadas. Luego este perfume es expuesto en el lugar
+                        y los elementos que estarán en contacto con los clientes, para crear un
+                        branding sensorial y generando una relación emocional que el usuario
+                        querrá repetir.
+                    {% endblocktrans %}
+                </p>
+            </div>
         </div>
         <div class="block text-center">
             <a ng-href="#" class="btn btn-blue-bordered">
@@ -142,8 +176,10 @@
         <div id="our-products-picture"></div>
         <div class="row">
             <div class="col-sm-6 col-sm-offset-6 ptgw-2x pbgw-2x text-center white">
+                {# I put it here to position relative to the col in xs devices #}
+                <img id="our-products-logo" ng-src="{% static 'img/homepage/our-products-logo.svg' %}" alt=""/>
                 <h1 class="gb mtgw-2x mbgw-2x">{% trans 'Nuestros <br> productos' %}</h1>
-                <p class="mbgw-2x prgw-2x plgw-2x">
+                <p class="mbgw-2x">
                     {% blocktrans %}
                         Contamos con difusores que se adaptan a diferentes tamaños
                         y tipo de espacio.<br>

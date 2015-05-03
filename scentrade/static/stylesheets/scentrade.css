@@ -1015,7 +1015,7 @@ section#homepage-hero div#homepage-hero-text h1 {
 }
 @media (max-width: 767px) {
   section#homepage-hero {
-    padding-bottom: 80%;
+    padding-bottom: 100%;
   }
   section#homepage-hero div#homepage-hero-text {
     bottom: 50px;
@@ -1060,6 +1060,10 @@ section#what-we-do div.row div.center div.box-square {
   height: 0;
   padding-bottom: 100%;
   position: relative;
+}
+section#what-we-do div.row div.center div.box-square img#scentrade-blue-logo {
+  width: 90px;
+  margin-top: -50px;
 }
 section#what-we-do div.row div.center div.box-square:after {
   content: "";
@@ -1107,36 +1111,29 @@ section#what-we-do div.row div.center div.box-square div.wrapper-full-absolute {
     padding: 0 10% 0 40%;
   }
 }
-@media (min-width: 992px) and (max-width: 1199px) {
-  section#what-we-do div.row div.center div.box-square:after {
-    content: "";
-    display: block;
-    width: 80%;
-    height: 80%;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-    position: absolute;
-    left: 10%;
-    top: 10%;
-    background-color: white;
-    z-index: 0;
-  }
-}
 @media (min-width: 768px) and (max-width: 991px) {
+  section#what-we-do div.row div.center div.box-square img#scentrade-blue-logo {
+    margin-top: -60px;
+    width: 50px;
+  }
+  section#what-we-do div.row div.center div.box-square h1 {
+    margin-top: 10px;
+  }
+  section#what-we-do div.row div.center div.box-square p {
+    font-size: 15px;
+  }
   section#what-we-do div.row div.center div.box-square:after {
     content: "";
     display: block;
-    width: 71%;
-    height: 71%;
+    width: 75%;
+    height: 75%;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
     position: absolute;
-    left: 14.5%;
-    top: 14.5%;
+    left: 12.5%;
+    top: 12.5%;
     background-color: white;
     z-index: 0;
   }
@@ -1194,6 +1191,18 @@ section#our-products div#our-products-picture {
   background: url('../img/temp/productos.jpg') no-repeat center center transparent;
   background-size: cover;
 }
+section#our-products img#our-products-logo {
+  display: block;
+  position: absolute;
+  width: 160px;
+  top: 50%;
+  left: 0;
+  margin-top: -80px;
+  margin-left: -80px;
+}
+section#our-products p {
+  padding: 0 90px;
+}
 @media (max-width: 767px) {
   section#our-products div#our-products-picture {
     display: block;
@@ -1205,5 +1214,15 @@ section#our-products div#our-products-picture {
     padding-right: 15px;
     margin-left: -15px;
     box-sizing: content-box;
+  }
+  section#our-products div[class*="col"] {
+    position: relative;
+  }
+  section#our-products div[class*="col"] img#our-products-logo {
+    left: 50%;
+    top: 0;
+  }
+  section#our-products div[class*="col"] p {
+    padding: 0 60px;
   }
 }
