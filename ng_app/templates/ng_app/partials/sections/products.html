@@ -1,0 +1,43 @@
+{% extends 'ng_app/partials/sections/base_sections.html' %}
+
+{% load i18n staticfiles %}
+
+{% block header_title %}{% trans 'Productos' %}{% endblock %}
+
+{% block content %}
+    <section id="products-nav" class="mtgw">
+        <div class="container">
+            <nav class="row">
+                <a ng-href="#" class="col-sm-4 h1 gb text-center active">
+                    {% trans 'Para tu hogar' %}
+                </a>
+                <a ng-href="#" class="col-sm-4 h1 gb text-center">
+                    {% trans 'Estrategias comerciales' %}
+                </a>
+                <a ng-href="#" class="col-sm-4 h1 gb text-center">
+                    {% trans 'Lo quiero ver todo' %}
+                </a>
+            </nav>
+        </div>
+    </section>
+    <section id="products-cart" class="mbgw">
+        <div class="container">
+
+        </div>
+    </section>
+    <section id="products-listing">
+        <div class="container">
+            <div class="row">
+                {% for x in 'abcdefghijkl' %}
+                    <div class="col-sm-4 col-md-3 product mbgw">
+                        <h1 class="nm">Difusor <span class="purple">Maki</span></h1>
+                        <a ng-href="#" class="see-more gray mbgw-05x">{% trans 'Ver +' %}</a>
+                        <img ng-src="http://placehold.it/500x500" alt="Difusor maki" class="img-responsive"/>
+                        <h2 class="gray-light">$263.970 COP</h2>
+                        <a ng-href="#" class="btn btn-red-bordered btn-lg btn-block bebas">{% trans 'Añadir al carrito' %} <i class="fa fa-shopping-cart"></i></a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

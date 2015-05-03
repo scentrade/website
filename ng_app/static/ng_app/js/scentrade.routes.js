@@ -25,6 +25,11 @@
         controller: 'AboutUsController',
         controllerAs: 'vm'
       })
+      .when('/productos', {
+        templateUrl: currentLanguage + '/partials/sections/products.html',
+        controller: 'ProductsController',
+        controllerAs: 'vm'
+      })
       .otherwise({
         redirectTo: '/'
       });

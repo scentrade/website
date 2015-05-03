@@ -803,17 +803,17 @@ header#section-hero {
   background-size: cover;
   color: white;
   text-align: center;
-}
-header#section-hero:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
+  /*&:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }*/
 }
 header#section-hero div.container {
   position: relative;
@@ -823,6 +823,7 @@ header#section-hero div.container {
 header#section-hero h1,
 header#section-hero h2 {
   text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+  display: none;
 }
 header#section-hero h1 {
   font-size: 164px;
@@ -857,15 +858,18 @@ header#section-hero h2 {
     font-size: 34px;
   }
 }
+body.about-us header#section-hero {
+  background-image: url('../img/temp/image-nosotros.jpg');
+}
+body.products header#section-hero {
+  background-image: url('../img/temp/image-productos.jpg');
+}
 .box-square {
   display: block;
   width: 100%;
   height: 0;
   padding-bottom: 100%;
   position: relative;
-}
-body.about-us header#section-hero {
-  background-image: url('../img/temp/image-nosotros.jpg');
 }
 .btn {
   border-radius: 0;
@@ -874,6 +878,9 @@ body.about-us header#section-hero {
 .btn.bebas {
   font-family: 'bebas', sans-serif;
   font-weight: 400;
+}
+.btn-lg.bebas {
+  font-size: 28px;
 }
 .btn-white-transparent {
   color: #000000;
@@ -1009,6 +1016,51 @@ fieldset[disabled] .btn-blue-bordered.active {
 .btn-blue-bordered .badge {
   color: transparent;
   background-color: #1d84be;
+}
+.btn-red-bordered {
+  color: #df1d3a;
+  background-color: transparent;
+  border-color: #df1d3a;
+}
+.btn-red-bordered:hover,
+.btn-red-bordered:focus,
+.btn-red-bordered.focus,
+.btn-red-bordered:active,
+.btn-red-bordered.active,
+.open > .dropdown-toggle.btn-red-bordered {
+  color: #df1d3a;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #a9162c;
+}
+.btn-red-bordered:active,
+.btn-red-bordered.active,
+.open > .dropdown-toggle.btn-red-bordered {
+  background-image: none;
+}
+.btn-red-bordered.disabled,
+.btn-red-bordered[disabled],
+fieldset[disabled] .btn-red-bordered,
+.btn-red-bordered.disabled:hover,
+.btn-red-bordered[disabled]:hover,
+fieldset[disabled] .btn-red-bordered:hover,
+.btn-red-bordered.disabled:focus,
+.btn-red-bordered[disabled]:focus,
+fieldset[disabled] .btn-red-bordered:focus,
+.btn-red-bordered.disabled.focus,
+.btn-red-bordered[disabled].focus,
+fieldset[disabled] .btn-red-bordered.focus,
+.btn-red-bordered.disabled:active,
+.btn-red-bordered[disabled]:active,
+fieldset[disabled] .btn-red-bordered:active,
+.btn-red-bordered.disabled.active,
+.btn-red-bordered[disabled].active,
+fieldset[disabled] .btn-red-bordered.active {
+  background-color: transparent;
+  border-color: #df1d3a;
+}
+.btn-red-bordered .badge {
+  color: transparent;
+  background-color: #df1d3a;
 }
 header#scentrade-header nav.navbar {
   min-height: 76px;
@@ -1302,4 +1354,28 @@ section#our-products p {
   section#our-products div[class*="col"] p {
     padding: 0 60px;
   }
+}
+section#products-nav nav a {
+  display: block;
+  padding: 0 50px;
+}
+section#products-nav nav a:hover,
+section#products-nav nav a.active {
+  text-decoration: none;
+  color: #b9d050;
+}
+section#products-nav nav a:active,
+section#products-nav nav a:focus {
+  text-decoration: none;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section#products-nav nav a {
+    padding: 0 30px;
+  }
+  section#products-nav nav a:last-child {
+    padding: 0 50px;
+  }
+}
+section#products-listing div.product a {
+  display: block;
 }

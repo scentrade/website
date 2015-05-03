@@ -49,11 +49,11 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a ng-href="inicio">{% trans 'Inicio' %}</a></li>
                     <li><a ng-href="nosotros">{% trans 'Nosotros' %}</a></li>
-                    <li><a ng-href="#">{% trans 'Productos' %}</a></li>
-                    <li><a ng-href="#">{% trans 'Servicios' %}</a></li>
-                    <li><a ng-href="#">{% trans 'Hogar' %}</a></li>
-                    <li><a ng-href="#">{% trans 'Blog' %}</a></li>
-                    <li><a ng-href="#">{% trans 'Contacto' %}</a></li>
+                    <li><a ng-href="productos">{% trans 'Productos' %}</a></li>
+                    <li><a ng-href="servicios">{% trans 'Servicios' %}</a></li>
+                    <li><a ng-href="hogar">{% trans 'Hogar' %}</a></li>
+                    <li><a ng-href="blog">{% trans 'Blog' %}</a></li>
+                    <li><a ng-href="contacto">{% trans 'Contacto' %}</a></li>
                 </ul>
             </div>
         </div>
@@ -80,11 +80,11 @@
             <nav id="footer-links">
                 <a ng-href="inicio">{% trans 'Inicio' %}</a>
                 <a ng-href="nosotros">{% trans 'Nosotros' %}</a>
-                <a ng-href="#">{% trans 'Productos' %}</a>
-                <a ng-href="#">{% trans 'Servicios' %}</a>
-                <a ng-href="#">{% trans 'Hogar' %}</a>
-                <a ng-href="#">{% trans 'Blog' %}</a>
-                <a ng-href="#">{% trans 'Contacto' %}</a>
+                <a ng-href="productos">{% trans 'Productos' %}</a>
+                <a ng-href="servicios">{% trans 'Servicios' %}</a>
+                <a ng-href="hogar">{% trans 'Hogar' %}</a>
+                <a ng-href="blog">{% trans 'Blog' %}</a>
+                <a ng-href="contacto">{% trans 'Contacto' %}</a>
             </nav>
         </div>
         <hr>
@@ -112,6 +112,7 @@
 <script src="{% static 'ng_app/js/directives/owl.carousel.directive.js' %}"></script>
 <script src="{% static 'ng_app/js/controllers/homepage.controller.js' %}"></script>
 <script src="{% static 'ng_app/js/controllers/about.us.controller.js' %}"></script>
+<script src="{% static 'ng_app/js/controllers/products.controller.js' %}"></script>
 
 </body>
 </html>

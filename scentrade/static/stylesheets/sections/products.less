@@ -1,0 +1,43 @@
+// @section products nav
+// /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+section#products-nav {
+  nav {
+    a {
+      display: block;
+      padding: 0 50px;
+
+      &:hover, &.active {
+        text-decoration: none;
+        color: @green;
+      }
+
+      &:active, &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+
+  // @responsive products nav
+  // -----------------------------------------------------------------------------
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
+    nav {
+      a {
+        padding: 0 30px;
+
+        &:last-child {
+          padding: 0 50px;
+        }
+      }
+    }
+  }
+}
+
+// @section products listing
+// /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+section#products-listing {
+  div.product {
+    a {
+      display: block;
+    }
+  }
+}

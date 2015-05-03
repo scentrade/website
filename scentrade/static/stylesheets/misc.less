@@ -43,7 +43,7 @@ header#section-hero {
   color: white;
   text-align: center;
 
-  &:after {
+  /*&:after {
     content: "";
     display: block;
     width: 100%;
@@ -53,7 +53,7 @@ header#section-hero {
     left: 0;
     top: 0;
     z-index: 1;
-  }
+  }*/
 
   div.container {
     position: relative;
@@ -63,6 +63,8 @@ header#section-hero {
 
   h1, h2 {
     text-shadow: 8px 8px 8px rgba(0,0,0,0.5);
+    // TODO re-show
+    display: none;
   }
 
   h1 {
@@ -102,6 +104,14 @@ header#section-hero {
   }
 }
 
+body.about-us header#section-hero {
+  background-image: url('@{img}temp/image-nosotros.jpg');
+}
+
+body.products header#section-hero {
+  background-image: url('@{img}temp/image-productos.jpg');
+}
+
 // box-square inside bootstrap cols
 // -----------------------------------------------------------------------------
 .box-square {
@@ -110,8 +120,4 @@ header#section-hero {
   height: 0;
   padding-bottom: 100%; // a square
   position: relative; // for the wrapper and the diamond
-}
-
-body.about-us header#section-hero {
-  background-image: url('@{img}temp/image-nosotros.jpg');
 }
