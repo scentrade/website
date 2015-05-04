@@ -901,6 +901,9 @@ body.services header#section-hero {
 body.home header#section-hero {
   background-image: url('../img/temp/image-hogar.jpg');
 }
+body.blog header#section-hero {
+  background-image: url('../img/temp/image-blog.jpg');
+}
 .box-square {
   display: block;
   width: 100%;
@@ -1480,4 +1483,40 @@ section#services-make-an-strategy div.bg-image {
   section#services-how-it-works img#difuser-picture {
     width: 100%;
   }
+}
+section#blog-posts-listing div.row div[class*="col"] {
+  position: relative;
+}
+section#blog-posts-listing div.row div[class*="col"]:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+section#blog-posts-listing div.row div[class*="col"] div.blog-box {
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 111.2%;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+section#blog-posts-listing div.row div[class*="col"] div.blog-box > a {
+  display: block;
+}
+section#blog-posts-listing div.row div[class*="col"] div.blog-box > a:hover {
+  text-decoration: none;
+}
+section#blog-posts-listing div.row div[class*="col"] div.blog-box h1 {
+  color: white;
+}
+section#blog-posts-listing div.row div[class*="col"] div.blog-box h2 {
+  color: rgba(255, 255, 255, 0.8);
 }

@@ -1,0 +1,30 @@
+{% extends 'ng_app/partials/sections/base_sections.html' %}
+
+{% load i18n staticfiles %}
+
+{% block header_title %}{% trans 'Blog' %}{% endblock %}
+
+{% block content %}
+    <section id="blog-posts-listing">
+        <div class="container">
+            <div class="row">
+                {% for x in 'abcdefgh' %}
+                    <div class="col-sm-6" style="background-image: url('http://placehold.it/585x618');">
+                        <div class="blog-box">
+                            <a ng-href="#">
+                                <div class="wrapper-full-absolute">
+                                    <div class="vcw">
+                                        <div class="vci">
+                                            <h1 class="mb">El futuro del branding</h1>
+                                            <h2 class="date">May 5, 2015</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -40,6 +40,11 @@
         controller: 'HomeController',
         controllerAs: 'vm'
       })
+      .when('/blog', {
+        templateUrl: currentLanguage + '/partials/sections/blog.html',
+        controller: 'BlogController',
+        controllerAs: 'vm'
+      })
       .otherwise({
         redirectTo: '/'
       });
