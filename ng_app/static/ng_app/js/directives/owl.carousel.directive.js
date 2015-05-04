@@ -11,23 +11,29 @@
         // the same as the directive name so it works as the
         // attribute directive initializer but the background image at
         // the same time
+        source: '=',
         owlCarousel: '=',
         items: '=',
         itemsDesktop: '=',
         itemsMobile: '=',
         autoPlay: '=',
       },
-      link: link
+      link: link,
+      templateUrl: 'partials/directives/owl-carousel.html'
     };
 
     return directive;
 
     function link(scope, element, attrs){
-      element.owlCarousel({
-        items: scope['items'],
-        itemsDesktop: scope['itemsDesktop'],
-        itemsMobile: scope['itemsMobile'],
-        autoPlay: scope['autoPlay'],
+      scope.$watch('source', function(data){
+        if( data ){
+          element.owlCarousel({
+            items: scope['items'],
+            itemsDesktop: scope['itemsDesktop'],
+            itemsMobile: scope['itemsMobile'],
+            autoPlay: scope['autoPlay'],
+          });
+        }
       });
     }
   }

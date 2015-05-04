@@ -42,6 +42,9 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'scentrade',
     'api',
+    'blog',
+    'company',
+    'utils',
     'ng_app',
     'easy_thumbnails',
     'django_extensions',
@@ -77,6 +80,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'utils.context_processors.global_variables',
             ],
         },
     },
@@ -137,6 +141,7 @@ MEDIA_URL = '/media/'
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 10,
+    'DEFAULT_FILTER_BACKENDS': ('rest_framework.filters.DjangoFilterBackend',)
 }
 
 

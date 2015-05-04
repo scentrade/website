@@ -8,11 +8,12 @@ from django.views.generic import TemplateView
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^rosetta/', include('rosetta.urls')),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) \
+  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += i18n_patterns('',
     url(r'^', include('ng_app.urls', namespace='ng_app')),
-    # url(r'^api/', include('api.urls', namespace='api')),
+    url(r'^api/', include('api.urls', namespace='api')),
     # (r'^search/', include('haystack.urls')),
     url(r'^.*$', TemplateView.as_view(template_name='base.html'), name='home'),
 )

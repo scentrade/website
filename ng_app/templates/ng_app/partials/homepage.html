@@ -7,8 +7,8 @@
                 <div class="text-center">
                     <h1 class="gb nmt mbgw">{% trans 'Creamos experiencias olfativas memorables' %}</h1>
                     <nav>
-                        <a href="#" class="btn btn-white-transparent btn-lg bebas mrgw">{% trans 'Para tu empresa' %}</a>
-                        <a href="#" class="btn btn-white-transparent btn-lg bebas">{% trans 'Para tu hogar' %}</a>
+                        <a ng-href="servicios" class="btn btn-white-transparent btn-lg bebas mrgw">{% trans 'Para tu empresa' %}</a>
+                        <a ng-href="hogar" class="btn btn-white-transparent btn-lg bebas">{% trans 'Para tu hogar' %}</a>
                     </nav>
                 </div>
             </div>
@@ -17,12 +17,7 @@
 </section>
 <section id="homepage-top-clients-logos">
     <div class="container ptgw pbgw">
-        <owl-carousel items="6" items-desktop="[1400,6]" items-mobile="[479,2]" auto-play="true">
-            {% for x in 'abcdefghi' %}
-                <div class="logo">
-                    <img ng-src="http://placehold.it/190x90" alt="[Company name here]" class="img-responsive"/>
-                </div>
-            {% endfor %}
+        <owl-carousel source="vm.clients" items="6" items-desktop="[1400,6]" items-mobile="[479,2]" auto-play="true">
         </owl-carousel>
     </div>
 </section>
@@ -34,7 +29,7 @@
                     <div class="vcw">
                         <div class="vci">
                             <h1>{% trans 'Estrategias comerciales' %}</h1>
-                            <a ng-href="#" class="btn btn-white-bordered">
+                            <a ng-href="servicios" class="btn btn-white-bordered">
                                 &nbsp;&nbsp;&nbsp;&nbsp;{% trans 'Ver +' %}&nbsp;&nbsp;&nbsp;&nbsp;
                             </a>
                         </div>
@@ -72,7 +67,7 @@
                     <div class="vcw">
                         <div class="vci">
                             <h1>{% trans 'Hogares con puro sentido' %}</h1>
-                            <a ng-href="#" class="btn btn-white-bordered">
+                            <a ng-href="hogar" class="btn btn-white-bordered">
                                 &nbsp;&nbsp;&nbsp;&nbsp;{% trans 'Ver +' %}&nbsp;&nbsp;&nbsp;&nbsp;
                             </a>
                         </div>
@@ -86,23 +81,23 @@
     <div class="container text-center ptgw-2x pbgw-2x">
         <h1 class="gb mtgw mbgw">{% trans '¿Qué opinan nuestros clientes?' %}</h1>
         <div class="row">
-            {% for x in 'abc' %}
-                <div class="col-sm-4 testimonial text-center">
-                    <p>
-                        <i class="fa fa-quote-left"></i>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate id odio sed dictum. Nam scelerisque tincidunt condimentum.
-                        <i class="fa fa-quote-right"></i>
-                    </p>
-                    <p>
-                        <i>
-                            <strong>
-                                Cristian Rojas, 22 años,<br>
-                                Desarrollador web
-                            </strong>
-                        </i>
-                    </p>
-                </div>
-            {% endfor %}
+            <div class="col-sm-4 testimonial text-center" ng-repeat="testimony in vm.testimonials">
+                {% verbatim %}
+                <p>
+                    <i class="fa fa-quote-left"></i>
+                    {{ testimony.text }}
+                    <i class="fa fa-quote-right"></i>
+                </p>
+                {% endverbatim %}
+                <p>
+                    <i>
+                        <strong>
+                            {% verbatim %}{{ testimony.client_name }}, {{ testimony.client_age }}{% endverbatim %} {% trans 'años' %},<br>
+                            {% verbatim %}{{ testimony.client_occupation }}{% endverbatim %}
+                        </strong>
+                    </i>
+                </p>
+            </div>
         </div>
     </div>
 </section>
@@ -165,7 +160,7 @@
             </div>
         </div>
         <div class="block text-center">
-            <a ng-href="#" class="btn btn-blue-bordered">
+            <a ng-href="servicios" class="btn btn-blue-bordered">
                 &nbsp;&nbsp;&nbsp;&nbsp;{% trans 'Ver +' %}&nbsp;&nbsp;&nbsp;&nbsp;
             </a>
         </div>

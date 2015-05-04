@@ -8,7 +8,9 @@ templates = [
     'sections/products.html',
     'sections/services.html',
     'sections/home.html',
-    'sections/blog.html']
+    'sections/blog.html',
+    # Directives
+    'directives/owl-carousel.html']
 
 partial_patterns = patterns('')
 
