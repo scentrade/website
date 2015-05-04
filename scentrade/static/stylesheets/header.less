@@ -6,6 +6,24 @@ header#scentrade-header {
     background-color: white;
     border: none;
     margin-bottom: 0;
+    .transition(background-color ease-in-out 200ms);
+
+    &.scrolling {
+      background-color: white !important;
+      box-shadow: 0 2px 7px rgba(0,0,0,0.15);
+
+      .navbar-nav {
+        > li {
+          > a {
+            color: @text-color !important;
+          }
+        }
+      }
+    }
+  }
+
+  div.container {
+    position: relative; // to position the cart
   }
 
   a.navbar-brand {
@@ -21,16 +39,23 @@ header#scentrade-header {
   }
 
   .navbar-nav {
+    margin-right: @header-height; // the width of the cart
+
     > li {
       > a {
         display: block;
         line-height: @header-height;
+        height: @header-height;
         padding-top: 0;
         padding-bottom: 0;
         text-transform: uppercase;
         // TODO add as app color
         color: #404041;
         font-size: @font-size-small;
+
+        &:hover, &:focus, &:active {
+          background-color: transparent;
+        }
       }
     }
   }

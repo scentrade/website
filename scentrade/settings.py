@@ -44,6 +44,8 @@ INSTALLED_APPS = (
     'api',
     'blog',
     'company',
+    'carton',
+    'store',
     'utils',
     'ng_app',
     'easy_thumbnails',
@@ -156,6 +158,11 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 DEFAULT_FROM_EMAIL = u'scentrade <info@scentrade.com.co>'
+
+
+# django carton
+
+CART_PRODUCT_MODEL = 'store.models.Product'
 
 
 from local_settings import *

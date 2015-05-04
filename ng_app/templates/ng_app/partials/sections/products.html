@@ -28,15 +28,21 @@
     <section id="products-listing">
         <div class="container">
             <div class="row">
-                {% for x in 'abcdefghijkl' %}
-                    <div class="col-sm-4 col-md-3 product mbgw">
-                        <h1 class="nm">Difusor <span class="purple">Maki</span></h1>
-                        <a ng-href="#" class="see-more gray mbgw-05x">{% trans 'Ver +' %}</a>
-                        <img ng-src="http://placehold.it/500x500" alt="Difusor maki" class="img-responsive"/>
-                        <h2 class="gray-light">$263.970 COP</h2>
-                        <a ng-href="#" class="btn btn-red-bordered btn-lg btn-block bebas">{% trans 'Añadir al carrito' %} <i class="fa fa-shopping-cart"></i></a>
-                    </div>
-                {% endfor %}
+                <div class="col-sm-4 col-md-3 product mbgw" ng-repeat="product in vm.products">
+                    {# TODO html_name #}
+                    {% verbatim %}
+                    <h1 class="nm h2" ng-bind-html="product.html_name"></h1>
+                    {% endverbatim %}
+                    <a ng-href="#" class="see-more gray mbgw-05x">{% trans 'Ver +' %}</a>
+                    {% verbatim %}
+                    <img ng-src="{{ product.main_picture }}" alt="{{ product.name }}" class="img-responsive"/>
+                    <h2 class="gray-light">${{ product.price|number }} COP</h2>
+                    <button class="btn btn-red-bordered btn-lg btn-block bebas" ng-click="vm.addProductToCart(product.id)">
+                    {% endverbatim %}
+                        {% trans 'Añadir al carrito' %}
+                        <i class="fa fa-shopping-cart"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
