@@ -6,7 +6,8 @@ templates = [
     'homepage.html',
     'sections/about-us.html',
     'sections/products.html',
-    'sections/services.html']
+    'sections/services.html',
+    'sections/home.html',]
 
 partial_patterns = patterns('')
 

@@ -1,0 +1,131 @@
+{% extends 'ng_app/partials/sections/base_sections.html' %}
+
+{% load i18n staticfiles %}
+
+{% block header_title %}{% trans 'Hogares con puro sentido' %}{% endblock %}
+
+{% block content %}
+    <section id="home-details">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 text-center">
+                    <div class="box-square">
+                        <div class="wrapper-full-absolute">
+                            <div class="vcw">
+                                <div class="vci">
+                                    <h1 class="mb green-dark">{% trans 'Aromatízate' %}</h1>
+                                    <p class="gray-light fz-md plgw-2x prgw-2x">
+                                        {% blocktrans %}
+                                            Convierte tu espacio en un lugar que te recibe con una
+                                            infinidad de sensaciones, atrévete a vivir cosas diferentes.
+                                            Escoge la fragancia que se identifique con tu personalidad,
+                                            deja a un lado los aromas genéricos y comienza a crear una
+                                            experiencia olfativa hecha a tu medida.
+                                        {% endblocktrans %}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 bg-green text-center white">
+                    <div class="box-square">
+                        <div class="wrapper-full-absolute">
+                            <div class="vcw">
+                                <div class="vci">
+                                    <h1 class="gb plgw-2x prgw-2x">
+                                        {% blocktrans %}
+                                            La diferencia está en los detalles
+                                        {% endblocktrans %}
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container ptgw-2x pbgw-2x">
+            <h1 class="gb text-center">
+                {% blocktrans %}
+                    <span class="green-dark">El placer de convertir tus espacios</span><br>
+                    <span class="green">en universos olfativos</span>
+                {% endblocktrans %}
+            </h1>
+            <div class="row">
+                <div class="col-sm-6 text-center">
+                    <div class="box-square">
+                        <div class="wrapper-full-absolute">
+                            <div class="vcw">
+                                <div class="vci">
+                                    <img ng-src="{% static 'img/temp/flor-scentrade.jpg' %}" alt="Flor scentrade" class="img-responsive centered"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <div class="box-square">
+                        <div class="wrapper-full-absolute">
+                            <div class="vcw">
+                                <div class="vci">
+                                    <h1 class="mb green mbgw">{% trans 'Flor' %}</h1>
+                                    <p class="fz-md mbgw plgw-2x prgw-2x">
+                                        {% blocktrans %}
+                                            Nuestros productos están pensados para despertar tus sentidos, deléitate
+                                            con sus aromas y decora tu casa con exclusivos
+                                        {% endblocktrans %}
+                                    </p>
+                                    <a ng-href="#" class="btn btn-green-bordered btn-lg">
+                                        {% trans 'Conócelos' %}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-green ptgw-2x pbgw-2x">
+        <div class="container text-center ptgw-2x pbgw">
+            <div class="row">
+                <div class="col-sm-4 mbgw">
+                    <h2>{% trans 'Logo olfativo' %}</h2>
+                    <p class="plgw prgw">
+                        {% blocktrans %}
+                            Desarrollamos un aroma especialmente pensado para representar
+                            tu marca, así creamos una experiencia comercial única que genera
+                            mayor atención hacia los productos, alta recordación,
+                            incrementando tus ventas hasta en un 20%.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+                <div class="col-sm-4 mbgw">
+                    <h2>{% trans 'Exclusividad' %}</h2>
+                    <p class="plgw prgw">
+                        {% blocktrans %}
+                            Descrubre nuestro portafolio de fragancias y disfruta de sensaciones
+                            aromáticas que jamás imaginaste. Te garantizamos que de parte
+                            de nosotros la fragancia será comercializada y distribuida
+                            exclusivamente para quien obtenga este derecho.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+                <div class="col-sm-4 mbgw">
+                    <h2>{% trans 'Fragancias memorables' %}</h2>
+                    <p class="plgw prgw">
+                        {% blocktrans %}
+                            Somos creadores de aromas, hacemos perfumes constantemente,
+                            jugamos con los olores para llevar al sentido del olfato a un
+                            éxtasis de sensaciones, mezclamos fragancias para transmitir emociones,
+                            con cada esencia hacemos una obra de arte.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

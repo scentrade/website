@@ -731,6 +731,9 @@ h1.gb,
     font-size: 41px;
   }
 }
+.fz-md {
+  font-size: 19.2px;
+}
 strong {
   font-weight: 700;
 }
@@ -751,6 +754,9 @@ strong {
 }
 .green {
   color: #b9d050;
+}
+.green-dark {
+  color: #719253;
 }
 .red {
   color: #df1d3a;
@@ -790,6 +796,9 @@ strong {
 }
 .bg-green {
   background-color: #b9d050;
+}
+.bg-green-dark {
+  background-color: #719253;
 }
 .bg-red {
   background-color: #df1d3a;
@@ -888,6 +897,9 @@ body.products header#section-hero {
 }
 body.services header#section-hero {
   background-image: url('../img/temp/image-servicios.jpg');
+}
+body.home header#section-hero {
+  background-image: url('../img/temp/image-hogar.jpg');
 }
 .box-square {
   display: block;
@@ -1101,6 +1113,51 @@ fieldset[disabled] .btn-red-bordered.active {
 .btn-red-bordered .badge {
   color: transparent;
   background-color: #df1d3a;
+}
+.btn-green-bordered {
+  color: #b9d050;
+  background-color: transparent;
+  border-color: #719253;
+}
+.btn-green-bordered:hover,
+.btn-green-bordered:focus,
+.btn-green-bordered.focus,
+.btn-green-bordered:active,
+.btn-green-bordered.active,
+.open > .dropdown-toggle.btn-green-bordered {
+  color: #b9d050;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #536b3d;
+}
+.btn-green-bordered:active,
+.btn-green-bordered.active,
+.open > .dropdown-toggle.btn-green-bordered {
+  background-image: none;
+}
+.btn-green-bordered.disabled,
+.btn-green-bordered[disabled],
+fieldset[disabled] .btn-green-bordered,
+.btn-green-bordered.disabled:hover,
+.btn-green-bordered[disabled]:hover,
+fieldset[disabled] .btn-green-bordered:hover,
+.btn-green-bordered.disabled:focus,
+.btn-green-bordered[disabled]:focus,
+fieldset[disabled] .btn-green-bordered:focus,
+.btn-green-bordered.disabled.focus,
+.btn-green-bordered[disabled].focus,
+fieldset[disabled] .btn-green-bordered.focus,
+.btn-green-bordered.disabled:active,
+.btn-green-bordered[disabled]:active,
+fieldset[disabled] .btn-green-bordered:active,
+.btn-green-bordered.disabled.active,
+.btn-green-bordered[disabled].active,
+fieldset[disabled] .btn-green-bordered.active {
+  background-color: transparent;
+  border-color: #719253;
+}
+.btn-green-bordered .badge {
+  color: transparent;
+  background-color: #b9d050;
 }
 header#scentrade-header nav.navbar {
   min-height: 76px;

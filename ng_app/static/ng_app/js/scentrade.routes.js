@@ -35,6 +35,11 @@
         controller: 'ServicesController',
         controllerAs: 'vm'
       })
+      .when('/hogar', {
+        templateUrl: currentLanguage + '/partials/sections/home.html',
+        controller: 'HomeController',
+        controllerAs: 'vm'
+      })
       .otherwise({
         redirectTo: '/'
       });
