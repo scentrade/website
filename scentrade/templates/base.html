@@ -13,6 +13,9 @@
     {% verbatim %}
     <meta name="description" content="{{ $root.metaDescription }}" ng-if="$root.metaDescription">
     {% endverbatim %}
+    {# GRUNT_DJANGO_COMPRESSOR CSS #}
+    {% if DEBUG %}
+    <!--STYLES-->
     <link href="{% static 'bower_components/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'bower_components/boost-bootstrap/dist/boost-bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'bower_components/fontawesome/css/font-awesome.css' %}" rel="stylesheet">
@@ -20,6 +23,11 @@
     <link href="{% static 'fonts/bebas/stylesheet.css' %}" rel="stylesheet">
     <link href="{% static 'bower_components/owl-carousel/owl-carousel/owl.carousel.css' %}" rel="stylesheet">
     <link href="{% static 'stylesheets/scentrade.css' %}" rel="stylesheet">
+    <!--STYLES END-->
+    {% else %}
+    <link rel="stylesheet" type="text/css" href="{% static 'dist/scentrade.base.1430768951730.css' %}?version=16da51991a297553df1f0adae498338d">
+    {% endif %}
+    {# GRUNT_DJANGO_COMPRESSOR CSS END #}
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -100,6 +108,9 @@
     </div>
 </footer>
 
+{# GRUNT_DJANGO_COMPRESSOR JS #}
+{% if DEBUG %}
+<!--SCRIPTS-->
 {# Needed because of this implementation: http://stackoverflow.com/a/19498009/923323 #}
 <script src="{% static 'bower_components/es5-shim/es5-shim.js' %}"></script>
 <script src="{% static 'bower_components/jquery/dist/jquery.js' %}"></script>
@@ -122,6 +133,11 @@
 <script src="{% static 'ng_app/js/controllers/services.controller.js' %}"></script>
 <script src="{% static 'ng_app/js/controllers/home.controller.js' %}"></script>
 <script src="{% static 'ng_app/js/controllers/blog.controller.js' %}"></script>
+<!--SCRIPTS END-->
+{% else %}
+<script type="text/javascript" src="{% static 'dist/scentrade.base.1430768946129.js' %}?version=1dbbbbcc32f4509e2325ec7db67f1134"></script>
+{% endif %}
+{# GRUNT_DJANGO_COMPRESSOR JS END #}
 
 </body>
 </html>
