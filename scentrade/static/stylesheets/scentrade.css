@@ -1521,10 +1521,18 @@ section#homepage-hero div#homepage-hero-text h1 {
 }
 @media (max-width: 767px) {
   section#homepage-hero {
-    padding-bottom: 100%;
+    padding-bottom: 140%;
   }
   section#homepage-hero div#homepage-hero-text {
     bottom: 50px;
+  }
+  section#homepage-hero div#homepage-hero-text nav a {
+    display: inline-block;
+    float: none;
+    margin-right: 0 !important;
+  }
+  section#homepage-hero div#homepage-hero-text nav a:first-child {
+    margin-bottom: 10px;
   }
 }
 section#homepage-top-clients-logos div.owl-item {
@@ -1656,6 +1664,16 @@ section#what-we-do div.row div.center div.box-square div.wrapper-full-absolute {
   section#what-we-do div.row div.left,
   section#what-we-do div.row div.right {
     padding: 60px 15px;
+  }
+  section#what-we-do div.row div.center div.box-square {
+    font-size: 15px;
+  }
+  section#what-we-do div.row div.center div.box-square img#scentrade-blue-logo {
+    margin-top: -70px;
+    width: 55px;
+  }
+  section#what-we-do div.row div.center div.box-square h1 {
+    margin-top: 10px;
   }
   section#what-we-do div.row div.center div.box-square:after {
     content: "";

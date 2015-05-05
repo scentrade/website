@@ -12,18 +12,25 @@
 
     var vm = this;
     vm.addProductToCart = addProductToCart;
+    vm.fetchProducts = fetchProducts;
+    // fetch products first time
+    vm.fetchProducts();
+    vm.selectedTab = 'all';
 
     // -----------------------------------------------------------------------------
 
-    $http.get(API.makeURL('store/products'))
-      .success(function(response, status){
-        vm.products = response.results;
-      });
+    function fetchProducts(params){
+      var url = API.makeURL('store/products');
+      if( params ) url += params;
+      $http.get(url)
+        .success(function(response, status){
+          vm.products = response.results;
+        });
+    }
 
     function addProductToCart(id){
       $http.post(API.makeURL('cart/add'), {'product_id': id})
         .success(function(response, status){
-          console.log(response);
           $rootScope.$broadcast('cart.update', true);
         });
     }

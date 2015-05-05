@@ -11,3 +11,4 @@ class CategoryViewSet(viewsets.ModelViewSet):
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.select_related().all()
     serializer_class = ProductSerializer
+    filter_fields = ('target', 'category',)
