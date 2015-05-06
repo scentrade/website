@@ -1,0 +1,1 @@
+git pull origin master; python manage.py collectstatic --noinput; python manage.py migrate; sudo supervisorctl restart all;
