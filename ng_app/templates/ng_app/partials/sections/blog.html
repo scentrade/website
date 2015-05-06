@@ -5,25 +5,46 @@
 {% block header_title %}{% trans 'Blog' %}{% endblock %}
 
 {% block content %}
+    <section id="blog-filters">
+        <div class="container ptgw pbgw">
+            <div class="row">
+                <div class="col-sm-3">
+                    <form>
+                        <select class="form-control">
+                            <option>Selecciona categoría</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="col-sm-6 col-sm-offset-3">
+                    <div class="block clearfix">
+                        <form class="pull-right">
+                            <input type="text" class="form-control" placeholder="Buscar">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="blog-posts-listing">
         <div class="container">
             <div class="row">
-                {% for x in 'abcdefgh' %}
-                    <div class="col-sm-6" style="background-image: url('http://placehold.it/585x618');">
-                        <div class="blog-box">
-                            <a ng-href="#">
-                                <div class="wrapper-full-absolute">
-                                    <div class="vcw">
-                                        <div class="vci">
-                                            <h1 class="mb">El futuro del branding</h1>
-                                            <h2 class="date">May 5, 2015</h2>
-                                        </div>
+                {% verbatim %}
+                <div class="col-sm-6" ng-repeat="post in vm.posts"
+                     ng-style="{'background-image': 'url({{ post.box_bg }})'}">
+                    <div class="blog-box">
+                        <a ng-href="#">
+                            <div class="wrapper-full-absolute">
+                                <div class="vcw">
+                                    <div class="vci">
+                                        <h1 class="mb">{{ post.title }}</h1>
+                                        <h2 class="date">{{ post.created|date }}</h2>
                                     </div>
                                 </div>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </div>
-                {% endfor %}
+                </div>
+                {% endverbatim %}
             </div>
         </div>
     </section>

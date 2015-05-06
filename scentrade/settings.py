@@ -55,6 +55,7 @@ INSTALLED_APPS = (
     'rest_framework',
     'djrill',
     'rosetta',
+    'ckeditor',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -163,6 +164,21 @@ DEFAULT_FROM_EMAIL = u'scentrade <info@scentrade.com.co>'
 # django carton
 
 CART_PRODUCT_MODEL = 'store.models.Product'
+
+
+# CK editor settings
+
+CKEDITOR_UPLOAD_PATH = 'uploads/ckeditor'
+
+CKEDITOR_IMAGE_BACKEND = 'Pillow'
+
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Advanced',
+    },
+}
 
 
 from local_settings import *
