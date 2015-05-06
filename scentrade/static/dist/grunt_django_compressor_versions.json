@@ -1,6 +1,6 @@
 {
     "created": null,
-    "modified": 1430935056253,
+    "modified": 1430936616977,
     "./scentrade/templates/base.html": {
         "js": {
             "scentrade/static/bower_components/es5-shim/es5-shim.js": "d8a4aac0a0591d07f07a2173e0dd1da5",
@@ -23,7 +23,7 @@
             "ng_app/static/ng_app/js/controllers/products.controller.js": "0c4e18caab6c4b8b31aa33b22bc94b39",
             "ng_app/static/ng_app/js/controllers/services.controller.js": "4f43807bb99717dcf41082d5619ba9b6",
             "ng_app/static/ng_app/js/controllers/home.controller.js": "4110c36cf71bd2b1940672dfd38afce0",
-            "ng_app/static/ng_app/js/controllers/blog.controller.js": "95b0f7eb4d88eaef8fa1b9212a9c1179",
+            "ng_app/static/ng_app/js/controllers/blog.controller.js": "fe4d9f012b8cfa4bdaf73979384c3f86",
             "version": "384a5084a20d076b2abdb71a8cd1da1a"
         },
         "css": {

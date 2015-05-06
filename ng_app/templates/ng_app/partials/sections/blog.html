@@ -10,8 +10,14 @@
             <div class="row">
                 <div class="col-sm-3">
                     <form>
-                        <select class="form-control">
-                            <option>Selecciona categoría</option>
+                        <label for="filter-by-category" class="sr-only">{% trans 'Selecciona categoría' %}</label>
+                        <select id="filter-by-category" class="form-control" ng-model="vm.filterBy" ng-change="vm.filterPosts()">
+                            <option value="">{% trans 'Selecciona categoría' %}</option>
+                            {% verbatim %}
+                            <option value="{{ category.slug }}" ng-repeat="category in vm.categories">
+                                {{ category.name }}
+                            </option>
+                            {% endverbatim %}
                         </select>
                     </form>
                 </div>

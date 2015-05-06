@@ -32,6 +32,11 @@ class Category(TranslatableModel):
 
 
 class Post(TranslatableModel):
+    category = models.ForeignKey(
+        Category,
+        related_name='posts',
+        verbose_name=_(u'Categoría')
+    )
     box_bg = ThumbnailerImageField(
         upload_to='blog/posts',
         verbose_name=_(u'Imagen de fondo de la caja'),

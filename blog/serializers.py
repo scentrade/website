@@ -10,6 +10,7 @@ class CategorySerializer(TranslatableModelSerializer):
 
 class PostSerializer(TranslatableModelSerializer):
     box_bg = ReadOnlyField(source='get_box_bg_cropped')
+    category = CategorySerializer()
 
     class Meta:
         model = Post
