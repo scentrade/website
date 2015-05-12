@@ -1,0 +1,70 @@
+{% extends 'ng_app/partials/sections/base_sections.html' %}
+
+{% load i18n staticfiles %}
+
+{% block header_title %}{% trans 'Nosotros' %}{% endblock %}
+
+{% comment %}{% block header_image %}
+    <img src="{% static 'img/about-us/hero-image.svg' %}" class="img-responsive"/>
+{% endblock %}{% endcomment %}
+
+{% block content %}
+    <section id="contact-form">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 ptgw-3x pbgw-3x">
+                    <div class="wrapper prgw-2x plgw-2x">
+                        <h1 class="nmt red text-center">
+                            {% trans 'Encuéntranos en:' %}
+                        </h1>
+                        <div class="block text-center">
+                            <p class="nmb">Bogotá</p>
+                            <p class="gray-light">
+                                Carrera 11 # 96 - 43 Oficina 501<br>
+                                Tel: (571) 8050100<br>
+                                Cel: (57) 321 4973074
+                            </p>
+                            <p class="nmb">Medellín</p>
+                            <p class="gray-light">
+                                Cra 43 A No 19A-87 Of 235<br>
+                                Tel: (57)(4) 2327656<br>
+                                Cel: (57) 310 3466805
+                            </p>
+                            <p class="nmb">México D.F.</p>
+                            <p class="gray-light">
+                                Av Xola 304, torre D2-301. Colonia Del Valle Norte, Delegación Benito Juaréz. México DF. CP 03103<br>
+                                Tel:  (+52) (1) 55 6588 0919<br>
+                                (+52) (1) 55 6588  7083.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 ptgw-3x pbgw-3x bg-red">
+                    <div class="wrapper prgw-2x plgw-2x">
+                        <h1 class="nmt white text-center">
+                            {% blocktrans %}
+                                Empieza tu estrategia de marketing olfativo ahora;
+                                haz de tu hogar un espacio único.
+                            {% endblocktrans %}
+                        </h1>
+                        <h2 class="nmt orange text-center">
+                            {% trans 'Escríbenos, estaremos felices de servirte.' %}
+                        </h2>
+                        <p ng-show="vm.success" class="white">{% verbatim %}{{ vm.successMessage }}{% endverbatim %}</p>
+                        <form id="contact-form"
+                              name="{{ contact_form.form_name }}"
+                              class="buho-form"
+                              ng-submit="vm.submitContactForm()"
+                              ng-hide="vm.success"
+                              novalidate>
+                            {{ contact_form.as_div }}
+                            <button type="submit" class="btn btn-orange pull-right" data-loading-html="<i class='fa fa-spinner fa-spin'></i> {% trans 'Enviando...' %}">
+                                {% trans 'Enviar' %} <i class="fa fa-angle-right"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

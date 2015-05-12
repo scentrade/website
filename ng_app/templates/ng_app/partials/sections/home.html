@@ -78,7 +78,7 @@
                                             con sus aromas y decora tu casa con exclusivos
                                         {% endblocktrans %}
                                     </p>
-                                    <a ng-href="#" class="btn btn-green-bordered btn-lg">
+                                    <a ng-href="productos" class="btn btn-green-bordered btn-lg">
                                         {% trans 'Conócelos' %}
                                     </a>
                                 </div>
@@ -93,35 +93,36 @@
         <div class="container text-center ptgw-2x pbgw">
             <div class="row">
                 <div class="col-sm-4 mbgw">
-                    <h2>{% trans 'Logo olfativo' %}</h2>
+                    <img ng-src="{% static 'img/home/icon-flag.svg' %}" alt="{% trans 'Diferenciación' %}" width="70" height="70"/>
+                    <h2>{% trans 'Diferenciación' %}</h2>
                     <p class="plgw prgw">
                         {% blocktrans %}
-                            Desarrollamos un aroma especialmente pensado para representar
-                            tu marca, así creamos una experiencia comercial única que genera
-                            mayor atención hacia los productos, alta recordación,
-                            incrementando tus ventas hasta en un 20%.
+                            Somos la única compañía en el mercado que desarrolla el aroma
+                            que tu quieres. Dinos cuál es la fragancia o perfume que más
+                            te gusta y nosotros la ponemos en tu casa.
                         {% endblocktrans %}
                     </p>
                 </div>
                 <div class="col-sm-4 mbgw">
-                    <h2>{% trans 'Exclusividad' %}</h2>
-                    <p class="plgw prgw">
-                        {% blocktrans %}
-                            Descrubre nuestro portafolio de fragancias y disfruta de sensaciones
-                            aromáticas que jamás imaginaste. Te garantizamos que de parte
-                            de nosotros la fragancia será comercializada y distribuida
-                            exclusivamente para quien obtenga este derecho.
-                        {% endblocktrans %}
-                    </p>
-                </div>
-                <div class="col-sm-4 mbgw">
+                    <img ng-src="{% static 'img/home/icon-scentrade-jar.svg' %}" alt="{% trans 'Fragancias memorables' %}" width="70" height="70"/>
                     <h2>{% trans 'Fragancias memorables' %}</h2>
                     <p class="plgw prgw">
                         {% blocktrans %}
-                            Somos creadores de aromas, hacemos perfumes constantemente,
-                            jugamos con los olores para llevar al sentido del olfato a un
-                            éxtasis de sensaciones, mezclamos fragancias para transmitir emociones,
-                            con cada esencia hacemos una obra de arte.
+                            La naturaleza nos brinda un sin número de esencias y nosotros
+                            las combinamos para crear más de 2000 fragancias capaces de
+                            transmitir distintas sensaciones. Cada mezcla tiene una personalidad
+                            y tú puedes escoger la que mejor se adapte a ti.
+                        {% endblocktrans %}
+                    </p>
+                </div>
+                <div class="col-sm-4 mbgw">
+                    <img ng-src="{% static 'img/home/icon-heart.svg' %}" alt="{% trans 'Salud' %}" width="70" height="70"/>
+                    <h2>{% trans 'Salud' %}</h2>
+                    <p class="plgw prgw">
+                        {% blocktrans %}
+                            Somos conscientes de la importancia de tu salud, por eso invertimos en
+                            investigación para elaborar fragancias que a través de la aromaterapia
+                            te hacen sentir mejor.
                         {% endblocktrans %}
                     </p>
                 </div>

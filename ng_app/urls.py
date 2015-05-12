@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-from ng_app.views import (PartialGroupView)
+from ng_app.views import (PartialGroupView, ContactView)
 
 
 templates = [
@@ -23,4 +23,6 @@ for template in templates:
 
 urlpatterns = patterns('',
     url(r'^partials/', include(partial_patterns, namespace='partials')),
+    url(r'^partials/sections/contact.html',
+        ContactView.as_view(), name='contact'),
 )

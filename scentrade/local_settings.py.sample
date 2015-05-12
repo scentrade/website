@@ -1,0 +1,8 @@
+# scentrade email defaults
+
+CONTACT_FORM_SEND_TO = 'Cristian <cristian@cristianrojas.com>'
+
+
+# Djrill configuration
+
+MANDRILL_API_KEY = "<your Mandrill key>"

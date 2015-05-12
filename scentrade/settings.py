@@ -56,6 +56,7 @@ INSTALLED_APPS = (
     'djrill',
     'rosetta',
     'ckeditor',
+    'djangular',
 )
 
 MIDDLEWARE_CLASSES = (

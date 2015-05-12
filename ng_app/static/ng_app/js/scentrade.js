@@ -11,6 +11,7 @@
 //      'uiGmapgoogle-maps',
 //      'ng.django.forms',
 //      'ngFileUpload',
+      'ng.django.forms',
 
       // scentrade modules
       'scentrade.config',

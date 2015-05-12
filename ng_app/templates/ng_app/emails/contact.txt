@@ -1,0 +1,5 @@
+{% load i18n %}
+
+{% trans 'Nombre' %}: {{ name }}
+{% trans 'Correo electrónico' %}: {{ email }}
+{% trans 'Comentarios' %}: {{ comment }}

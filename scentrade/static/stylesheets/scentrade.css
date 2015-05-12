@@ -779,6 +779,9 @@ strong {
 .cyan-desaturated {
   color: #82cbac;
 }
+.orange {
+  color: #ff9933;
+}
 .white {
   color: white;
 }
@@ -910,6 +913,9 @@ body.home header#section-hero {
 body.blog header#section-hero {
   background-image: url('../img/temp/image-blog.jpg');
 }
+body.contact header#section-hero {
+  background-image: url('../img/temp/image-contact.jpg');
+}
 .box-square {
   display: block;
   width: 100%;
@@ -931,6 +937,15 @@ img#scentrade-diamond-logo {
     left: 50%;
     top: 0;
   }
+}
+ul.djng-field-errors {
+  list-style: none;
+  padding-left: 0;
+}
+ul.djng-field-errors li.invalid {
+  display: block;
+  color: white;
+  font-weight: 500;
 }
 .btn {
   border-radius: 0;
@@ -1122,6 +1137,51 @@ fieldset[disabled] .btn-red-bordered.active {
 .btn-red-bordered .badge {
   color: transparent;
   background-color: #df1d3a;
+}
+.btn-orange {
+  color: #ffffff;
+  background-color: #ff9933;
+  border-color: #ff9933;
+}
+.btn-orange:hover,
+.btn-orange:focus,
+.btn-orange.focus,
+.btn-orange:active,
+.btn-orange.active,
+.open > .dropdown-toggle.btn-orange {
+  color: #ffffff;
+  background-color: #ff8000;
+  border-color: #f57a00;
+}
+.btn-orange:active,
+.btn-orange.active,
+.open > .dropdown-toggle.btn-orange {
+  background-image: none;
+}
+.btn-orange.disabled,
+.btn-orange[disabled],
+fieldset[disabled] .btn-orange,
+.btn-orange.disabled:hover,
+.btn-orange[disabled]:hover,
+fieldset[disabled] .btn-orange:hover,
+.btn-orange.disabled:focus,
+.btn-orange[disabled]:focus,
+fieldset[disabled] .btn-orange:focus,
+.btn-orange.disabled.focus,
+.btn-orange[disabled].focus,
+fieldset[disabled] .btn-orange.focus,
+.btn-orange.disabled:active,
+.btn-orange[disabled]:active,
+fieldset[disabled] .btn-orange:active,
+.btn-orange.disabled.active,
+.btn-orange[disabled].active,
+fieldset[disabled] .btn-orange.active {
+  background-color: #ff9933;
+  border-color: #ff9933;
+}
+.btn-orange .badge {
+  color: #ff9933;
+  background-color: #ffffff;
 }
 .btn-green-bordered {
   color: #b9d050;
@@ -1704,6 +1764,9 @@ section#free-trial {
   background: url('../img/temp/background-free-trial.jpg') no-repeat center right transparent;
   background-size: cover;
 }
+section#free-trial.no-bg {
+  background: none;
+}
 section#our-products {
   background-color: #df1d3a;
   position: relative;
@@ -1817,4 +1880,22 @@ section#blog-posts-listing div.row div[class*="col"] div.blog-box h1 {
 }
 section#blog-posts-listing div.row div[class*="col"] div.blog-box h2 {
   color: rgba(255, 255, 255, 0.8);
+}
+form#contact-form label {
+  display: none;
+}
+form#contact-form .form-control {
+  color: #ff9933;
+  font-family: 'bebas', sans-serif;
+  font-size: 20px;
+}
+form#contact-form .form-control::-moz-placeholder {
+  color: #ffb366;
+  opacity: 1;
+}
+form#contact-form .form-control:-ms-input-placeholder {
+  color: #ffb366;
+}
+form#contact-form .form-control::-webkit-input-placeholder {
+  color: #ffb366;
 }

@@ -45,6 +45,11 @@
         controller: 'BlogController',
         controllerAs: 'vm'
       })
+      .when('/contacto', {
+        templateUrl: currentLanguage + '/partials/sections/contact.html',
+        controller: 'ContactController',
+        controllerAs: 'vm'
+      })
       .otherwise({
         redirectTo: '/'
       });
