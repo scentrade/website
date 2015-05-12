@@ -671,6 +671,9 @@ body {
   line-height: 1.42857143;
   color: #333333;
 }
+.asap {
+  font-family: 'Asap', 'Helvetica Neue', Arial, sans-serif;
+}
 h1,
 h2,
 h3,
@@ -772,6 +775,9 @@ strong {
 }
 .blue-dark {
   color: #034e78;
+}
+.cyan-desaturated {
+  color: #82cbac;
 }
 .white {
   color: white;
@@ -1693,6 +1699,10 @@ section#what-we-do div.row div.center div.box-square div.wrapper-full-absolute {
 }
 section#homepage-testimonials div.row div[class*="col"] {
   padding: 30px;
+}
+section#free-trial {
+  background: url('../img/temp/background-free-trial.jpg') no-repeat center right transparent;
+  background-size: cover;
 }
 section#our-products {
   background-color: #df1d3a;
