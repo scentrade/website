@@ -2,24 +2,16 @@
 
 {% load i18n staticfiles %}
 
-{% block header_title %}{% trans 'Blog' %}{% endblock %}
-
-{% block section_hero %}
+{% block header_image %}
     {% verbatim %}
-    <header id="section-hero" ng-style="{'background-image':'url({{ vm.post.featured_picture }})'}">
+    <img ng-src="{{ vm.post.featured_picture }}" alt="{{ vm.post.title }}"/>
     {% endverbatim %}
-        <div class="wrapper-full-absolute">
-            <div class="container">
-                <div class="vcw">
-                    <div class="vci">
-{#                        {% block header_image %}{% endblock %}#}
-{#                        <h1>{% block header_title %}{% endblock %}</h1>#}
-{#                        <h2>{% block header_subtitle %}{% endblock %}</h2>#}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+{% endblock %}
+
+{% block header_title %}
+    {% verbatim %}
+    {{ vm.post.title }}
+    {% endverbatim %}
 {% endblock %}
 
 {% block content %}

@@ -863,7 +863,6 @@ header#section-hero div.container {
 header#section-hero h1,
 header#section-hero h2 {
   text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
-  display: none;
 }
 header#section-hero h1 {
   font-size: 164px;
@@ -912,6 +911,33 @@ body.home header#section-hero {
 }
 body.blog header#section-hero {
   background-image: url('../img/temp/image-blog.jpg');
+}
+body.blog-single header#section-hero {
+  overflow: hidden;
+}
+body.blog-single header#section-hero img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -2;
+  height: 100%;
+  width: auto;
+}
+body.blog-single header#section-hero div.wrapper-full-absolute {
+  z-index: -1;
+}
+body.blog-single header#section-hero h1 {
+  font-size: 61.5px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  body.blog-single header#section-hero h1 {
+    font-size: 53.3px;
+  }
+}
+@media (max-width: 767px) {
+  body.blog-single header#section-hero h1 {
+    font-size: 41px;
+  }
 }
 body.contact header#section-hero {
   background-image: url('../img/temp/image-contact.jpg');
