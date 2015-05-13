@@ -947,6 +947,12 @@ ul.djng-field-errors li.invalid {
   color: white;
   font-weight: 500;
 }
+body {
+  padding-top: 76px;
+}
+body.homepage {
+  padding-top: 0;
+}
 .btn {
   border-radius: 0;
   font-weight: 700;

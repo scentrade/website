@@ -1,16 +1,18 @@
 {% load i18n staticfiles %}
 
-<header id="section-hero">
-    <div class="wrapper-full-absolute">
-        <div class="container">
-            <div class="vcw">
-                <div class="vci">
-                    {% block header_image %}{% endblock %}
-                    <h1>{% block header_title %}{% endblock %}</h1>
-                    <h2>{% block header_subtitle %}{% endblock %}</h2>
+{% block section_hero %}
+    <header id="section-hero"{% block section_hero_extra_attrs %}{% endblock %}>
+        <div class="wrapper-full-absolute">
+            <div class="container">
+                <div class="vcw">
+                    <div class="vci">
+                        {% block header_image %}{% endblock %}
+                        <h1>{% block header_title %}{% endblock %}</h1>
+                        <h2>{% block header_subtitle %}{% endblock %}</h2>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
+{% endblock %}
 {% block content %}{% endblock %}

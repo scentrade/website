@@ -38,7 +38,7 @@
                 <div class="col-sm-6" ng-repeat="post in vm.posts"
                      ng-style="{'background-image': 'url({{ post.box_bg }})'}">
                     <div class="blog-box">
-                        <a ng-href="#">
+                        <a ng-href="blog/{{ post.category.slug }}/{{ post.slug }}">
                             <div class="wrapper-full-absolute">
                                 <div class="vcw">
                                     <div class="vci">

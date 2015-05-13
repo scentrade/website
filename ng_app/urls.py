@@ -9,6 +9,7 @@ templates = [
     'sections/services.html',
     'sections/home.html',
     'sections/blog.html',
+    'sections/blog-single.html',
     # Directives
     'directives/owl-carousel.html']
 

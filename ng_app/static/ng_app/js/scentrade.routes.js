@@ -45,6 +45,11 @@
         controller: 'BlogController',
         controllerAs: 'vm'
       })
+      .when('/blog/:categorySlug/:postSlug', {
+        templateUrl: currentLanguage + '/partials/sections/blog-single.html',
+        controller: 'BlogSingleController',
+        controllerAs: 'vm'
+      })
       .when('/contacto', {
         templateUrl: currentLanguage + '/partials/sections/contact.html',
         controller: 'ContactController',

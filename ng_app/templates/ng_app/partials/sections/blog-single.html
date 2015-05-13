@@ -1,0 +1,40 @@
+{% extends 'ng_app/partials/sections/base_sections.html' %}
+
+{% load i18n staticfiles %}
+
+{% block header_title %}{% trans 'Blog' %}{% endblock %}
+
+{% block section_hero %}
+    {% verbatim %}
+    <header id="section-hero" ng-style="{'background-image':'url({{ vm.post.featured_picture }})'}">
+    {% endverbatim %}
+        <div class="wrapper-full-absolute">
+            <div class="container">
+                <div class="vcw">
+                    <div class="vci">
+{#                        {% block header_image %}{% endblock %}#}
+{#                        <h1>{% block header_title %}{% endblock %}</h1>#}
+{#                        <h2>{% block header_subtitle %}{% endblock %}</h2>#}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock %}
+
+{% block content %}
+    <section id="blog-single">
+        <div class="container ptgw-2x pbgw-2x">
+            <div class="row">
+                <div class="col-sm-2">
+
+                </div>
+                {% verbatim %}
+                <div class="col-sm-8">
+                    <div ng-bind-html="vm.post.content"></div>
+                </div>
+                {% endverbatim %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

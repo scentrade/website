@@ -42,6 +42,11 @@ class Post(TranslatableModel):
         verbose_name=_(u'Imagen de fondo de la caja'),
         help_text=_(u'585 x 618px. Será recortada si no.')
     )
+    featured_picture = ThumbnailerImageField(
+        upload_to='blog/posts',
+        verbose_name=_(u'Imagen destacada del post'),
+        help_text=_(u'1280 x 512px. Será recortada si no.')
+    )
 
     created = CreationDateTimeField()
     modified = ModificationDateTimeField()
@@ -79,3 +84,11 @@ class Post(TranslatableModel):
         return make_absolute_url(
             get_thumbnailer(self.box_bg).get_thumbnail({
                 'size': (585, 618), 'crop': True}).url)
+
+    def get_featured_picture_cropped(self):
+        """
+        Returns the box bg with proper size
+        """
+        return make_absolute_url(
+            get_thumbnailer(self.featured_picture).get_thumbnail({
+                'size': (1280, 512), 'crop': True}).url)
