@@ -1,6 +1,6 @@
 {
     "created": null,
-    "modified": 1431526846798,
+    "modified": 1431528793066,
     "./scentrade/templates/base.html": {
         "js": {
             "scentrade/static/bower_components/es5-shim/es5-shim.js": "d8a4aac0a0591d07f07a2173e0dd1da5",
@@ -24,11 +24,12 @@
             "ng_app/static/ng_app/js/controllers/services.controller.js": "4f43807bb99717dcf41082d5619ba9b6",
             "ng_app/static/ng_app/js/controllers/home.controller.js": "4110c36cf71bd2b1940672dfd38afce0",
             "ng_app/static/ng_app/js/controllers/blog.controller.js": "fe4d9f012b8cfa4bdaf73979384c3f86",
-            "version": "a36a888808cb936e47d748a83136df65",
+            "version": "65b73ce7f7d1849278c7db225b88482f",
             "scentrade/static/js/temp/django-angular.js": "62177d8a834180a028ea214d3b5ccbfb",
             "ng_app/static/ng_app/js/services/forms.utils.service.js": "a96e3f70bc33d873d03bd88174761682",
             "ng_app/static/ng_app/js/controllers/contact.controller.js": "69f64aadffb5f39d7f8eea9740205825",
-            "ng_app/static/ng_app/js/controllers/blog.single.controller.js": "463293708de004a375443b272be62cd2"
+            "ng_app/static/ng_app/js/controllers/blog.single.controller.js": "463293708de004a375443b272be62cd2",
+            "scentrade/static/js/main/header-nav-active.js": "94a842a1cec7898bb18869b8fae58e82"
         },
         "css": {
             "scentrade/static/bower_components/bootstrap/dist/css/bootstrap.min.css": "eedf9ee80c2faa4e1b9ab9017cdfcb88",
@@ -37,7 +38,7 @@
             "scentrade/static/fonts/asap/stylesheet.css": "fd7ebc6706d34933a44aba351fcc6591",
             "scentrade/static/fonts/bebas/stylesheet.css": "d02c2d642447dda1087400706308847d",
             "scentrade/static/bower_components/owl-carousel/owl-carousel/owl.carousel.css": "783f04b573ab6d378baf10c3be65e5bd",
-            "scentrade/static/stylesheets/scentrade.css": "37166995f82bb95554f2f27e3fc97595",
+            "scentrade/static/stylesheets/scentrade.css": "f31a577c862f9cea524b6e9a2a33d18d",
             "version": "21f20e8bd48b0b9d262e28087a735446"
         }
     }

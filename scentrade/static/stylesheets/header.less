@@ -59,6 +59,126 @@ header#scentrade-header {
       }
     }
   }
+
+  // Mobile navigation button
+  // /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+  @nav-color:      @green;
+  @duration:       170ms;
+  @ease:           ease-in-out;
+
+  // taken from http://codepen.io/dubiel/pen/yyWEVo
+
+  .nav-trigger {
+    display:none;
+    position:absolute;
+    width:@header-height;
+    height:@header-height;
+    right:@header-height;
+    top:0;
+    z-index:200;
+    transition-property: all;
+    transition-duration: @duration;
+  }
+
+  .nav-icon {
+    display:inline-block;
+    position: relative;
+    width:30px;
+    height:5px;
+    margin-left: (@header-height - 30px) / 2;
+    margin-top: (@header-height - 5px) / 2;
+    background-color: @nav-color;
+    transition-property: background-color, transform;
+    transition-duration: @duration;
+
+    &:before,
+    &:after {
+      content:'';
+      display:block;
+      width:30px;
+      height:5px;
+      position: absolute;
+      background: @nav-color;
+      transition-property: margin, transform;
+      transition-duration: @duration;
+    }
+
+    &:before {
+      margin-top:-10px;
+    }
+
+    &:after {
+      margin-top:10px;
+    }
+  }
+
+  // Nav active
+  // -----------------------------------------------------------------------------
+  .nav-active .nav-trigger {
+//    opacity:0.5;
+    right: 0;
+  }
+
+  .nav-active .nav-icon {
+    background: rgba(0,0,0,0.0);
+
+    &:before {
+      margin-top:0;
+      transform:rotate(45deg);
+    }
+
+    &:after {
+      margin-top:0;
+      transform:rotate(-45deg);
+    }
+  }
+
+  @media (max-width: @screen-xs-max){
+    .nav-trigger {
+      display: block;
+    }
+
+    div.navbar-collapse {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-height: none; // override bootstrap default
+      position: fixed;
+      left: 0;
+      top: 0;
+      // remove bs margins
+      margin-left: -100%;
+      margin-right: 0;
+      opacity: 0;
+      transition-property: all;
+      transition-duration: @duration;
+    }
+
+    ul.nav {
+      li {
+        &#invest-online {
+          margin-left: 0;
+          padding-left: @grid-gutter-width-half;
+          padding-right: @grid-gutter-width-half;
+        }
+      }
+    }
+
+    .nav-active {
+      .nav-trigger {
+        z-index: @zindex-navbar-fixed + 2;
+      }
+
+      div.navbar-collapse {
+        margin-left: 0;
+        opacity:1;
+        background-color: white;
+        transition: all @duration @ease;
+        transform: translateX(0);
+        z-index: @zindex-navbar-fixed + 1;
+      }
+    }
+  }
 }
 
 // @responsive: header

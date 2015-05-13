@@ -25,7 +25,7 @@
         <link href="{% static 'stylesheets/scentrade.css' %}" rel="stylesheet">
         <!--STYLES END-->
         {% else %}
-        <link rel="stylesheet" type="text/css" href="{% static 'dist/scentrade.base.1431526846798.css' %}?version=2236be1881debf7386182a17ecd281a4">
+        <link rel="stylesheet" type="text/css" href="{% static 'dist/scentrade.base.1431528793066.css' %}?version=87be88aa15245caf3c3d3925eecfc61d">
         {% endif %}
         {# GRUNT_DJANGO_COMPRESSOR CSS END #}
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -42,12 +42,10 @@
     <nav class="navbar navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#scentrade-navbar-collapse">
+                <a href="#" class="nav-trigger">
                     <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+                    <span class="nav-icon"></span>
+                </a>
                 <a class="navbar-brand" ng-href="inicio">
                     <img src="{% static 'img/main/header-logo-green.svg' %}" alt="Scentrade.com"/>
                 </a>
@@ -137,6 +135,7 @@
     <script src="{% static 'bower_components/angular-route/angular-route.js' %}"></script>
     <script src="{% static 'bower_components/angular-sanitize/angular-sanitize.js' %}"></script>
     <script src="{% static 'js/main/header-nav.js' %}"></script>
+    <script src="{% static 'js/main/header-nav-active.js' %}"></script>
     <script src="{% static 'js/temp/django-angular.js' %}"></script>
     <script src="{% static 'ng_app/js/scentrade.js' %}"></script>
     <script src="{% static 'ng_app/js/scentrade.config.js' %}"></script>
@@ -156,7 +155,7 @@
     <script src="{% static 'ng_app/js/controllers/contact.controller.js' %}"></script>
     <!--SCRIPTS END-->
     {% else %}
-    <script type="text/javascript" src="{% static 'dist/scentrade.base.1431525673428.js' %}?version=0fdbd24909689b4c680e216e94010c07"></script>
+    <script type="text/javascript" src="{% static 'dist/scentrade.base.1431528787379.js' %}?version=6b875d4b4e378f8260c08ab93a894fd5"></script>
     {% endif %}
     {# GRUNT_DJANGO_COMPRESSOR JS END #}
 

@@ -1552,6 +1552,94 @@ header#scentrade-header .navbar-nav > li > a:focus,
 header#scentrade-header .navbar-nav > li > a:active {
   background-color: transparent;
 }
+header#scentrade-header .nav-trigger {
+  display: none;
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  right: 76px;
+  top: 0;
+  z-index: 200;
+  transition-property: all;
+  transition-duration: 170ms;
+}
+header#scentrade-header .nav-icon {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 5px;
+  margin-left: 23px;
+  margin-top: 35.5px;
+  background-color: #b9d050;
+  transition-property: background-color, transform;
+  transition-duration: 170ms;
+}
+header#scentrade-header .nav-icon:before,
+header#scentrade-header .nav-icon:after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 5px;
+  position: absolute;
+  background: #b9d050;
+  transition-property: margin, transform;
+  transition-duration: 170ms;
+}
+header#scentrade-header .nav-icon:before {
+  margin-top: -10px;
+}
+header#scentrade-header .nav-icon:after {
+  margin-top: 10px;
+}
+header#scentrade-header .nav-active .nav-trigger {
+  right: 0;
+}
+header#scentrade-header .nav-active .nav-icon {
+  background: rgba(0, 0, 0, 0);
+}
+header#scentrade-header .nav-active .nav-icon:before {
+  margin-top: 0;
+  transform: rotate(45deg);
+}
+header#scentrade-header .nav-active .nav-icon:after {
+  margin-top: 0;
+  transform: rotate(-45deg);
+}
+@media (max-width: 767px) {
+  header#scentrade-header .nav-trigger {
+    display: block;
+  }
+  header#scentrade-header div.navbar-collapse {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin-left: -100%;
+    margin-right: 0;
+    opacity: 0;
+    transition-property: all;
+    transition-duration: 170ms;
+  }
+  header#scentrade-header ul.nav li#invest-online {
+    margin-left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  header#scentrade-header .nav-active .nav-trigger {
+    z-index: 1032;
+  }
+  header#scentrade-header .nav-active div.navbar-collapse {
+    margin-left: 0;
+    opacity: 1;
+    background-color: white;
+    transition: all 170ms ease-in-out;
+    transform: translateX(0);
+    z-index: 1031;
+  }
+}
 @media (min-width: 768px) and (max-width: 991px) {
   header#scentrade-header ul.navbar-nav > li > a {
     padding-left: 10px;
