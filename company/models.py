@@ -17,6 +17,9 @@ class Client(models.Model):
         verbose_name=_(u'Logo'),
         help_text=_(u'PNG de fondo transparente. 190px x 90px')
     )
+    url = models.URLField(
+        verbose_name=_(u'Link a la web del cliente')
+    )
 
     class Meta:
         verbose_name = _(u'Cliente')

@@ -4,9 +4,9 @@
 
 {% block header_title %}{% trans 'Contáctanos' %}{% endblock %}
 
-{% comment %}{% block header_image %}
-    <img src="{% static 'img/about-us/hero-image.svg' %}" class="img-responsive"/>
-{% endblock %}{% endcomment %}
+{% block header_image %}
+    <img src="{% static 'img/contact/hero-vector.svg' %}" alt=""/>
+{% endblock %}
 
 {% block content %}
     <section id="contact-form">
@@ -47,9 +47,10 @@
                                 haz de tu hogar un espacio único.
                             {% endblocktrans %}
                         </h1>
-                        <h2 class="nmt orange text-center">
+                        <h2 class="nm orange text-center">
                             {% trans 'Escríbenos, estaremos felices de servirte.' %}
                         </h2>
+                        <div class="slashed-line white mtgw"></div>
                         <p ng-show="vm.success" class="white">{% verbatim %}{{ vm.successMessage }}{% endverbatim %}</p>
                         <form id="contact-form"
                               name="{{ contact_form.form_name }}"

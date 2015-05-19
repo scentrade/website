@@ -48,7 +48,7 @@ class Post(TranslatableModel):
         help_text=_(u'1280 x 512px. Será recortada si no.')
     )
 
-    created = CreationDateTimeField()
+    created = CreationDateTimeField(editable=True)
     modified = ModificationDateTimeField()
 
     translations = TranslatedFields(

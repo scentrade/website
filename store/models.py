@@ -46,9 +46,13 @@ class Product(TranslatableModel):
         verbose_name=_(u'Fotografía del producto'),
         help_text=_(u'500px x 500px, será recortada si no.')
     )
-    price = models.PositiveIntegerField(
-        verbose_name=_(u'Precio'),
-        help_text=_(u'En pesos colombianos (COP)')
+    price_in_cop = models.PositiveIntegerField(
+        verbose_name=_(u'Precio (COP)'),
+        help_text=_(u'En pesos Colombianos (COP)')
+    )
+    price_in_mx = models.PositiveIntegerField(
+        verbose_name=_(u'Precio (MX)'),
+        help_text=_(u'En pesos Mexicanos')
     )
     translations = TranslatedFields(
         name=models.CharField(

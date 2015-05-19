@@ -6,6 +6,7 @@
 .blue         { color: @blue; }
 .blue-light   { color: @blue-light; }
 .blue-dark    { color: @blue-dark; }
+.blue-semi-dark    { color: @blue-semi-dark; }
 .cyan-desaturated { color: @cyan-desaturated; }
 .orange       { color: @orange; }
 .white        { color: white; }
@@ -23,6 +24,7 @@
 .bg-blue      { background-color: @blue; }
 .bg-blue-light{ background-color: @blue-light; }
 .bg-blue-dark { background-color: @blue-dark; }
+.bg-blue-semi-dark { background-color: @blue-semi-dark; }
 .bg-white     { background-color: white; }
 
 // Wrapper full absolute
@@ -59,6 +61,13 @@ header#section-hero {
     z-index: 1;
   }*/
 
+  img {
+    position: absolute;
+    width: 35%;
+    left: 0;
+    top: 20%;
+  }
+
   div.container {
     position: relative;
     z-index: 2;
@@ -67,10 +76,24 @@ header#section-hero {
 
   h1, h2 {
     text-shadow: 8px 8px 8px rgba(0,0,0,0.5);
+    color: white;
+    line-height: 0.6;
+
+    &.has-small {
+      line-height: 0.5;
+    }
+
+    small {
+      color: white;
+    }
   }
 
   h1 {
     font-size: round(@font-size-h1 * 4);
+
+    small {
+      font-size: round(@font-size-h1 * 2);
+    }
   }
 
   h2 {
@@ -86,6 +109,10 @@ header#section-hero {
 
     h1 {
       font-size: round(@font-size-h1 * 3);
+
+      small {
+        font-size: round(@font-size-h1 * 1.5);
+      }
     }
 
     h2 {
@@ -98,6 +125,10 @@ header#section-hero {
 
     h1 {
       font-size: round(@font-size-h1 * 1.5);
+
+      small {
+        font-size: round(@font-size-h1 * 0.75);
+      }
     }
 
     h2 {
@@ -187,5 +218,18 @@ img#scentrade-diamond-logo {
   img#scentrade-diamond-logo {
     left: 50%;
     top: 0;
+  }
+}
+
+// Slashed line
+// -----------------------------------------------------------------------------
+div.slashed-line {
+  display: block;
+  height: 15px;
+  width: 100%;
+  background: url('@{img}misc/slashed-line.png') repeat center center transparent;
+
+  &.white {
+    background: url('@{img}misc/slashed-line-white.png') repeat center center transparent;
   }
 }

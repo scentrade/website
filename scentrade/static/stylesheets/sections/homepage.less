@@ -4,12 +4,24 @@ section#homepage-hero {
   display: block;
   height: 0px;
   width: 100%;
-  padding-bottom: 42.1%; // 21:9 aspect ratio video or image
+  padding-bottom: 62.1%; // this video aspect ratio
   position: relative;
   background: url('@{img}temp/homepage-hero.png') no-repeat center center transparent;
   background-size: cover;
   margin-top: @header-height * -1;
   z-index: 10;
+  overflow-y: hidden; // to prevent the video to be somewhere else
+
+  div#homepage-hero-video {
+    video {
+      display: block;
+      width: 100%;
+      height: auto;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
 
   div#homepage-hero-text {
     display: block;
@@ -21,6 +33,16 @@ section#homepage-hero {
     h1 {
       text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
     }
+
+    span.btn-wrapper {
+      padding: 3px;
+      border: 1px solid white;
+      display: inline-block;
+
+      a {
+
+      }
+    }
   }
 }
 
@@ -30,6 +52,10 @@ section#homepage-hero {
   section#homepage-hero {
     // TODO rethink this padding
     padding-bottom: 140%;
+
+    div#homepage-hero-video {
+      display: none;
+    }
 
     div#homepage-hero-text {
       bottom: 50px;

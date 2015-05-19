@@ -8,8 +8,10 @@
             <div class="container">
                 <div class="vcw">
                     <div class="vci">
-                        <h1>{% block header_title %}{% endblock %}</h1>
-                        <h2>{% block header_subtitle %}{% endblock %}</h2>
+                        {% block header_title_mom %}
+                            <h1>{% block header_title %}{% endblock %}</h1>
+                            <h2>{% block header_subtitle %}{% endblock %}</h2>
+                        {% endblock %}
                     </div>
                 </div>
             </div>

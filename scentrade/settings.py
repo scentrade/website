@@ -111,7 +111,8 @@ LANGUAGE_CODE = 'es'
 
 LANGUAGES = (
     ('es', _(u'Español')),
-    ('en', _(u'Inglés')),
+    # TODO re-enable english
+    # ('en', _(u'Inglés')),
 )
 
 TIME_ZONE = 'UTC'

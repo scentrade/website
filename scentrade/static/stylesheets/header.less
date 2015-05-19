@@ -12,6 +12,10 @@ header#scentrade-header {
       background-color: white !important;
       box-shadow: 0 2px 7px rgba(0,0,0,0.15);
 
+      .checkout__order::before {
+        background-color: @red;
+      }
+
       .navbar-nav {
         > li {
           > a {
@@ -115,7 +119,7 @@ header#scentrade-header {
   // Nav active
   // -----------------------------------------------------------------------------
   .nav-active .nav-trigger {
-//    opacity:0.5;
+    //    opacity:0.5;
     right: 0;
   }
 
@@ -210,6 +214,16 @@ body.homepage {
 
     nav.navbar {
       background-color: transparent;
+    }
+
+    .checkout__order::before {
+      background-color: transparent;
+    }
+
+    .checkout--active {
+      .checkout__order::before {
+        background-color: @red;
+      }
     }
 
     .navbar-nav {

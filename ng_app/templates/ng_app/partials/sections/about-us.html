@@ -4,9 +4,9 @@
 
 {% block header_title %}{% trans 'Nosotros' %}{% endblock %}
 
-{% comment %}{% block header_image %}
-    <img src="{% static 'img/about-us/hero-image.svg' %}" class="img-responsive"/>
-{% endblock %}{% endcomment %}
+{% block header_image %}
+    <img src="{% static 'img/about-us/hero-vector.svg' %}" alt=""/>
+{% endblock %}
 
 {% block content %}
     <section>
@@ -58,7 +58,7 @@
         </div>
     </section>
     <section>
-        <div class="container text-center ptgw-2x pbgw-2x">
+        <div class="container text-center ptgw-4x pbgw-4x">
             <h1 class="mtgw mbgw">
                 {% blocktrans %}
                     Generamos empatía con lo que nos rodea, proponemos soluciones,<br>
@@ -92,7 +92,7 @@
                     </div>
                 </div>
                 <div class="col-sm-6 text-center">
-                    <div class="box-square bg-blue-dark">
+                    <div class="box-square bg-blue-semi-dark">
                         <div class="wrapper-full-absolute">
                             <div class="vcw">
                                 <div class="vci">
@@ -110,11 +110,11 @@
         </div>
     </section>
     <section id="olfactory-marketing">
-        <div class="container text-center ptgw-2x pbgw-2x">
+        <div class="container text-center ptgw-4x pbgw-2x">
             <div class="row">
                 <div class="col-sm-4 mbgw">
                     <img ng-src="{% static 'img/about-us/icon-hands.svg' %}" alt="{% trans '¿Cómo funciona?' %}" width="70"/>
-                    <h2 class="blue">{% trans 'Conectamos' %}</h2>
+                    <h2 class="blue mtgw">{% trans 'Conectamos' %}</h2>
                     <p class="plgw prgw">
                         {% blocktrans %}
                             Profundizamos en los valores que definen tu marca, encontramos su
@@ -125,7 +125,7 @@
                 </div>
                 <div class="col-sm-4 mbgw">
                     <img ng-src="{% static 'img/about-us/icon-sound.svg' %}" alt="{% trans 'Importancia del olfato' %}" width="70"/>
-                    <h2 class="blue">{% trans 'Resonamos' %}</h2>
+                    <h2 class="blue mtgw">{% trans 'Resonamos' %}</h2>
                     <p class="plgw prgw">
                         {% blocktrans %}
                             Vibramos con la creatividad, con el placer, con la elegancia,
@@ -136,7 +136,7 @@
                 </div>
                 <div class="col-sm-4 mbgw">
                     <img ng-src="{% static 'img/about-us/icon-flower.svg' %}" alt="{% trans 'En la práctica' %}" width="70"/>
-                    <h2 class="blue">{% trans 'Respetamos' %}</h2>
+                    <h2 class="blue mtgw">{% trans 'Respetamos' %}</h2>
                     <p class="plgw prgw">
                         {% blocktrans %}
                             Adoramos la naturaleza, sus aromas, reconocemos que es nuestra

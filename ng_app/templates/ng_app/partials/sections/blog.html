@@ -2,7 +2,17 @@
 
 {% load i18n staticfiles %}
 
-{% block header_title %}{% trans 'Blog' %}{% endblock %}
+{% block header_title_mom %}
+    <h2 class="mbgw-andhalf">-{% trans 'Blog' %}-</h2>
+    <h1 class="has-small">
+        {% trans 'Marketing' %}<br>
+        <small>{% trans 'con puro sentido' %}</small>
+    </h1>
+{% endblock %}
+
+{% block header_image %}
+    <img src="{% static 'img/blog/hero-vector.svg' %}" alt=""/>
+{% endblock %}
 
 {% block content %}
     <section id="blog-filters">
@@ -24,7 +34,7 @@
                 <div class="col-sm-6 col-sm-offset-3">
                     <div class="block clearfix">
                         <form class="pull-right">
-                            <input type="text" class="form-control" placeholder="Buscar">
+                            <input type="text" class="form-control" placeholder="Buscar" ng-model="vm.search">
                         </form>
                     </div>
                 </div>
@@ -35,7 +45,7 @@
         <div class="container">
             <div class="row">
                 {% verbatim %}
-                <div class="col-sm-6" ng-repeat="post in vm.posts"
+                <div class="col-sm-6" ng-repeat="post in vm.posts | filter:vm.search"
                      ng-style="{'background-image': 'url({{ post.box_bg }})'}">
                     <div class="blog-box">
                         <a ng-href="blog/{{ post.category.slug }}/{{ post.slug }}">

@@ -1,5 +1,7 @@
 <div class="logo" ng-repeat="client in source">
     {% verbatim %}
-    <img ng-src="{{ client.logo }}" alt="{{ client.name }}" class="img-responsive"/>
+    <a ng-href="{{ client.url }}" target="_blank">
+        <img ng-src="{{ client.logo }}" alt="{{ client.name }}" class="img-responsive"/>
+    </a>
     {% endverbatim %}
 </div>

@@ -4,6 +4,10 @@
 
 {% block header_title %}{% trans 'Servicios' %}{% endblock %}
 
+{% block header_image %}
+    <img src="{% static 'img/services/hero-vector.svg' %}" alt=""/>
+{% endblock %}
+
 {% block content %}
     <section id="services-make-an-strategy">
         <div class="container">
@@ -100,11 +104,11 @@
         </div>
     </section>
     <section>
-        <div class="container text-center ptgw-2x pbgw">
+        <div class="container text-center ptgw-4x pbgw-2x">
             <div class="row">
                 <div class="col-sm-3 mbgw">
                     <img ng-src="{% static 'img/services/icon-scentrade.svg' %}" alt="{% trans 'Logo olfativo' %}" width="70" height="70"/>
-                    <h2>{% trans 'Logo olfativo' %}</h2>
+                    <h2 class="mtgw">{% trans 'Logo olfativo' %}</h2>
                     <p>
                         {% blocktrans %}
                             Desarrollamos un aroma especialmente pensado para representar
@@ -116,7 +120,7 @@
                 </div>
                 <div class="col-sm-3 mbgw">
                 <img ng-src="{% static 'img/services/icon-star.svg' %}" alt="{% trans 'Exclusividad' %}" width="70" height="70"/>
-                    <h2>{% trans 'Exclusividad' %}</h2>
+                    <h2 class="mtgw">{% trans 'Exclusividad' %}</h2>
                     <p>
                         {% blocktrans %}
                             Descrubre nuestro portafolio de fragancias y disfruta de sensaciones
@@ -128,7 +132,7 @@
                 </div>
                 <div class="col-sm-3 mbgw">
                     <img ng-src="{% static 'img/services/icon-scentrade-jar.svg' %}" alt="{% trans 'Fragancias memorables' %}" width="70" height="70"/>
-                    <h2>{% trans 'Fragancias memorables' %}</h2>
+                    <h2 class="mtgw">{% trans 'Fragancias memorables' %}</h2>
                     <p>
                         {% blocktrans %}
                             Somos creadores de aromas, hacemos perfumes constantemente,
@@ -140,7 +144,7 @@
                 </div>
                 <div class="col-sm-3 mbgw">
                     <img ng-src="{% static 'img/services/icon-bag.svg' %}" alt="{% trans 'Servicio continuo' %}" width="70" height="70"/>
-                    <h2>{% trans 'Servicio continuo' %}</h2>
+                    <h2 class="mtgw">{% trans 'Servicio continuo' %}</h2>
                     <p>
                         {% blocktrans %}
                             Su estrategia tendrá soporte continuo. Bien sea con equipos en arriendo

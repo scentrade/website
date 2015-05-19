@@ -2,7 +2,16 @@
 
 {% load i18n staticfiles %}
 
-{% block header_title %}{% trans 'Hogares con puro sentido' %}{% endblock %}
+{% block header_title_mom %}
+    <h1 class="has-small">
+        {% trans 'Hogares con' %}<br>
+        <small>{% trans 'puro sentido' %}</small>
+    </h1>
+{% endblock %}
+
+{% block header_image %}
+    <img src="{% static 'img/home/hero-vector.svg' %}" alt=""/>
+{% endblock %}
 
 {% block content %}
     <section id="home-details">
@@ -35,7 +44,7 @@
                                 <div class="vci">
                                     <h1 class="gb plgw-2x prgw-2x">
                                         {% blocktrans %}
-                                            La diferencia está en los detalles
+                                            La diferencia<br>está en los<br>detalles
                                         {% endblocktrans %}
                                     </h1>
                                 </div>

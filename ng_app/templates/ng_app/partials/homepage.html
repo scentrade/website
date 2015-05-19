@@ -1,14 +1,25 @@
 {% load i18n staticfiles %}
 
 <section id="homepage-hero">
+    <div id="homepage-hero-video">
+        <video autoplay loop poster="polina.jpg">
+            <source src="{% static 'video/bg-hero_1.webm' %}" type="video/webm">
+            <source src="{% static 'video/bg-hero_1.mp4' %}" type="video/mp4">
+        </video>
+    </div>
     <div class="wrapper-full-absolute">
         <div id="homepage-hero-text">
             <div class="container">
                 <div class="text-center">
+                    <img src="{% static 'img/homepage/hero-s.svg' %}" alt="Scentrade" width="100" class="mbgw"/>
                     <h1 class="gb nmt mbgw">{% trans 'Creamos experiencias olfativas memorables' %}</h1>
                     <nav>
-                        <a ng-href="servicios" class="btn btn-white-transparent btn-lg bebas mrgw">{% trans 'Para tu empresa' %}</a>
-                        <a ng-href="hogar" class="btn btn-white-transparent btn-lg bebas">{% trans 'Para tu hogar' %}</a>
+                        <span class="btn-wrapper mrgw">
+                            <a ng-href="servicios" class="btn btn-white-transparent btn-lg bebas">{% trans 'Para tu empresa' %}</a>
+                        </span>
+                        <span class="btn-wrapper">
+                            <a ng-href="hogar" class="btn btn-white-transparent btn-lg bebas">{% trans 'Para tu hogar' %}</a>
+                        </span>
                     </nav>
                 </div>
             </div>
@@ -28,7 +39,8 @@
                 <div class="wrapper">
                     <div class="vcw">
                         <div class="vci">
-                            <h1>{% trans 'Estrategias comerciales' %}</h1>
+                            <img src="{% static 'img/homepage/icon-bag.svg' %}" alt="" width="50"/>
+                            <h1>{% trans 'Estrategias<br>comerciales' %}</h1>
                             <a ng-href="servicios" class="btn btn-white-bordered">
                                 &nbsp;&nbsp;&nbsp;&nbsp;{% trans 'Ver +' %}&nbsp;&nbsp;&nbsp;&nbsp;
                             </a>
@@ -66,7 +78,8 @@
                 <div class="wrapper">
                     <div class="vcw">
                         <div class="vci">
-                            <h1>{% trans 'Hogares con puro sentido' %}</h1>
+                            <img src="{% static 'img/homepage/icon-house.svg' %}" alt="" width="50"/>
+                            <h1>{% trans 'Hogares con<br>puro sentido' %}</h1>
                             <a ng-href="hogar" class="btn btn-white-bordered">
                                 &nbsp;&nbsp;&nbsp;&nbsp;{% trans 'Ver +' %}&nbsp;&nbsp;&nbsp;&nbsp;
                             </a>
@@ -102,15 +115,15 @@
     </div>
 </section>
 <section id="free-trial">
-     <div class="container ptgw-2x pbgw-2x text-center">
-         <h1 class="gb nmt mbgw">
-             <span class="asap upper regular cyan-desaturated">Lleva</span><br>
-             <span class="red">una muestra</span><br>
-             <span class="asap upper regular cyan-desaturated">de producto</span><br>
-             <span class="red">gratis</span><br>
-         </h1>
-         <a ng-href="#" class="btn btn-red-bordered btn-lg"><i>{% trans '¡Solicítalo ya!' %}</i></a>
-     </div>
+    <div class="container ptgw-3x pbgw-3x text-center">
+        <h1 class="gb nmt mbgw">
+            <span class="asap upper regular cyan-desaturated">Lleva</span><br>
+            <span class="red">una muestra</span><br>
+            <span class="asap upper regular cyan-desaturated">de producto</span><br>
+            <span class="red">gratis</span><br>
+        </h1>
+        <a ng-href="#" class="btn btn-red-bordered btn-lg"><i>{% trans '¡Solicítalo ya!' %}</i></a>
+    </div>
 </section>
 <section id="olfactory-marketing">
     <div class="container text-center ptgw-2x pbgw-2x">
@@ -123,7 +136,7 @@
         <div class="row mbgw">
             <div class="col-sm-4 mbgw">
                 <img ng-src="{% static 'img/homepage/icon-question.svg' %}" alt="{% trans '¿Cómo funciona?' %}" width="70"/>
-                <h2 class="blue">{% trans '¿Cómo funciona?' %}</h2>
+                <h2 class="blue mtgw">{% trans '¿Cómo funciona?' %}</h2>
                 <p class="plgw prgw">
                     {% blocktrans %}
                         El ser humano es impresionable a través de los sentidos, recibe estímulos
@@ -138,7 +151,7 @@
             </div>
             <div class="col-sm-4 mbgw">
                 <img ng-src="{% static 'img/homepage/icon-nose.svg' %}" alt="{% trans 'Importancia del olfato' %}" width="70"/>
-                <h2 class="blue">{% trans 'Importancia del olfato' %}</h2>
+                <h2 class="blue mtgw">{% trans 'Importancia del olfato' %}</h2>
                 <p class="plgw prgw">
                     {% blocktrans %}
                         El olfato es el único de los cinco sentidos que recibe sus estímulos en
@@ -152,7 +165,7 @@
             </div>
             <div class="col-sm-4 mbgw">
                 <img ng-src="{% static 'img/homepage/icon-cog.svg' %}" alt="{% trans 'En la práctica' %}" width="70"/>
-                <h2 class="blue">{% trans 'En la práctica' %}</h2>
+                <h2 class="blue mtgw">{% trans 'En la práctica' %}</h2>
                 <p class="plgw prgw">
                     {% blocktrans %}
                         Para ver los efectos de esta técnica es importante crear una estrategia
