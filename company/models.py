@@ -45,6 +45,10 @@ class Testimony(TranslatableModel):
     client_age = models.PositiveIntegerField(
         verbose_name=_(u'Edad del cliente')
     )
+    url = models.URLField(
+        verbose_name=_(u'URL del cliente'),
+        null=True, blank=True
+    )
     translations = TranslatedFields(
         client_occupation=models.CharField(
             max_length=100,

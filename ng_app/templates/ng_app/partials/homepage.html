@@ -105,7 +105,17 @@
                 <p>
                     <i>
                         <strong>
-                            {% verbatim %}{{ testimony.client_name }}, {{ testimony.client_age }}{% endverbatim %} {% trans 'años' %},<br>
+                            {% verbatim %}
+                            <a href="{{ testimony.url }}" ng-if="testimony.url">
+                                {{ testimony.client_name }},&nbsp;
+                            </a>
+                            <span ng-if="! testimony.url">
+                                {{ testimony.client_name }},&nbsp;
+                            </span>
+                            {{ testimony.client_age }}
+                            {% endverbatim %}
+                            {% trans 'años' %},
+                            <br>
                             {% verbatim %}{{ testimony.client_occupation }}{% endverbatim %}
                         </strong>
                     </i>
@@ -115,19 +125,16 @@
     </div>
 </section>
 <section id="free-trial">
-    <div class="container ptgw-3x pbgw-3x text-center">
-        <h1 class="gb nmt mbgw">
-            <span class="asap upper regular cyan-desaturated">Lleva</span><br>
-            <span class="red">una muestra</span><br>
-            <span class="asap upper regular cyan-desaturated">de producto</span><br>
-            <span class="red">gratis</span><br>
-        </h1>
+    <div class="container ptgw-4x pbgw-4x text-center">
+        <div class="block mbgw">
+            <img src="{% static 'img/services/free-trial.svg' %}" alt=""/>
+        </div>
         <a ng-href="#" class="btn btn-red-bordered btn-lg"><i>{% trans '¡Solicítalo ya!' %}</i></a>
     </div>
 </section>
 <section id="olfactory-marketing">
-    <div class="container text-center ptgw-2x pbgw-2x">
-        <h1 class="gb blue mtgw mbgw-2x">
+    <div class="container text-center ptgw-3x pbgw-3x">
+        <h1 class="gb blue mbgw-3x">
             {% blocktrans %}
                 Hacemos marketing olfativo, pero<br>
                 lo hacemos diferente.

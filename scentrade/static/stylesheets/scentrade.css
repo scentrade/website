@@ -885,6 +885,7 @@ header#section-hero h2.has-small {
 header#section-hero h1 small,
 header#section-hero h2 small {
   color: white;
+  font-weight: 700;
 }
 header#section-hero h1 {
   font-size: 164px;
@@ -894,6 +895,10 @@ header#section-hero h1 small {
 }
 header#section-hero h2 {
   font-size: 41px;
+}
+header#section-hero h2#header-subtitle {
+  line-height: 1;
+  margin-top: 30px;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   header#section-hero {
@@ -1004,6 +1009,26 @@ div.slashed-line {
 div.slashed-line.white {
   background: url('../img/misc/slashed-line-white.png') repeat center center transparent;
 }
+@media (max-width: 767px) {
+  section#free-trial img {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section#free-trial img {
+    width: 70%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  section#free-trial img {
+    width: 60%;
+  }
+}
+@media (min-width: 1200px) {
+  section#free-trial img {
+    width: 50%;
+  }
+}
 ul.djng-field-errors {
   list-style: none;
   padding-left: 0;
@@ -1022,6 +1047,9 @@ body.homepage {
 .btn {
   border-radius: 0;
   font-weight: 700;
+  -webkit-transition: all ease-in-out 100ms;
+  -o-transition: all ease-in-out 100ms;
+  transition: all ease-in-out 100ms;
 }
 .btn.bebas {
   font-family: 'bebas', sans-serif;
@@ -1209,6 +1237,10 @@ fieldset[disabled] .btn-red-bordered.active {
 .btn-red-bordered .badge {
   color: transparent;
   background-color: #df1d3a;
+}
+.btn-red-bordered:hover {
+  background-color: #df1d3a;
+  color: white;
 }
 .btn-orange {
   color: #ffffff;
@@ -1776,15 +1808,18 @@ section#homepage-hero div#homepage-hero-text span.btn-wrapper {
   section#homepage-hero div#homepage-hero-video {
     display: none;
   }
+  section#homepage-hero img {
+    width: 80px;
+  }
   section#homepage-hero div#homepage-hero-text {
     bottom: 50px;
   }
-  section#homepage-hero div#homepage-hero-text nav a {
+  section#homepage-hero div#homepage-hero-text nav span {
     display: inline-block;
     float: none;
     margin-right: 0 !important;
   }
-  section#homepage-hero div#homepage-hero-text nav a:first-child {
+  section#homepage-hero div#homepage-hero-text nav span:first-child {
     margin-bottom: 10px;
   }
 }
@@ -1999,6 +2034,9 @@ section#products-nav nav a.active {
   text-decoration: none;
   color: #b9d050;
 }
+section#products-nav nav a:hover {
+  color: #df1d3a;
+}
 section#products-nav nav a:active,
 section#products-nav nav a:focus {
   text-decoration: none;
@@ -2018,7 +2056,7 @@ section#products-listing div.product h1 span {
   color: #70174a;
 }
 section#services-make-an-strategy div.bg-image {
-  background: url('http://placehold.it/800x800') no-repeat center center transparent;
+  background: url('../img/services/services-image.jpg') no-repeat center center transparent;
   background-size: cover;
 }
 @media (max-width: 767px) {
@@ -2071,12 +2109,14 @@ section#blog-posts-listing div.row div[class*="col"] div.blog-box h2 {
 .post-content img {
   max-width: 100%;
 }
+body.blog-single h1#header-title {
+  line-height: 1;
+}
 form#contact-form label {
   display: none;
 }
 form#contact-form .form-control {
   color: #ff9933;
-  font-family: 'bebas', sans-serif;
   font-size: 20px;
 }
 form#contact-form .form-control::-moz-placeholder {

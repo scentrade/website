@@ -1,6 +1,7 @@
 .btn {
   border-radius: 0;
   font-weight: @font-weight-bold;
+  .transition(all ease-in-out 100ms);
 
   // with bebas font
   &.bebas {
@@ -29,6 +30,11 @@
 
 .btn-red-bordered {
   .button-variant(@red, transparent, @red);
+
+  &:hover {
+    background-color: @red;
+    color: white;
+  }
 }
 
 .btn-orange {

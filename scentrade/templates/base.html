@@ -25,7 +25,7 @@
         <link href="{% static 'stylesheets/scentrade.css' %}" rel="stylesheet">
         <!--STYLES END-->
         {% else %}
-        <link rel="stylesheet" type="text/css" href="{% static 'dist/scentrade.base.1432047746596.css' %}?version=5b4f8b73b6474e0e12ae9e544d315347">
+        <link rel="stylesheet" type="text/css" href="{% static 'dist/scentrade.base.1432517777762.css' %}?version=1eba23b31ae9b6b48943f4bbb8f33d5a">
         {% endif %}
         {# GRUNT_DJANGO_COMPRESSOR CSS END #}
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -72,7 +72,7 @@
     </nav>
 </header>
 
-<main ng-view></main>
+<main ng-view{% if not DEBUG %} autoscroll="true"{% endif %}></main>
 
 <footer id="scentrade-footer">
     <div class="container ptgw">

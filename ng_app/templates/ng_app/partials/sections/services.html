@@ -2,7 +2,7 @@
 
 {% load i18n staticfiles %}
 
-{% block header_title %}{% trans 'Servicios' %}{% endblock %}
+{% block header_title %}{% trans 'Estrategias<br><small>comerciales</small>' %}{% endblock %}
 
 {% block header_image %}
     <img src="{% static 'img/services/hero-vector.svg' %}" alt=""/>
@@ -17,6 +17,7 @@
                         <div class="wrapper-full-absolute">
                             <div class="vcw">
                                 <div class="vci">
+                                    <img src="{% static 'img/services/scentrade-logo-white.svg' %}" alt="" width="72"/>
                                     <h1 class="mb white plgw prgw">
                                         {% blocktrans %}
                                             Crea una estrategia que a través del marketing olfativo
@@ -35,14 +36,11 @@
             </div>
         </div>
     </section>
-    <section id="free-trial" class="no-bg">
-        <div class="container ptgw-2x pbgw-2x text-center">
-            <h1 class="gb nmt mbgw">
-                <span class="asap upper regular cyan-desaturated">Lleva</span><br>
-                <span class="red">una muestra</span><br>
-                <span class="asap upper regular cyan-desaturated">de producto</span><br>
-                <span class="red">gratis</span><br>
-            </h1>
+    <section id="free-trial">
+        <div class="container ptgw-4x pbgw-4x text-center">
+            <div class="block mbgw">
+                <img src="{% static 'img/services/free-trial.svg' %}" alt=""/>
+            </div>
             <a ng-href="#" class="btn btn-red-bordered btn-lg"><i>{% trans '¡Solicítalo ya!' %}</i></a>
         </div>
     </section>
