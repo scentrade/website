@@ -47,15 +47,55 @@
                     {% verbatim %}
                     <h1 class="nm h2" ng-bind-html="product.html_name"></h1>
                     {% endverbatim %}
-                    <a ng-href="#" class="see-more gray mbgw-05x">{% trans 'Ver +' %}</a>
+                    <a href=""
+                       class="see-more gray mbgw-05x"
+                       data-toggle="modal"
+                       data-target="#product-{% verbatim %}{{ product.id }}{% endverbatim %}"
+                            >
+                        {% trans 'Ver +' %}
+                    </a>
                     {% verbatim %}
                     <img ng-src="{{ product.main_picture }}" alt="{{ product.name }}" class="img-responsive"/>
                     <h2 class="gray-light">${{ product.price_cop|number }} COP</h2>
-                    <button class="btn btn-red-bordered btn-lg btn-block bebas" ng-click="vm.addProductToCart(product.id)">
                     {% endverbatim %}
+                    <button class="btn btn-red-bordered btn-lg btn-block bebas" ng-click="vm.addProductToCart(product.id)">
                         {% trans 'Añadir al carrito' %}
                         <i class="fa fa-shopping-cart"></i>
                     </button>
+
+                    <!-- Modal -->
+                    {% verbatim %}
+                    <div class="modal fade" id="product-{{ product.id }}" tabindex="-1" role="dialog" aria-hidden="true">
+                        {% endverbatim %}
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h2 class="modal-title">Modal title</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            {% verbatim %}
+                                            <img ng-src="{{ product.main_picture }}" alt="{{ product.name }}" class="img-responsive"/>
+                                            {% endverbatim %}
+                                        </div>
+                                        <div class="col-sm-6 text-right">
+                                            <h1 class="nm h2 mbgw" ng-bind-html="product.html_name"></h1>
+                                            {% verbatim %}
+                                            <p class="mbgw"><i>{{ product.description }}</i></p>
+                                            <h2 class="gray-light mbgw">${{ product.price_cop|number }} COP</h2>
+                                            {% endverbatim %}
+                                            <button class="btn btn-red-bordered btn-lg bebas" ng-click="vm.addProductToCart(product.id)">
+                                                {% trans 'Añadir al carrito' %}
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

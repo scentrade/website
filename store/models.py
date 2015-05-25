@@ -58,6 +58,9 @@ class Product(TranslatableModel):
         name=models.CharField(
             max_length=100,
             verbose_name=_(u'Nombre')
+        ),
+        description=models.TextField(
+            verbose_name=_(u'Descripción')
         )
     )
     slug = AutoSlugField(

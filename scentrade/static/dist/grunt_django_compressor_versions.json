@@ -1,6 +1,6 @@
 {
     "created": null,
-    "modified": 1432517777762,
+    "modified": 1432519325245,
     "./scentrade/templates/base.html": {
         "js": {
             "scentrade/static/bower_components/es5-shim/es5-shim.js": "d8a4aac0a0591d07f07a2173e0dd1da5",
