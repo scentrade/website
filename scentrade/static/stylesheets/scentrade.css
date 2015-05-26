@@ -1783,7 +1783,7 @@ section#homepage-hero {
   display: block;
   height: 0px;
   width: 100%;
-  padding-bottom: 62.1%;
+  padding-bottom: 45%;
   position: relative;
   background: url('../img/temp/homepage-hero.png') no-repeat center center transparent;
   background-size: cover;
@@ -1803,7 +1803,7 @@ section#homepage-hero div#homepage-hero-text {
   display: block;
   width: 100%;
   position: absolute;
-  bottom: 100px;
+  bottom: 20px;
   color: white;
 }
 section#homepage-hero div#homepage-hero-text h1 {
@@ -1813,6 +1813,16 @@ section#homepage-hero div#homepage-hero-text span.btn-wrapper {
   padding: 3px;
   border: 1px solid white;
   display: inline-block;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  section#homepage-hero {
+    padding-bottom: 55%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section#homepage-hero {
+    padding-bottom: 65%;
+  }
 }
 @media (max-width: 767px) {
   section#homepage-hero {

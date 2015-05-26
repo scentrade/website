@@ -4,7 +4,7 @@ section#homepage-hero {
   display: block;
   height: 0px;
   width: 100%;
-  padding-bottom: 62.1%; // this video aspect ratio
+  padding-bottom: 45%; // the same as section hero
   position: relative;
   background: url('@{img}temp/homepage-hero.png') no-repeat center center transparent;
   background-size: cover;
@@ -27,7 +27,7 @@ section#homepage-hero {
     display: block;
     width: 100%;
     position: absolute;
-    bottom: 100px;
+    bottom: 20px;
     color: white;
 
     h1 {
@@ -43,6 +43,18 @@ section#homepage-hero {
 
       }
     }
+  }
+}
+
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max){
+  section#homepage-hero {
+    padding-bottom: 55%;
+  }
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
+  section#homepage-hero {
+    padding-bottom: 65%;
   }
 }
 
