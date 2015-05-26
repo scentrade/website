@@ -731,7 +731,7 @@ h1.gb,
 @media (max-width: 767px) {
   h1.gb,
   .h1.gb {
-    font-size: 41px;
+    font-size: 34px;
   }
 }
 .fz-md {
@@ -1806,13 +1806,13 @@ section#homepage-hero div#homepage-hero-text span.btn-wrapper {
 }
 @media (max-width: 767px) {
   section#homepage-hero {
-    padding-bottom: 140%;
+    padding-bottom: 160%;
   }
   section#homepage-hero div#homepage-hero-video {
     display: none;
   }
   section#homepage-hero img {
-    width: 80px;
+    height: 80px;
   }
   section#homepage-hero div#homepage-hero-text {
     bottom: 50px;
@@ -1824,6 +1824,9 @@ section#homepage-hero div#homepage-hero-text span.btn-wrapper {
   }
   section#homepage-hero div#homepage-hero-text nav span:first-child {
     margin-bottom: 10px;
+  }
+  section#homepage-hero div#homepage-hero-text nav span a {
+    font-size: 16px;
   }
 }
 section#homepage-top-clients-logos div.owl-item {

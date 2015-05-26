@@ -51,14 +51,14 @@ section#homepage-hero {
 @media (max-width: @screen-xs-max){
   section#homepage-hero {
     // TODO rethink this padding
-    padding-bottom: 140%;
+    padding-bottom: 160%;
 
     div#homepage-hero-video {
       display: none;
     }
 
     img {
-      width: 80px;
+      height: 80px;
     }
 
     div#homepage-hero-text {
@@ -72,6 +72,10 @@ section#homepage-hero {
 
           &:first-child {
             margin-bottom: 10px;
+          }
+
+          a {
+            font-size: @font-size-base;
           }
         }
       }
