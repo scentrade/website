@@ -1,6 +1,6 @@
 {
     "created": null,
-    "modified": 1432519325245,
+    "modified": 1432651847527,
     "./scentrade/templates/base.html": {
         "js": {
             "scentrade/static/bower_components/es5-shim/es5-shim.js": "d8a4aac0a0591d07f07a2173e0dd1da5",
@@ -13,7 +13,7 @@
             "scentrade/static/js/main/header-nav.js": "a58be371a43ac18f86d329ab34e9df4d",
             "ng_app/static/ng_app/js/scentrade.js": "d46d6877c23369d05627117065429da1",
             "ng_app/static/ng_app/js/scentrade.config.js": "fe0c0e6b4036e891e8f893a3d2a52ca2",
-            "ng_app/static/ng_app/js/constants.js": "2c821c67abce20dc07e4a13856f8aca6",
+            "ng_app/static/ng_app/js/constants.js": "cf277f072399cb1d12e2e01ba3f19715",
             "ng_app/static/ng_app/js/scentrade.routes.js": "fdc30949bee2b827a588bde9fb0fa635",
             "ng_app/static/ng_app/js/directives/owl.carousel.directive.js": "cfb793cc62f9f40145dd53aa8eff05a7",
             "ng_app/static/ng_app/js/services/api.service.js": "d7c7deee5aedd379dd4d9a0f73a782f9",
