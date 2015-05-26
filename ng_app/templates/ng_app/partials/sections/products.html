@@ -56,7 +56,7 @@
                     </a>
                     {% verbatim %}
                     <img ng-src="{{ product.main_picture }}" alt="{{ product.name }}" class="img-responsive"/>
-                    <h2 class="gray-light">${{ product.price_cop|number }} COP</h2>
+                    <h2 class="gray-light">${{ product.price_in_cop|number }} COP</h2>
                     {% endverbatim %}
                     <button class="btn btn-red-bordered btn-lg btn-block bebas" ng-click="vm.addProductToCart(product.id)">
                         {% trans 'Añadir al carrito' %}
