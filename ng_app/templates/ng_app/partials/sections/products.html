@@ -84,7 +84,7 @@
                                             <h1 class="nm h2 mbgw" ng-bind-html="product.html_name"></h1>
                                             {% verbatim %}
                                             <p class="mbgw"><i>{{ product.description }}</i></p>
-                                            <h2 class="gray-light mbgw">${{ product.price_cop|number }} COP</h2>
+                                            <h2 class="gray-light mbgw">${{ product.price_in_cop|number }} COP</h2>
                                             {% endverbatim %}
                                             <button class="btn btn-red-bordered btn-lg bebas" ng-click="vm.addProductToCart(product.id)">
                                                 {% trans 'Añadir al carrito' %}
