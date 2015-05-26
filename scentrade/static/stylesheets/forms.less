@@ -6,8 +6,19 @@ ul.djng-field-errors {
   li {
     &.invalid {
       display: block;
-      color: white;
+      color: @text-color;
       font-weight: @font-weight-medium;
+    }
+  }
+}
+
+form#contact-form {
+  // Django-angular form errors
+  ul.djng-field-errors {
+    li {
+      &.invalid {
+        color: @orange;
+      }
     }
   }
 }

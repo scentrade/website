@@ -1,0 +1,7 @@
+{% load i18n %}
+
+{% trans 'Nombre' %}: {{ name }}
+{% trans 'Empresa' %}: {{ company }}
+{% trans 'Cargo' %}: {{ position }}
+{% trans 'Correo electrónico' %}: {{ email }}
+{% trans 'Teléfono' %}: {{ phone }}

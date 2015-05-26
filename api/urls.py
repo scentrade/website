@@ -1,6 +1,6 @@
 from django.conf.urls import *
 from rest_framework import routers
-from api.views import ContactFormView
+from api.views import ContactFormView, FreeTrialFormView
 from company.viewsets import (ClientViewSet, TestimonyViewSet)
 from store.views import (AddProductToCartView, RemoveProductFromCartView,
                          ShoppingCartView)
@@ -28,4 +28,6 @@ urlpatterns = [
     ], namespace='cart')),
     url(r'^contact$', ContactFormView.as_view(),
         name='contact'),
+    url(r'^free-trial$', FreeTrialFormView.as_view(),
+        name='free-trial'),
 ]

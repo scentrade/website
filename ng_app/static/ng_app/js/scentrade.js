@@ -12,6 +12,7 @@
 //      'ng.django.forms',
 //      'ngFileUpload',
       'ng.django.forms',
+      'ui.bootstrap',
 
       // scentrade modules
       'scentrade.config',

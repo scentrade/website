@@ -1,12 +1,10 @@
 from django.conf.urls import patterns, include, url
-from ng_app.views import (PartialGroupView, ContactView)
+from ng_app.views import (PartialGroupView, ContactView, FreeTrialView)
 
 
 templates = [
-    'homepage.html',
     'sections/about-us.html',
     'sections/products.html',
-    'sections/services.html',
     'sections/home.html',
     'sections/blog.html',
     'sections/blog-single.html',
@@ -26,4 +24,12 @@ urlpatterns = patterns('',
     url(r'^partials/', include(partial_patterns, namespace='partials')),
     url(r'^partials/sections/contact.html',
         ContactView.as_view(), name='contact'),
+    url(r'^partials/homepage.html',
+        FreeTrialView.as_view(
+            template_name='ng_app/partials/homepage.html'),
+        name='homepage'),
+    url(r'^partials/sections/services.html',
+        FreeTrialView.as_view(
+            template_name='ng_app/partials/sections/services.html'),
+        name='services'),
 )
