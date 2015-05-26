@@ -41,7 +41,7 @@
             <div class="block mbgw">
                 <img src="{% static 'img/services/free-trial.svg' %}" alt=""/>
             </div>
-            <a ng-href="#" class="btn btn-red-bordered btn-lg"><i>{% trans '¡Solicítalo ya!' %}</i></a>
+            <a ng-href="" class="btn btn-red-bordered btn-lg" ng-click="vm.openFreeTrialModal()"><i>{% trans '¡Solicítalo ya!' %}</i></a>
         </div>
     </section>
     <section id="what-is-olfactory-marketing">
@@ -154,4 +154,7 @@
             </div>
         </div>
     </section>
+
+
+    {% include 'ng_app/partials/snippets/free-trial-form.html' %}
 {% endblock %}
