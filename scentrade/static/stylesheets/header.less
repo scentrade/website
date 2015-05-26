@@ -12,8 +12,20 @@ header#scentrade-header {
       background-color: white !important;
       box-shadow: 0 2px 7px rgba(0,0,0,0.15);
 
+      .checkout__text {
+        background-color: @red;
+      }
+
+      .checkout__order {
+        z-index: 1;
+      }
+
       .checkout__order::before {
         background-color: @red;
+      }
+
+      .checkout__order-inner {
+        z-index: 2;
       }
 
       .navbar-nav {
