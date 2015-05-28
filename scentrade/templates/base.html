@@ -100,7 +100,7 @@
     </nav>
 </header>
 
-<main ng-view{% if not DEBUG %} autoscroll="true"{% endif %}></main>
+<main ng-view data-sr-container{% if not DEBUG %} autoscroll="true"{% endif %}></main>
 
 <footer id="scentrade-footer">
     <div class="container ptgw">
@@ -168,6 +168,8 @@
     <script src="{% static 'bower_components/angular-route/angular-route.js' %}"></script>
     <script src="{% static 'bower_components/angular-sanitize/angular-sanitize.js' %}"></script>
     <script src="{% static 'bower_components/angular-bootstrap/ui-bootstrap-tpls.js' %}"></script>
+    <script src="{% static 'bower_components/scrollReveal.js/dist/scrollReveal.js' %}"></script>
+    <script src="{% static 'bower_components/fox-angular-scrollReveal.js/dist/fox-angular-scrollReveal.js' %}"></script>
     <script src="{% static 'js/main/header-nav.js' %}"></script>
     <script src="{% static 'js/main/header-nav-active.js' %}"></script>
     <script src="{% static 'js/temp/django-angular.js' %}"></script>
@@ -191,7 +193,7 @@
     <script src="{% static 'ng_app/js/controllers/main.menu.controller.js' %}"></script>
     <!--SCRIPTS END-->
     {% else %}
-    <script type="text/javascript" src="{% static 'dist/scentrade.base.1432827670047.js' %}?version=f290b039b8a733743480b042ba007627"></script>
+    <script type="text/javascript" src="{% static 'dist/scentrade.base.1432829443097.js' %}?version=af9a5af7968240cc5ec7d81e824c62d0"></script>
     {% endif %}
     {# GRUNT_DJANGO_COMPRESSOR JS END #}
 
