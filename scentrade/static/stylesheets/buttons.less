@@ -22,10 +22,20 @@
 
 .btn-white-bordered {
   .button-variant(white, transparent, white);
+
+  &:hover {
+    background-color: white;
+    color: @text-color;
+  }
 }
 
 .btn-blue-bordered {
   .button-variant(@blue, transparent, @blue);
+
+  &:hover {
+    background-color: @blue;
+    color: white;
+  }
 }
 
 .btn-red-bordered {
@@ -43,4 +53,9 @@
 
 .btn-green-bordered {
   .button-variant(@green, transparent, @green-dark);
+
+  &:hover {
+    background-color: @green;
+    color: white;
+  }
 }

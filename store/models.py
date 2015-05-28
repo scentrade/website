@@ -91,3 +91,7 @@ class Product(TranslatableModel):
         return make_absolute_url(
             get_thumbnailer(self.main_picture).get_thumbnail({
                 'size': (500, 500), 'crop': True}).url)
+
+    @property
+    def price(self):
+        return self.price_in_cop

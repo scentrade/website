@@ -25,7 +25,7 @@
         <link href="{% static 'stylesheets/scentrade.css' %}" rel="stylesheet">
         <!--STYLES END-->
         {% else %}
-        <link rel="stylesheet" type="text/css" href="{% static 'dist/scentrade.base.1432664544366.css' %}?version=698005776ed3ea193198d5f77ce2c83d">
+        <link rel="stylesheet" type="text/css" href="{% static 'dist/scentrade.base.1432827677046.css' %}?version=506f65b9ccc98d2b6c5361e5f7e041fc">
         {% endif %}
         {# GRUNT_DJANGO_COMPRESSOR CSS END #}
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -56,15 +56,43 @@
                 </a>
             </div>
 
-            <div class="collapse navbar-collapse" id="scentrade-navbar-collapse">
+            <div class="collapse navbar-collapse" id="scentrade-navbar-collapse" ng-controller="MainMenuController">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a ng-href="inicio">{% trans 'Inicio' %}</a></li>
-                    <li><a ng-href="nosotros">{% trans 'Nosotros' %}</a></li>
-                    <li><a ng-href="productos">{% trans 'Productos' %}</a></li>
-                    <li><a ng-href="servicios">{% trans 'Servicios' %}</a></li>
-                    <li><a ng-href="hogar">{% trans 'Hogar' %}</a></li>
-                    <li><a ng-href="blog">{% trans 'Blog' %}</a></li>
-                    <li><a ng-href="contacto">{% trans 'Contacto' %}</a></li>
+                    <li ng-class="{ active: isActive('/inicio')}">
+                        <a ng-href="inicio">
+                            {% trans 'Inicio' %}
+                        </a>
+                    </li>
+                    <li ng-class="{ active: isActive('/nosotros')}">
+                        <a ng-href="nosotros">
+                            {% trans 'Nosotros' %}
+                        </a>
+                    </li>
+                    <li ng-class="{ active: isActive('/productos')}">
+                        <a ng-href="productos">
+                            {% trans 'Productos' %}
+                        </a>
+                    </li>
+                    <li ng-class="{ active: isActive('/servicios')}">
+                        <a ng-href="servicios">
+                            {% trans 'Servicios' %}
+                        </a>
+                    </li>
+                    <li ng-class="{ active: isActive('/hogar')}">
+                        <a ng-href="hogar">
+                            {% trans 'Hogar' %}
+                        </a>
+                    </li>
+                    <li ng-class="{ active: isActive('/blog')}">
+                        <a ng-href="blog">
+                            {% trans 'Blog' %}
+                        </a>
+                    </li>
+                    <li ng-class="{ active: isActive('/contacto')}">
+                        <a ng-href="contacto">
+                            {% trans 'Contacto' %}
+                        </a>
+                    </li>
                 </ul>
             </div>
             {% include 'snippets/shopping-cart.html' %}
@@ -160,9 +188,10 @@
     <script src="{% static 'ng_app/js/controllers/blog.single.controller.js' %}"></script>
     <script src="{% static 'ng_app/js/controllers/contact.controller.js' %}"></script>
     <script src="{% static 'ng_app/js/controllers/modal.free.trial.controller.js' %}"></script>
+    <script src="{% static 'ng_app/js/controllers/main.menu.controller.js' %}"></script>
     <!--SCRIPTS END-->
     {% else %}
-    <script type="text/javascript" src="{% static 'dist/scentrade.base.1432663445367.js' %}?version=cffef64e666e2cf2ec8c2c1907135c62"></script>
+    <script type="text/javascript" src="{% static 'dist/scentrade.base.1432827670047.js' %}?version=f290b039b8a733743480b042ba007627"></script>
     {% endif %}
     {# GRUNT_DJANGO_COMPRESSOR JS END #}
 

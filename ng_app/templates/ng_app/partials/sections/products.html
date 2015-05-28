@@ -13,19 +13,19 @@
         <div class="container">
             <nav class="row mbgw">
                 <a ng-href="#"
-                   class="col-sm-4 h1 nmb gb text-center"
+                   class="col-sm-4 h1 nmb gb text-center home"
                    ng-class="{'active':vm.selectedTab === 'home'}"
                    ng-click="vm.fetchProducts('?target=home'); vm.selectedTab = 'home';">
                     {% trans 'Para tu hogar' %}
                 </a>
                 <a ng-href="#"
-                   class="col-sm-4 h1 nmb gb text-center"
+                   class="col-sm-4 h1 nmb gb text-center commercial"
                    ng-class="{'active':vm.selectedTab === 'commercial'}"
                    ng-click="vm.fetchProducts('?target=commercial'); vm.selectedTab = 'commercial';">
                     {% trans 'Estrategias comerciales' %}
                 </a>
                 <a ng-href="#"
-                   class="col-sm-4 h1 nmb gb text-center"
+                   class="col-sm-4 h1 nmb gb text-center all"
                    ng-class="{'active':vm.selectedTab === 'all'}"
                    ng-click="vm.fetchProducts(); vm.selectedTab = 'all';">
                     {% trans 'Lo quiero ver todo' %}
@@ -65,14 +65,13 @@
 
                     <!-- Modal -->
                     {% verbatim %}
-                    <div class="modal fade" id="product-{{ product.id }}" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal fade modal-product" id="product-{{ product.id }}" tabindex="-1" role="dialog" aria-hidden="true">
                         {% endverbatim %}
-                        <div class="modal-dialog">
+                        <div class="modal-dialog modal-lg">
                             <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    <h2 class="modal-title">Modal title</h2>
-                                </div>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
                                 <div class="modal-body">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -81,7 +80,7 @@
                                             {% endverbatim %}
                                         </div>
                                         <div class="col-sm-6 text-right">
-                                            <h1 class="nm h2 mbgw" ng-bind-html="product.html_name"></h1>
+                                            <h1 class="h2 mtgw mbgw" ng-bind-html="product.html_name"></h1>
                                             {% verbatim %}
                                             <p class="mbgw"><i>{{ product.description }}</i></p>
                                             <h2 class="gray-light mbgw">${{ product.price_in_cop|number }} COP</h2>

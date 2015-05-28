@@ -5,18 +5,26 @@ section#products-nav {
     a {
       display: block;
       padding: 0 50px;
+      .transition(color ease-in-out 100ms);
 
       &:hover, &.active {
         text-decoration: none;
-        color: @green;
-      }
-
-      &:hover {
-        color: @red;
       }
 
       &:active, &:focus {
         text-decoration: none;
+      }
+
+      &.home {
+        &:hover, &.active { color: @green; }
+      }
+
+      &.commercial {
+        &:hover, &.active { color: @purple; }
+      }
+
+      &.all {
+        &:hover, &.active { color: @red; }
       }
     }
   }

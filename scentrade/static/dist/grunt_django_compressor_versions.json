@@ -1,6 +1,6 @@
 {
     "created": null,
-    "modified": 1432664544366,
+    "modified": 1432827677046,
     "./scentrade/templates/base.html": {
         "js": {
             "scentrade/static/bower_components/es5-shim/es5-shim.js": "d8a4aac0a0591d07f07a2173e0dd1da5",
@@ -24,14 +24,15 @@
             "ng_app/static/ng_app/js/controllers/services.controller.js": "71312b9d43f914cd17acea6993b08434",
             "ng_app/static/ng_app/js/controllers/home.controller.js": "4110c36cf71bd2b1940672dfd38afce0",
             "ng_app/static/ng_app/js/controllers/blog.controller.js": "fe4d9f012b8cfa4bdaf73979384c3f86",
-            "version": "c1bdc06c4e3c9aee3131bbcb82b00936",
+            "version": "53065d46db0d85b2b6a75875efd1bb35",
             "scentrade/static/js/temp/django-angular.js": "62177d8a834180a028ea214d3b5ccbfb",
             "ng_app/static/ng_app/js/services/forms.utils.service.js": "a96e3f70bc33d873d03bd88174761682",
             "ng_app/static/ng_app/js/controllers/contact.controller.js": "69f64aadffb5f39d7f8eea9740205825",
             "ng_app/static/ng_app/js/controllers/blog.single.controller.js": "463293708de004a375443b272be62cd2",
             "scentrade/static/js/main/header-nav-active.js": "94a842a1cec7898bb18869b8fae58e82",
             "scentrade/static/bower_components/angular-bootstrap/ui-bootstrap-tpls.js": "065fda175b158d2aa10f82aa0e82d16e",
-            "ng_app/static/ng_app/js/controllers/modal.free.trial.controller.js": "dff52f27d6e2e6cc3a13973948fa59fb"
+            "ng_app/static/ng_app/js/controllers/modal.free.trial.controller.js": "dff52f27d6e2e6cc3a13973948fa59fb",
+            "ng_app/static/ng_app/js/controllers/main.menu.controller.js": "741326bfae541391709b3f78aad41895"
         },
         "css": {
             "scentrade/static/bower_components/bootstrap/dist/css/bootstrap.min.css": "eedf9ee80c2faa4e1b9ab9017cdfcb88",
@@ -40,7 +41,7 @@
             "scentrade/static/fonts/asap/stylesheet.css": "fd7ebc6706d34933a44aba351fcc6591",
             "scentrade/static/fonts/bebas/stylesheet.css": "d02c2d642447dda1087400706308847d",
             "scentrade/static/bower_components/owl-carousel/owl-carousel/owl.carousel.css": "783f04b573ab6d378baf10c3be65e5bd",
-            "scentrade/static/stylesheets/scentrade.css": "34212f69a2967dc48c2ea41b8c6482dc",
+            "scentrade/static/stylesheets/scentrade.css": "5d3b47dc5ae03e196b91bb2d8ef9323f",
             "version": "21f20e8bd48b0b9d262e28087a735446"
         }
     }

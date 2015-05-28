@@ -8,6 +8,8 @@ header#scentrade-header {
     margin-bottom: 0;
     .transition(background-color ease-in-out 200ms);
 
+    // When scrolling
+    // -----------------------------------------------------------------------------
     &.scrolling {
       background-color: white !important;
       box-shadow: 0 2px 7px rgba(0,0,0,0.15);
@@ -26,14 +28,6 @@ header#scentrade-header {
 
       .checkout__order-inner {
         z-index: 2;
-      }
-
-      .navbar-nav {
-        > li {
-          > a {
-            color: @text-color !important;
-          }
-        }
       }
     }
   }
@@ -66,11 +60,18 @@ header#scentrade-header {
         padding-bottom: 0;
         text-transform: uppercase;
         // TODO add as app color
-        color: #404041;
         font-size: @font-size-small;
+        color: @text-color;
+        .transition(color ease-in-out 100ms);
 
         &:hover, &:focus, &:active {
           background-color: transparent;
+        }
+      }
+
+      &:hover, &.active {
+        > a {
+          color: @red;
         }
       }
     }
@@ -217,33 +218,33 @@ header#scentrade-header {
 
 // Homepage header style
 // -----------------------------------------------------------------------------
-body.homepage {
-  position: relative;
-
-  header#scentrade-header {
-    position: relative;
-    z-index: @zindex-navbar-fixed;
-
-    nav.navbar {
-      background-color: transparent;
-    }
-
-    .checkout__order::before {
-      background-color: transparent;
-    }
-
-    .checkout--active {
-      .checkout__order::before {
-        background-color: @red;
-      }
-    }
-
-    .navbar-nav {
-      > li {
-        > a {
-          color: white;
-        }
-      }
-    }
-  }
-}
+//body.homepage {
+//  position: relative;
+//
+//  header#scentrade-header {
+//    position: relative;
+//    z-index: @zindex-navbar-fixed;
+//
+//    nav.navbar {
+//      background-color: transparent;
+//    }
+//
+//    .checkout__order::before {
+//      background-color: transparent;
+//    }
+//
+//    .checkout--active {
+//      .checkout__order::before {
+//        background-color: @red;
+//      }
+//    }
+//
+//    .navbar-nav {
+//      > li {
+//        > a {
+//          color: white;
+//        }
+//      }
+//    }
+//  }
+//}
