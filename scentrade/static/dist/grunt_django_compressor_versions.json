@@ -1,6 +1,6 @@
 {
     "created": null,
-    "modified": 1433181449992,
+    "modified": 1433183673052,
     "./scentrade/templates/base.html": {
         "js": {
             "scentrade/static/bower_components/es5-shim/es5-shim.js": "d8a4aac0a0591d07f07a2173e0dd1da5",
@@ -45,7 +45,7 @@
             "scentrade/static/fonts/asap/stylesheet.css": "fd7ebc6706d34933a44aba351fcc6591",
             "scentrade/static/fonts/bebas/stylesheet.css": "d02c2d642447dda1087400706308847d",
             "scentrade/static/bower_components/owl-carousel/owl-carousel/owl.carousel.css": "783f04b573ab6d378baf10c3be65e5bd",
-            "scentrade/static/stylesheets/scentrade.css": "a15a43104dfb642118aadce2ecf09ae4",
+            "scentrade/static/stylesheets/scentrade.css": "030a17e58beee69d8ca71ee675d1ec9f",
             "version": "21f20e8bd48b0b9d262e28087a735446"
         }
     }
