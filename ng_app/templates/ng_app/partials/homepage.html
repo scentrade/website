@@ -35,7 +35,7 @@
 <section id="what-we-do">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-4 left text-center white">
+            <div id="what-we-do-services" class="col-sm-4 left text-center white">
                 <div class="wrapper">
                     <div class="vcw">
                         <div class="vci">
@@ -48,7 +48,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 center">
+            <div id="what-we-do-diamond" class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 center">
                 <div class="box-square">
                     <div class="wrapper-full-absolute">
                         <div class="vcw">
@@ -74,7 +74,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4 right text-center white">
+            <div id="what-we-do-home" class="col-sm-4 right text-center white">
                 <div class="wrapper">
                     <div class="vcw">
                         <div class="vci">
@@ -132,7 +132,7 @@
         <a ng-href="" class="btn btn-red-bordered btn-lg" ng-click="vm.openFreeTrialModal()"><i>{% trans '¡Solicítalo ya!' %}</i></a>
     </div>
 </section>
-<section id="olfactory-marketing" data-sr="enter bottom">
+<section id="olfactory-marketing">
     <div class="container text-center ptgw-3x pbgw-3x">
         <h1 class="gb blue mbgw-3x">
             {% blocktrans %}
@@ -141,7 +141,7 @@
             {% endblocktrans %}
         </h1>
         <div class="row mbgw">
-            <div class="col-sm-4 mbgw">
+            <div class="col-sm-4 homepage-item mbgw">
                 <img ng-src="{% static 'img/homepage/icon-question.svg' %}" alt="{% trans '¿Cómo funciona?' %}" width="70"/>
                 <h2 class="blue mtgw">{% trans '¿Cómo funciona?' %}</h2>
                 <p class="plgw prgw">
@@ -156,7 +156,7 @@
                     {% endblocktrans %}
                 </p>
             </div>
-            <div class="col-sm-4 mbgw">
+            <div class="col-sm-4 homepage-item mbgw">
                 <img ng-src="{% static 'img/homepage/icon-nose.svg' %}" alt="{% trans 'Importancia del olfato' %}" width="70"/>
                 <h2 class="blue mtgw">{% trans 'Importancia del olfato' %}</h2>
                 <p class="plgw prgw">
@@ -170,7 +170,7 @@
                     {% endblocktrans %}
                 </p>
             </div>
-            <div class="col-sm-4 mbgw">
+            <div class="col-sm-4 homepage-item mbgw">
                 <img ng-src="{% static 'img/homepage/icon-cog.svg' %}" alt="{% trans 'En la práctica' %}" width="70"/>
                 <h2 class="blue mtgw">{% trans 'En la práctica' %}</h2>
                 <p class="plgw prgw">

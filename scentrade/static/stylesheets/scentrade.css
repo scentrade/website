@@ -1350,6 +1350,124 @@ fieldset[disabled] .btn-green-bordered.active {
   position: absolute;
   z-index: 1050;
 }
+body.desktop div.homepage-item {
+  -webkit-transform: translate(0, 200px);
+  -ms-transform: translate(0, 200px);
+  -o-transform: translate(0, 200px);
+  transform: translate(0, 200px);
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+body.desktop div.homepage-item.reveal {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+body.desktop section#what-we-do div.container-fluid:before {
+  -webkit-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+body.desktop section#what-we-do div.container-fluid:after {
+  -webkit-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+body.desktop section#what-we-do div.container-fluid div#what-we-do-diamond {
+  -webkit-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+body.desktop section#what-we-do div.container-fluid div#what-we-do-services {
+  -webkit-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+body.desktop section#what-we-do div.container-fluid div#what-we-do-services div.wrapper {
+  -webkit-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+body.desktop section#what-we-do div.container-fluid div#what-we-do-home {
+  -webkit-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+body.desktop section#what-we-do div.container-fluid div#what-we-do-home div.wrapper {
+  -webkit-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+body.desktop section#what-we-do.over-services div.container-fluid:before {
+  width: 70%;
+}
+body.desktop section#what-we-do.over-services div.container-fluid:after {
+  width: 30%;
+}
+body.desktop section#what-we-do.over-services div.container-fluid div#what-we-do-diamond {
+  margin-left: 45%;
+}
+body.desktop section#what-we-do.over-services div.container-fluid div#what-we-do-services {
+  width: 50%;
+}
+body.desktop section#what-we-do.over-services div.container-fluid div#what-we-do-services div.wrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
+body.desktop section#what-we-do.over-home div.container-fluid:before {
+  width: 30%;
+}
+body.desktop section#what-we-do.over-home div.container-fluid:after {
+  width: 70%;
+}
+body.desktop section#what-we-do.over-home div.container-fluid div#what-we-do-diamond {
+  margin-left: 5%;
+}
+body.desktop section#what-we-do.over-home div.container-fluid div#what-we-do-home {
+  width: 50%;
+}
+body.desktop section#what-we-do.over-home div.container-fluid div#what-we-do-home div.wrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
+body.desktop section#blog-posts-listing div.row div[class*="col"] {
+  background: no-repeat center center transparent;
+  background-size: 100%;
+  -webkit-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+body.desktop section#blog-posts-listing div.row div[class*="col"]:after {
+  opacity: 0;
+  -webkit-transition: all ease-in-out 200ms;
+  -o-transition: all ease-in-out 200ms;
+  transition: all ease-in-out 200ms;
+}
+body.desktop section#blog-posts-listing div.row div[class*="col"] div.blog-box div.text {
+  opacity: 0;
+  -webkit-transform: translate(0, 200px);
+  -ms-transform: translate(0, 200px);
+  -o-transform: translate(0, 200px);
+  transform: translate(0, 200px);
+  -webkit-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+body.desktop section#blog-posts-listing div.row div[class*="col"]:hover {
+  background-size: 120%;
+}
+body.desktop section#blog-posts-listing div.row div[class*="col"]:hover:after {
+  opacity: 1;
+}
+body.desktop section#blog-posts-listing div.row div[class*="col"]:hover div.blog-box div.text {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
 .checkout {
   position: absolute;
   top: 0;
@@ -1730,11 +1848,6 @@ header#scentrade-header .nav-active .nav-icon:after {
     opacity: 0;
     transition-property: all;
     transition-duration: 170ms;
-  }
-  header#scentrade-header ul.nav li#invest-online {
-    margin-left: 0;
-    padding-left: 15px;
-    padding-right: 15px;
   }
   header#scentrade-header .nav-active .nav-trigger {
     z-index: 1032;

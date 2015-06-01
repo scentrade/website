@@ -25,7 +25,7 @@
         <link href="{% static 'stylesheets/scentrade.css' %}" rel="stylesheet">
         <!--STYLES END-->
         {% else %}
-        <link rel="stylesheet" type="text/css" href="{% static 'dist/scentrade.base.1432827677046.css' %}?version=506f65b9ccc98d2b6c5361e5f7e041fc">
+        <link rel="stylesheet" type="text/css" href="{% static 'dist/scentrade.base.1433181449992.css' %}?version=14c20465dd7404195762cff957ca4529">
         {% endif %}
         {# GRUNT_DJANGO_COMPRESSOR CSS END #}
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -100,7 +100,7 @@
     </nav>
 </header>
 
-<main ng-view data-sr-container{% if not DEBUG %} autoscroll="true"{% endif %}></main>
+<main ng-view{% if not DEBUG %} autoscroll="true"{% endif %}></main>
 
 <footer id="scentrade-footer">
     <div class="container ptgw">
@@ -160,6 +160,7 @@
     {% if DEBUG %}
     <!--SCRIPTS-->
     {# Needed because of this implementation: http://stackoverflow.com/a/19498009/923323 #}
+    <script src="{% static 'js/main/detectmobilebrowser.js' %}"></script>
     <script src="{% static 'bower_components/es5-shim/es5-shim.js' %}"></script>
     <script src="{% static 'bower_components/jquery/dist/jquery.js' %}"></script>
     <script src="{% static 'bower_components/bootstrap/dist/js/bootstrap.js' %}"></script>
@@ -168,10 +169,9 @@
     <script src="{% static 'bower_components/angular-route/angular-route.js' %}"></script>
     <script src="{% static 'bower_components/angular-sanitize/angular-sanitize.js' %}"></script>
     <script src="{% static 'bower_components/angular-bootstrap/ui-bootstrap-tpls.js' %}"></script>
-    <script src="{% static 'bower_components/scrollReveal.js/dist/scrollReveal.js' %}"></script>
-    <script src="{% static 'bower_components/fox-angular-scrollReveal.js/dist/fox-angular-scrollReveal.js' %}"></script>
     <script src="{% static 'js/main/header-nav.js' %}"></script>
     <script src="{% static 'js/main/header-nav-active.js' %}"></script>
+    <script src="{% static 'js/main/jquery.viewport.js' %}"></script>
     <script src="{% static 'js/temp/django-angular.js' %}"></script>
     <script src="{% static 'ng_app/js/scentrade.js' %}"></script>
     <script src="{% static 'ng_app/js/scentrade.config.js' %}"></script>
@@ -193,7 +193,7 @@
     <script src="{% static 'ng_app/js/controllers/main.menu.controller.js' %}"></script>
     <!--SCRIPTS END-->
     {% else %}
-    <script type="text/javascript" src="{% static 'dist/scentrade.base.1432829443097.js' %}?version=af9a5af7968240cc5ec7d81e824c62d0"></script>
+    <script type="text/javascript" src="{% static 'dist/scentrade.base.1433181443385.js' %}?version=0a46723bcfbc5a834ceb52421bdb2af8"></script>
     {% endif %}
     {# GRUNT_DJANGO_COMPRESSOR JS END #}
 

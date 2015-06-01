@@ -4,9 +4,9 @@
   angular.module('scentrade.controllers')
     .controller('HomePageController', HomePageController);
 
-  HomePageController.$inject = ['$scope', '$rootScope', '$http', 'API', '$modal'];
+  HomePageController.$inject = ['$scope', '$rootScope', '$http', 'API', '$modal', '$window'];
 
-  function HomePageController($scope, $rootScope, $http, API, $modal){
+  function HomePageController($scope, $rootScope, $http, API, $modal, $window){
     $rootScope.bodyClass = 'homepage';
     $rootScope.title = 'Inicio';
 
@@ -32,5 +32,31 @@
         controllerAs: 'vm',
       });
     }
+
+    $($window).on('scroll', function(){
+      $('.homepage-item:in-viewport').addClass('reveal');
+    });
+
+    // Diamond functionality
+    // -----------------------------------------------------------------------------
+    var $whatWeDo = $('section#what-we-do'),
+      $whatWeDoServices = $('div#what-we-do-services'),
+      $whatWeDoHome = $('div#what-we-do-home');
+
+    $whatWeDoServices.on('mouseover', function(){
+      $('section#what-we-do').addClass('over-services');
+    });
+
+    $whatWeDoServices.on('mouseleave', function(){
+      $('section#what-we-do').removeClass('over-services');
+    });
+
+    $whatWeDoHome.on('mouseover', function(){
+      $('section#what-we-do').addClass('over-home');
+    });
+
+    $whatWeDoHome.on('mouseleave', function(){
+      $('section#what-we-do').removeClass('over-home');
+    });
   }
 })();

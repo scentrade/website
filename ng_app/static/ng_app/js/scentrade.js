@@ -13,7 +13,6 @@
 //      'ngFileUpload',
       'ng.django.forms',
       'ui.bootstrap',
-      'fox.scrollReveal',
 
       // scentrade modules
       'scentrade.config',
