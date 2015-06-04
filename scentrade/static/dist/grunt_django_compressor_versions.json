@@ -1,6 +1,6 @@
 {
     "created": null,
-    "modified": 1433433177097,
+    "modified": 1433437467913,
     "./scentrade/templates/base.html": {
         "js": {
             "scentrade/static/bower_components/es5-shim/es5-shim.js": "d8a4aac0a0591d07f07a2173e0dd1da5",
@@ -35,7 +35,7 @@
             "ng_app/static/ng_app/js/controllers/main.menu.controller.js": "741326bfae541391709b3f78aad41895",
             "scentrade/static/bower_components/scrollreveal.js/dist/scrollreveal.js": "f9c429b30beaffbbb8fa1c64a508bf3b",
             "scentrade/static/bower_components/fox-angular-scrollreveal.js/dist/fox-angular-scrollreveal.js": "10e097b95fce30bcefac098c033fad20",
-            "scentrade/static/js/main/detectmobilebrowser.js": "cdb16983aaaef637e69f4aafd198f61f",
+            "scentrade/static/js/main/detectmobilebrowser.js": "032147d727092b2f467e9ada5fac4baa",
             "scentrade/static/js/main/jquery.viewport.js": "318ed33bbdee2ef7181386682cdf6e63"
         },
         "css": {
