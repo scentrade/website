@@ -1103,6 +1103,9 @@ fieldset[disabled] .btn-white-transparent.active {
   color: rgba(255, 255, 255, 0.7);
   background-color: #000000;
 }
+.btn-white-transparent:hover {
+  background-color: white;
+}
 .btn-white-bordered {
   color: #ffffff;
   background-color: transparent;
@@ -1350,64 +1353,79 @@ fieldset[disabled] .btn-green-bordered.active {
   position: absolute;
   z-index: 1050;
 }
-body.desktop div.homepage-item {
-  -webkit-transform: translate(0, 200px);
-  -ms-transform: translate(0, 200px);
-  -o-transform: translate(0, 200px);
-  transform: translate(0, 200px);
-  -webkit-transition: all 500ms ease-in-out;
-  -o-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
-}
-body.desktop div.homepage-item.reveal {
-  -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  -o-transform: translate(0, 0);
-  transform: translate(0, 0);
-}
 body.desktop section#what-we-do div.container-fluid:before {
-  -webkit-transition: all ease-in-out 500ms;
-  -o-transition: all ease-in-out 500ms;
-  transition: all ease-in-out 500ms;
+  -webkit-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
 }
 body.desktop section#what-we-do div.container-fluid:after {
-  -webkit-transition: all ease-in-out 500ms;
-  -o-transition: all ease-in-out 500ms;
-  transition: all ease-in-out 500ms;
+  -webkit-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
 }
 body.desktop section#what-we-do div.container-fluid div#what-we-do-diamond {
-  -webkit-transition: all ease-in-out 500ms;
-  -o-transition: all ease-in-out 500ms;
-  transition: all ease-in-out 500ms;
+  -webkit-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
 }
 body.desktop section#what-we-do div.container-fluid div#what-we-do-services {
-  -webkit-transition: all ease-in-out 500ms;
-  -o-transition: all ease-in-out 500ms;
-  transition: all ease-in-out 500ms;
+  -webkit-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
 }
 body.desktop section#what-we-do div.container-fluid div#what-we-do-services div.wrapper {
-  -webkit-transition: all ease-in-out 500ms;
-  -o-transition: all ease-in-out 500ms;
-  transition: all ease-in-out 500ms;
+  -webkit-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+body.desktop section#what-we-do div.container-fluid div#what-we-do-services img {
+  -webkit-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+body.desktop section#what-we-do div.container-fluid div#what-we-do-services h1 {
+  -webkit-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+body.desktop section#what-we-do div.container-fluid div#what-we-do-services .btn {
+  -webkit-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
 }
 body.desktop section#what-we-do div.container-fluid div#what-we-do-home {
-  -webkit-transition: all ease-in-out 500ms;
-  -o-transition: all ease-in-out 500ms;
-  transition: all ease-in-out 500ms;
+  -webkit-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
 }
 body.desktop section#what-we-do div.container-fluid div#what-we-do-home div.wrapper {
-  -webkit-transition: all ease-in-out 500ms;
-  -o-transition: all ease-in-out 500ms;
-  transition: all ease-in-out 500ms;
+  -webkit-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+body.desktop section#what-we-do div.container-fluid div#what-we-do-home img {
+  -webkit-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+body.desktop section#what-we-do div.container-fluid div#what-we-do-home h1 {
+  -webkit-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+body.desktop section#what-we-do div.container-fluid div#what-we-do-home .btn {
+  -webkit-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
 }
 body.desktop section#what-we-do.over-services div.container-fluid:before {
-  width: 70%;
+  width: 80%;
 }
 body.desktop section#what-we-do.over-services div.container-fluid:after {
-  width: 30%;
+  width: 20%;
 }
 body.desktop section#what-we-do.over-services div.container-fluid div#what-we-do-diamond {
-  margin-left: 45%;
+  margin-left: 55%;
 }
 body.desktop section#what-we-do.over-services div.container-fluid div#what-we-do-services {
   width: 50%;
@@ -1416,14 +1434,24 @@ body.desktop section#what-we-do.over-services div.container-fluid div#what-we-do
   padding-left: 0;
   padding-right: 0;
 }
+body.desktop section#what-we-do.over-services div.container-fluid div#what-we-do-services img {
+  width: 100px;
+}
+body.desktop section#what-we-do.over-services div.container-fluid div#what-we-do-services h1 {
+  font-size: 82px;
+}
+body.desktop section#what-we-do.over-services div.container-fluid div#what-we-do-services a.btn {
+  font-size: 24px;
+  padding: 10px 20px;
+}
 body.desktop section#what-we-do.over-home div.container-fluid:before {
-  width: 30%;
+  width: 20%;
 }
 body.desktop section#what-we-do.over-home div.container-fluid:after {
-  width: 70%;
+  width: 80%;
 }
 body.desktop section#what-we-do.over-home div.container-fluid div#what-we-do-diamond {
-  margin-left: 5%;
+  margin-left: -5%;
 }
 body.desktop section#what-we-do.over-home div.container-fluid div#what-we-do-home {
   width: 50%;
@@ -1431,6 +1459,16 @@ body.desktop section#what-we-do.over-home div.container-fluid div#what-we-do-hom
 body.desktop section#what-we-do.over-home div.container-fluid div#what-we-do-home div.wrapper {
   padding-left: 0;
   padding-right: 0;
+}
+body.desktop section#what-we-do.over-home div.container-fluid div#what-we-do-home img {
+  width: 100px;
+}
+body.desktop section#what-we-do.over-home div.container-fluid div#what-we-do-home h1 {
+  font-size: 82px;
+}
+body.desktop section#what-we-do.over-home div.container-fluid div#what-we-do-home a.btn {
+  font-size: 24px;
+  padding: 10px 20px;
 }
 body.desktop section#blog-posts-listing div.row div[class*="col"] {
   background: no-repeat center center transparent;
@@ -1463,6 +1501,24 @@ body.desktop section#blog-posts-listing div.row div[class*="col"]:hover:after {
 }
 body.desktop section#blog-posts-listing div.row div[class*="col"]:hover div.blog-box div.text {
   opacity: 1;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+body.desktop .reveal-items-container {
+  overflow-y: hidden;
+}
+body.desktop .reveal-items-container div.reveal-item {
+  -webkit-transform: translate(0, 200px);
+  -ms-transform: translate(0, 200px);
+  -o-transform: translate(0, 200px);
+  transform: translate(0, 200px);
+  -webkit-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+body.desktop .reveal-items-container div.reveal-item.reveal {
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   -o-transform: translate(0, 0);
@@ -1921,9 +1977,6 @@ section#homepage-hero div#homepage-hero-video video {
 }
 section#homepage-hero div#homepage-hero-text {
   display: block;
-  width: 100%;
-  position: absolute;
-  bottom: 20px;
   color: white;
 }
 section#homepage-hero div#homepage-hero-text h1 {
@@ -2131,9 +2184,35 @@ section#homepage-testimonials div.row div[class*="col"] {
 section#free-trial {
   background: url('../img/temp/background-free-trial.jpg') no-repeat center right transparent;
   background-size: cover;
+  position: relative;
+  overflow-y: hidden;
+}
+section#free-trial:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url('../img/main/free-trial-over.png') no-repeat center center transparent;
+  background-size: cover;
+  z-index: 1;
+  opacity: 1;
+  -webkit-transition: all ease-in-out 300ms;
+  -o-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+section#free-trial:hover:after {
+  margin-top: -100%;
+  opacity: 0;
 }
 section#free-trial.no-bg {
   background: none;
+}
+body.modal-open section#free-trial:after {
+  margin-top: -100%;
+  opacity: 0;
 }
 section#our-products {
   background-color: #df1d3a;

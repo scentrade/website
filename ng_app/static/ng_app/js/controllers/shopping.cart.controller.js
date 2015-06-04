@@ -15,7 +15,6 @@
     // Communicating between controllers
     // http://stackoverflow.com/a/26060511/923323
     $scope.$on('cart.update', function(){
-      console.log('root scope magic');
       vm.fetchCart();
     });
 

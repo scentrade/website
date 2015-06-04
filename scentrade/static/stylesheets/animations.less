@@ -1,42 +1,57 @@
 body.desktop {
   // Homepage animations
   // /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
-  div.homepage-item {
-    .translate(0; 200px);
-    .transition(all 500ms ease-in-out);
-
-    &.reveal {
-      .translate(0; 0);
-    }
-  }
-
   section#what-we-do {
     div.container-fluid {
       &:before {
-        .transition(all ease-in-out 500ms);
+        .transition(all ease-in-out 300ms);
       }
 
       &:after{
-        .transition(all ease-in-out 500ms);
+        .transition(all ease-in-out 300ms);
       }
 
       div#what-we-do-diamond {
-        .transition(all ease-in-out 500ms);
+        .transition(all ease-in-out 300ms);
       }
 
       div#what-we-do-services {
-        .transition(all ease-in-out 500ms);
+        .transition(all ease-in-out 300ms);
 
         div.wrapper {
-          .transition(all ease-in-out 500ms);
+          .transition(all ease-in-out 300ms);
+        }
+
+        img {
+          .transition(all ease-in-out 300ms);
+        }
+
+        h1 {
+          .transition(all ease-in-out 300ms);
+        }
+
+        .btn {
+          .transition(all ease-in-out 300ms);
         }
       }
 
       div#what-we-do-home {
-        .transition(all ease-in-out 500ms);
+        .transition(all ease-in-out 300ms);
 
         div.wrapper {
-          .transition(all ease-in-out 500ms);
+          .transition(all ease-in-out 300ms);
+        }
+
+        img {
+          .transition(all ease-in-out 300ms);
+        }
+
+        h1 {
+          .transition(all ease-in-out 300ms);
+        }
+
+        .btn {
+          .transition(all ease-in-out 300ms);
         }
       }
     }
@@ -44,15 +59,15 @@ body.desktop {
     &.over-services {
       div.container-fluid {
         &:before {
-          width: 70%;
+          width: 80%;
         }
 
         &:after {
-          width: 30%;
+          width: 20%;
         }
 
         div#what-we-do-diamond {
-          margin-left: 45%;
+          margin-left: 55%;
         }
 
         div#what-we-do-services {
@@ -62,6 +77,19 @@ body.desktop {
             padding-left: 0;
             padding-right: 0;
           }
+
+          img {
+            width: 100px;
+          }
+
+          h1 {
+            font-size: round(@font-size-h1 * 2);
+          }
+
+          a.btn {
+            font-size: round(@font-size-base * 1.5);
+            padding: 10px 20px;
+          }
         }
       }
     }
@@ -69,15 +97,15 @@ body.desktop {
     &.over-home {
       div.container-fluid {
         &:before {
-          width: 30%;
+          width: 20%;
         }
 
         &:after {
-          width: 70%;
+          width: 80%;
         }
 
         div#what-we-do-diamond {
-          margin-left: 5%;
+          margin-left: -5%;
         }
 
         div#what-we-do-home {
@@ -87,6 +115,19 @@ body.desktop {
             padding-left: 0;
             padding-right: 0;
           }
+
+          img {
+            width: 100px;
+          }
+
+          h1 {
+            font-size: round(@font-size-h1 * 2);
+          }
+
+          a.btn {
+            font-size: round(@font-size-base * 1.5);
+            padding: 10px 20px;
+          }
         }
       }
     }
@@ -94,7 +135,7 @@ body.desktop {
 
 
   // Blog animations
-  // -----------------------------------------------------------------------------
+  // /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
   section#blog-posts-listing {
     div.row {
       div[class*="col"] {
@@ -129,6 +170,22 @@ body.desktop {
             }
           }
         }
+      }
+    }
+  }
+
+
+  // Reveal items animation
+  // /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+  .reveal-items-container {
+    overflow-y: hidden;
+
+    div.reveal-item {
+      .translate(0; 200px);
+      .transition(all 500ms ease-in-out);
+
+      &.reveal {
+        .translate(0; 0);
       }
     }
   }

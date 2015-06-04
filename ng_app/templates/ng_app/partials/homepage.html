@@ -8,19 +8,23 @@
         </video>
     </div>
     <div class="wrapper-full-absolute">
-        <div id="homepage-hero-text">
-            <div class="container">
-                <div class="text-center">
-                    <img src="{% static 'img/homepage/hero-s.svg' %}" alt="Scentrade" width="100" class="mbgw"/>
-                    <h1 class="gb nmt mbgw">{% trans 'Creamos experiencias olfativas memorables' %}</h1>
-                    <nav>
-                        <span class="btn-wrapper mrgw">
-                            <a ng-href="servicios" class="btn btn-white-transparent btn-lg bebas">{% trans 'Para tu empresa' %}</a>
-                        </span>
-                        <span class="btn-wrapper">
-                            <a ng-href="hogar" class="btn btn-white-transparent btn-lg bebas">{% trans 'Para tu hogar' %}</a>
-                        </span>
-                    </nav>
+        <div class="vcw">
+            <div class="vci">
+                <div id="homepage-hero-text">
+                    <div class="container">
+                        <div class="text-center">
+                            <img src="{% static 'img/homepage/hero-s.svg' %}" alt="Scentrade" width="100" class="mbgw"/>
+                            <h1 class="gb nmt mbgw">{% trans 'Creamos experiencias olfativas memorables' %}</h1>
+                            <nav>
+                                <span class="btn-wrapper mrgw">
+                                    <a ng-href="servicios" class="btn btn-white-transparent btn-lg bebas">{% trans 'Para tu empresa' %}</a>
+                                </span>
+                                <span class="btn-wrapper">
+                                    <a ng-href="hogar" class="btn btn-white-transparent btn-lg bebas">{% trans 'Para tu hogar' %}</a>
+                                </span>
+                            </nav>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -140,8 +144,8 @@
                 lo hacemos diferente.
             {% endblocktrans %}
         </h1>
-        <div class="row mbgw">
-            <div class="col-sm-4 homepage-item mbgw">
+        <div class="row reveal-items-container mbgw">
+            <div class="col-sm-4 reveal-item mbgw">
                 <img ng-src="{% static 'img/homepage/icon-question.svg' %}" alt="{% trans '¿Cómo funciona?' %}" width="70"/>
                 <h2 class="blue mtgw">{% trans '¿Cómo funciona?' %}</h2>
                 <p class="plgw prgw">
@@ -156,7 +160,7 @@
                     {% endblocktrans %}
                 </p>
             </div>
-            <div class="col-sm-4 homepage-item mbgw">
+            <div class="col-sm-4 reveal-item mbgw">
                 <img ng-src="{% static 'img/homepage/icon-nose.svg' %}" alt="{% trans 'Importancia del olfato' %}" width="70"/>
                 <h2 class="blue mtgw">{% trans 'Importancia del olfato' %}</h2>
                 <p class="plgw prgw">
@@ -170,7 +174,7 @@
                     {% endblocktrans %}
                 </p>
             </div>
-            <div class="col-sm-4 homepage-item mbgw">
+            <div class="col-sm-4 reveal-item mbgw">
                 <img ng-src="{% static 'img/homepage/icon-cog.svg' %}" alt="{% trans 'En la práctica' %}" width="70"/>
                 <h2 class="blue mtgw">{% trans 'En la práctica' %}</h2>
                 <p class="plgw prgw">

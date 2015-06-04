@@ -34,7 +34,14 @@
     }
 
     $($window).on('scroll', function(){
-      $('.homepage-item:in-viewport').addClass('reveal');
+      if( $('div.reveal-items-container:in-viewport').length > 0 ){
+        $('.reveal-item').each(function(index){
+          var $this = $(this);
+          setTimeout(function(){
+            $this.addClass('reveal');
+          }, 400 * index);
+        });
+      }
     });
 
     // Diamond functionality

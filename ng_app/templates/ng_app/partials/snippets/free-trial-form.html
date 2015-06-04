@@ -1,11 +1,22 @@
-{% load i18n %}
+{% load i18n staticfiles %}
 
 <script type="text/ng-template" id="free-trial-modal.html">
     <div class="modal-header">
+        <button type="button" class="close" ng-click="vm.close()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
         <h3 class="modal-title">{% trans 'Solicita una muestra de producto gratis' %}</h3>
     </div>
     <div class="modal-body">
-        <p ng-show="vm.success" class="ptgw pbgw">{% verbatim %}{{ vm.successMessage }}{% endverbatim %}</p>
+        <div ng-show="vm.success" class="block text-center ptgw pbgw">
+            <img src="{% static 'img/main/logo-red.svg' %}" alt="" width="50" class="mtgw"/>
+            <h1 class="nmb">
+                {% trans '¡Gracias por escribirnos!' %}
+            </h1>
+            <h2 class="nm">
+                {% trans 'Muy pronto uno de nuestros asesores se pondrá en contacto contigo.' %}
+            </h2>
+        </div>
         <form id="free-trial-form"
               name="{{ free_trial_form.form_name }}"
               ng-hide="vm.success"
@@ -14,7 +25,6 @@
         </form>
     </div>
     <div class="modal-footer">
-        <button class="btn btn-warning" ng-click="vm.close()">{% trans 'Cerrar' %}</button>
         <button class="btn btn-primary" ng-click="vm.submit()" ng-hide="vm.success">{% trans 'Enviar' %}</button>
     </div>
 </script>

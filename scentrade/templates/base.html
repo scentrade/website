@@ -25,7 +25,7 @@
         <link href="{% static 'stylesheets/scentrade.css' %}" rel="stylesheet">
         <!--STYLES END-->
         {% else %}
-        <link rel="stylesheet" type="text/css" href="{% static 'dist/scentrade.base.1433183673052.css' %}?version=f2dfa24b9097cbf7b21ece74f46664b3">
+        <link rel="stylesheet" type="text/css" href="{% static 'dist/scentrade.base.1433433177097.css' %}?version=30c6a0cae1f34b960a898b0458415f8f">
         {% endif %}
         {# GRUNT_DJANGO_COMPRESSOR CSS END #}
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -70,7 +70,7 @@
                     </li>
                     <li ng-class="{ active: isActive('/productos')}">
                         <a ng-href="productos">
-                            {% trans 'Productos' %}
+                            {% trans 'Tienda' %}
                         </a>
                     </li>
                     <li ng-class="{ active: isActive('/servicios')}">
@@ -193,7 +193,7 @@
     <script src="{% static 'ng_app/js/controllers/main.menu.controller.js' %}"></script>
     <!--SCRIPTS END-->
     {% else %}
-    <script type="text/javascript" src="{% static 'dist/scentrade.base.1433181443385.js' %}?version=0a46723bcfbc5a834ceb52421bdb2af8"></script>
+    <script type="text/javascript" src="{% static 'dist/scentrade.base.1433433170725.js' %}?version=3c43ce53a794a235662bbdfa9a61051f"></script>
     {% endif %}
     {# GRUNT_DJANGO_COMPRESSOR JS END #}
 

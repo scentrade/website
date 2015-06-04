@@ -29,7 +29,6 @@
     });
 
     $scentradeHeader.on('click', '.checkout__cancel', function(event){
-      event.preventDefault();
       $scentradeHeader.find('.checkout').removeClass('checkout--active');
     });
 
