@@ -4,9 +4,9 @@
   angular.module('scentrade.controllers')
     .controller('HomePageController', HomePageController);
 
-  HomePageController.$inject = ['$scope', '$rootScope', '$http', 'API', '$modal', '$window'];
+  HomePageController.$inject = ['$scope', '$rootScope', '$http', 'API', '$modal'];
 
-  function HomePageController($scope, $rootScope, $http, API, $modal, $window){
+  function HomePageController($scope, $rootScope, $http, API, $modal){
     $rootScope.bodyClass = 'homepage';
     $rootScope.title = 'Inicio';
 
@@ -32,17 +32,6 @@
         controllerAs: 'vm',
       });
     }
-
-    $($window).on('scroll', function(){
-      if( $('div.reveal-items-container:in-viewport').length > 0 ){
-        $('.reveal-item').each(function(index){
-          var $this = $(this);
-          setTimeout(function(){
-            $this.addClass('reveal');
-          }, 400 * index);
-        });
-      }
-    });
 
     // Diamond functionality
     // -----------------------------------------------------------------------------

@@ -134,6 +134,22 @@ body.desktop {
   }
 
 
+  // Free trial animation
+  // -----------------------------------------------------------------------------
+  section#free-trial {
+    &.open {
+      a#open-button {
+        display: none;
+      }
+
+      &:after {
+        margin-top: -100%;
+        opacity: 0;
+      }
+    }
+  }
+
+
   // Blog animations
   // /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
   section#blog-posts-listing {

@@ -12,22 +12,16 @@
     <section id="products-nav" class="mtgw">
         <div class="container">
             <nav class="row mbgw">
-                <a ng-href="#"
-                   class="col-sm-4 h1 nmb gb text-center home"
-                   ng-class="{'active':vm.selectedTab === 'home'}"
-                   ng-click="vm.fetchProducts('?target=home'); vm.selectedTab = 'home';">
+                <a ng-href="productos/hogar"
+                   class="col-sm-4 h1 nmb gb text-center home">
                     {% trans 'Para tu hogar' %}
                 </a>
-                <a ng-href="#"
-                   class="col-sm-4 h1 nmb gb text-center commercial"
-                   ng-class="{'active':vm.selectedTab === 'commercial'}"
-                   ng-click="vm.fetchProducts('?target=commercial'); vm.selectedTab = 'commercial';">
+                <a ng-href="productos/comercial"
+                   class="col-sm-4 h1 nmb gb text-center commercial">
                     {% trans 'Estrategias comerciales' %}
                 </a>
-                <a ng-href="#"
-                   class="col-sm-4 h1 nmb gb text-center all"
-                   ng-class="{'active':vm.selectedTab === 'all'}"
-                   ng-click="vm.fetchProducts(); vm.selectedTab = 'all';">
+                <a ng-href="productos"
+                   class="col-sm-4 h1 nmb gb text-center all">
                     {% trans 'Lo quiero ver todo' %}
                 </a>
             </nav>

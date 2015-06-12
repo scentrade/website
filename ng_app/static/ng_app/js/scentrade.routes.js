@@ -30,6 +30,11 @@
         controller: 'ProductsController',
         controllerAs: 'vm'
       })
+      .when('/productos/:target', {
+        templateUrl: currentLanguage + '/partials/sections/products.html',
+        controller: 'ProductsController',
+        controllerAs: 'vm'
+      })
       .when('/servicios', {
         templateUrl: currentLanguage + '/partials/sections/services.html',
         controller: 'ServicesController',

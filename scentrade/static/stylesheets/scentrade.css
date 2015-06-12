@@ -1470,6 +1470,13 @@ body.desktop section#what-we-do.over-home div.container-fluid div#what-we-do-hom
   font-size: 24px;
   padding: 10px 20px;
 }
+body.desktop section#free-trial.open a#open-button {
+  display: none;
+}
+body.desktop section#free-trial.open:after {
+  margin-top: -100%;
+  opacity: 0;
+}
 body.desktop section#blog-posts-listing div.row div[class*="col"] {
   background: no-repeat center center transparent;
   background-size: 100%;
@@ -1954,7 +1961,7 @@ section#homepage-hero {
   width: 100%;
   padding-bottom: 40%;
   position: relative;
-  background: url('../img/temp/homepage-hero.png') no-repeat center center transparent;
+  background: url('../video/bg-hero_3_cover.jpg') no-repeat center center transparent;
   background-size: cover;
   z-index: 10;
   overflow-y: hidden;
@@ -2182,33 +2189,43 @@ section#homepage-testimonials div.row div[class*="col"] {
   padding: 30px;
 }
 section#free-trial {
-  background: url('../img/temp/background-free-trial.jpg') no-repeat center right transparent;
+  background: url('../img/temp/background-free-trial.jpg') no-repeat right -168px bottom -20px transparent;
   background-size: cover;
   position: relative;
   overflow-y: hidden;
 }
-section#free-trial:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: url('../img/main/free-trial-over.png') no-repeat center center transparent;
-  background-size: cover;
-  z-index: 1;
-  opacity: 1;
-  -webkit-transition: all ease-in-out 300ms;
-  -o-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms;
-}
-section#free-trial:hover:after {
-  margin-top: -100%;
-  opacity: 0;
+@media (min-width: 768px) {
+  section#free-trial a#open-button {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 20%;
+    width: 100%;
+    z-index: 2;
+  }
+  section#free-trial:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url('../img/main/free-trial-over.png') no-repeat center center transparent;
+    background-size: cover;
+    z-index: 1;
+    opacity: 1;
+    -webkit-transition: all ease-in-out 300ms;
+    -o-transition: all ease-in-out 300ms;
+    transition: all ease-in-out 300ms;
+  }
 }
 section#free-trial.no-bg {
   background: none;
+}
+section#free-trial a.btn {
+  padding: 15px 25px;
+  font-size: 20px;
 }
 body.modal-open section#free-trial:after {
   margin-top: -100%;
@@ -2284,6 +2301,10 @@ section#products-nav nav a.all.active {
   section#products-nav nav a:last-child {
     padding: 0 50px;
   }
+}
+section#products-listing div.product h1 {
+  height: 66px;
+  overflow: hidden;
 }
 section#products-listing div.product a {
   display: block;

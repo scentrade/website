@@ -6,7 +6,7 @@ section#homepage-hero {
   width: 100%;
   padding-bottom: @scentrade-hero-height-lg; // the same as section hero
   position: relative;
-  background: url('@{img}temp/homepage-hero.png') no-repeat center center transparent;
+  background: url('../video/bg-hero_3_cover.jpg') no-repeat center center transparent;
   background-size: cover;
   //  margin-top: @header-height * -1;
   z-index: 10;
@@ -298,35 +298,44 @@ section#homepage-testimonials {
 // @section: free trial
 // /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 section#free-trial {
-  background: url('@{img}temp/background-free-trial.jpg') no-repeat center right transparent;
+  background: url('@{img}temp/background-free-trial.jpg') no-repeat right -168px bottom -20px transparent;
   background-size: cover;
   position: relative;
   overflow-y: hidden;
 
-  &:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: url('@{img}main/free-trial-over.png') no-repeat center center transparent;
-    background-size: cover;
-    z-index: 1;
-    opacity: 1;
-    .transition(all ease-in-out 300ms);
-  }
+  @media (min-width: @screen-sm-min){
+    a#open-button {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      height: 20%;
+      width: 100%;
+      z-index: 2;
+    }
 
-  &:hover {
     &:after {
-      margin-top: -100%;
-      opacity: 0;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: url('@{img}main/free-trial-over.png') no-repeat center center transparent;
+      background-size: cover;
+      z-index: 1;
+      opacity: 1;
+      .transition(all ease-in-out 300ms);
     }
   }
 
   &.no-bg {
     background: none;
+  }
+
+  a.btn {
+    padding: 15px 25px;
+    font-size: @font-size-h4;
   }
 }
 

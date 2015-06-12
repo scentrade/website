@@ -4,9 +4,9 @@
   angular.module('scentrade.controllers')
     .controller('ProductsController', ProductsController);
 
-  ProductsController.$inject = ['$scope', '$rootScope', '$http', 'API'];
+  ProductsController.$inject = ['$scope', '$rootScope', '$http', 'API', '$location', '$routeParams'];
 
-  function ProductsController($scope, $rootScope, $http, API){
+  function ProductsController($scope, $rootScope, $http, API, $location, $routeParams){
     $rootScope.bodyClass = 'products';
     $rootScope.title = 'Productos';
 
