@@ -14,14 +14,19 @@
     vm.addProductToCart = addProductToCart;
     vm.fetchProducts = fetchProducts;
     // fetch products first time
-    vm.fetchProducts();
+    vm.fetchProducts($routeParams['target']);
     vm.selectedTab = 'all';
 
     // -----------------------------------------------------------------------------
 
-    function fetchProducts(params){
+    if( $routeParams['target'] ){
+      vm.selectedTab = $routeParams['target'];
+    }
+
+    function fetchProducts(target){
+      if( angular.isUndefined(target) ) target = 'all';
       var url = API.makeURL('store/products');
-      if( params ) url += params;
+      if( target != 'all' ) url += '?target=' + target;
       $http.get(url)
         .success(function(response, status){
           vm.products = response.results;
