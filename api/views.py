@@ -18,7 +18,7 @@ class ContactFormView(generics.GenericAPIView):
 
         contact_form = ContactForm(data=request.data)
         if contact_form.is_valid():
-            from_email = '{name} <{email}>'.format(
+            from_email = u'{name} <{email}>'.format(
                 name=contact_form.cleaned_data['name'],
                 email=contact_form.cleaned_data['email']
             )
@@ -60,7 +60,7 @@ class FreeTrialFormView(generics.GenericAPIView):
 
         contact_form = FreeTrialForm(data=request.data)
         if contact_form.is_valid():
-            from_email = '{name} <{email}>'.format(
+            from_email = u'{name} <{email}>'.format(
                 name=contact_form.cleaned_data['name'],
                 email=contact_form.cleaned_data['email']
             )
