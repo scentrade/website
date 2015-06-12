@@ -921,10 +921,10 @@ header#section-hero h2#header-subtitle {
 }
 @media (max-width: 767px) {
   header#section-hero {
-    padding-bottom: 70%;
+    padding-bottom: 80%;
   }
   header#section-hero h1 {
-    font-size: 62px;
+    font-size: 53px;
   }
   header#section-hero h1 small {
     font-size: 31px;
@@ -984,6 +984,22 @@ body.contact header#section-hero {
   height: 0;
   padding-bottom: 100%;
   position: relative;
+}
+@media (max-width: 767px) {
+  .box-square.fix-xs {
+    width: auto;
+    height: auto;
+    padding-bottom: 0;
+  }
+  .box-square.fix-xs .wrapper-full-absolute {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 img#scentrade-diamond-logo {
   display: block;
@@ -2160,14 +2176,15 @@ section#what-we-do div.row div.center div.box-square div.wrapper-full-absolute {
     padding: 60px 15px;
   }
   section#what-we-do div.row div.center div.box-square {
-    font-size: 15px;
+    font-size: 13px;
   }
   section#what-we-do div.row div.center div.box-square img#scentrade-blue-logo {
-    margin-top: -70px;
-    width: 55px;
+    margin-top: -65px;
+    width: 50px;
   }
   section#what-we-do div.row div.center div.box-square h1 {
-    margin-top: 10px;
+    margin-top: 5px;
+    font-size: 28px;
   }
   section#what-we-do div.row div.center div.box-square:after {
     content: "";
@@ -2264,7 +2281,7 @@ section#our-products p {
     position: relative;
   }
   section#our-products div[class*="col"] p {
-    padding: 0 60px;
+    padding: 0 30px;
   }
 }
 section#products-nav nav a {
@@ -2385,4 +2402,32 @@ form#contact-form .form-control:-ms-input-placeholder {
 }
 form#contact-form .form-control::-webkit-input-placeholder {
   color: #ffb366;
+}
+@media (max-width: 767px) {
+  body.contact div.wrapper {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+@media (max-width: 767px) {
+  div#how-we-do-it h1 {
+    margin-bottom: 10px !important;
+  }
+  div#how-we-do-it p {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+@media (max-width: 767px) {
+  body.home section#home-details h1 {
+    margin-bottom: 10px !important;
+  }
+  body.home section#home-details p {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  body.home section#transform-spaces p {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
