@@ -19,7 +19,7 @@
     vm.goToPreviousPage = goToPreviousPage;
     vm.goToNextPage = goToNextPage;
     vm.goToPage = goToPage;
-    vm.currentPage = $routeParams['page'];
+    vm.currentPage = $routeParams['page'] || 1;
 
     // -----------------------------------------------------------------------------
 
@@ -28,7 +28,7 @@
     }
 
     function fetchProducts(target){
-      var page = $routeParams['page'] || 0,
+      var page = $routeParams['page'] - 1 || 0,
         offset = API_PAGE_SIZE * page;
 
       if( angular.isUndefined(target) ) target = 'all';
@@ -43,8 +43,11 @@
 
           vm.pages = function(){
             var pages = [];
-            for(var i=1; i<=response.count/API_PAGE_SIZE; i++){
-              pages.push(i);
+            console.log(response.count);
+            console.log(API_PAGE_SIZE);
+            console.log(response.count/API_PAGE_SIZE);
+            for(var i=0; i<response.count/API_PAGE_SIZE; i++){
+              pages.push(i+1);
             }
             return pages;
           }();
