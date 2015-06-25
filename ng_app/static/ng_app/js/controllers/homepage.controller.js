@@ -4,9 +4,9 @@
   angular.module('scentrade.controllers')
     .controller('HomePageController', HomePageController);
 
-  HomePageController.$inject = ['$scope', '$rootScope', '$http', 'API', '$modal'];
+  HomePageController.$inject = ['$scope', '$rootScope', '$http', 'API', '$modal', '$timeout'];
 
-  function HomePageController($scope, $rootScope, $http, API, $modal){
+  function HomePageController($scope, $rootScope, $http, API, $modal, $timeout){
     $rootScope.bodyClass = 'homepage';
     $rootScope.title = 'Inicio';
 

@@ -4,9 +4,9 @@
   angular.module('scentrade.controllers')
     .controller('ShoppingCartController', ShoppingCartController);
 
-  ShoppingCartController.$inject = ['$scope', '$http', 'API'];
+  ShoppingCartController.$inject = ['$scope', '$http', 'API', '$timeout'];
 
-  function ShoppingCartController($scope, $http, API){
+  function ShoppingCartController($scope, $http, API, $timeout){
     var vm = this;
     vm.fetchCart = fetchCart;
     // fetch the first time
@@ -16,6 +16,10 @@
     // http://stackoverflow.com/a/26060511/923323
     $scope.$on('cart.update', function(){
       vm.fetchCart();
+      angular.element('div.checkout').addClass('updated');
+      $timeout(function(){
+        angular.element('div.checkout').removeClass('updated');
+      }, 500);
     });
 
     // -----------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 {
     "created": null,
-    "modified": 1434118288597,
+    "modified": 1435256669644,
     "./scentrade/templates/base.html": {
         "js": {
             "scentrade/static/bower_components/es5-shim/es5-shim.js": "d8a4aac0a0591d07f07a2173e0dd1da5",
@@ -13,14 +13,14 @@
             "scentrade/static/js/main/header-nav.js": "8dc8aab991ef44ff8e4e623db35ca940",
             "ng_app/static/ng_app/js/scentrade.js": "949f96d727a9846468205e54c111a33c",
             "ng_app/static/ng_app/js/scentrade.config.js": "fe0c0e6b4036e891e8f893a3d2a52ca2",
-            "ng_app/static/ng_app/js/constants.js": "cf277f072399cb1d12e2e01ba3f19715",
+            "ng_app/static/ng_app/js/constants.js": "5799ff018c2651793cc9908022725b85",
             "ng_app/static/ng_app/js/scentrade.routes.js": "413047bf586787a0f97059f2e572568b",
             "ng_app/static/ng_app/js/directives/owl.carousel.directive.js": "cfb793cc62f9f40145dd53aa8eff05a7",
             "ng_app/static/ng_app/js/services/api.service.js": "d7c7deee5aedd379dd4d9a0f73a782f9",
-            "ng_app/static/ng_app/js/controllers/shopping.cart.controller.js": "dd3c5aef65aa0ba0b920a28895add39f",
-            "ng_app/static/ng_app/js/controllers/homepage.controller.js": "f8fd28d5cd6357fd38999172342f6397",
+            "ng_app/static/ng_app/js/controllers/shopping.cart.controller.js": "f45c14822d1a41ab2ee1f864647fc787",
+            "ng_app/static/ng_app/js/controllers/homepage.controller.js": "348485a92304d3410e208fce83832575",
             "ng_app/static/ng_app/js/controllers/about.us.controller.js": "ecf159dfbfdf5aab3d87c8ddea837162",
-            "ng_app/static/ng_app/js/controllers/products.controller.js": "14632a1fa432dce3604d57c2ec4da999",
+            "ng_app/static/ng_app/js/controllers/products.controller.js": "6424f9bb2bc982b967e0181c2f325b2d",
             "ng_app/static/ng_app/js/controllers/services.controller.js": "71312b9d43f914cd17acea6993b08434",
             "ng_app/static/ng_app/js/controllers/home.controller.js": "4110c36cf71bd2b1940672dfd38afce0",
             "ng_app/static/ng_app/js/controllers/blog.controller.js": "fe4d9f012b8cfa4bdaf73979384c3f86",
@@ -46,7 +46,7 @@
             "scentrade/static/fonts/asap/stylesheet.css": "fd7ebc6706d34933a44aba351fcc6591",
             "scentrade/static/fonts/bebas/stylesheet.css": "d02c2d642447dda1087400706308847d",
             "scentrade/static/bower_components/owl-carousel/owl-carousel/owl.carousel.css": "783f04b573ab6d378baf10c3be65e5bd",
-            "scentrade/static/stylesheets/scentrade.css": "4c6c42a0b42dd09921a6738fcf5b62b5",
+            "scentrade/static/stylesheets/scentrade.css": "36b1ded9a3dee8908281afa21bb17b22",
             "version": "21f20e8bd48b0b9d262e28087a735446"
         }
     }

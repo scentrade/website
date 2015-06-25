@@ -12,22 +12,19 @@
     <section id="products-nav" class="mtgw">
         <div class="container">
             <nav class="row mbgw">
-                <a ng-href="#"
+                <a ng-href="productos/home"
                    class="col-sm-4 h1 nmb gb text-center home"
-                   ng-class="{'active':vm.selectedTab == 'home'}"
-                   ng-click="vm.fetchProducts('home'); vm.selectedTab = 'home';">
+                   ng-class="{'active':vm.selectedTab == 'home'}">
                     {% trans 'Para tu hogar' %}
                 </a>
-                <a ng-href="#"
+                <a ng-href="productos/commercial"
                    class="col-sm-4 h1 nmb gb text-center commercial"
-                   ng-class="{'active':vm.selectedTab == 'commercial'}"
-                   ng-click="vm.fetchProducts('commercial'); vm.selectedTab = 'commercial';">
+                   ng-class="{'active':vm.selectedTab == 'commercial'}">
                     {% trans 'Estrategias comerciales' %}
                 </a>
-                <a ng-href="#"
+                <a ng-href="productos"
                    class="col-sm-4 h1 nmb gb text-center all"
-                   ng-class="{'active':vm.selectedTab == 'all'}"
-                   ng-click="vm.fetchProducts('all'); vm.selectedTab = 'all';">
+                   ng-class="{'active':vm.selectedTab == 'all'}">
                     {% trans 'Lo quiero ver todo' %}
                 </a>
             </nav>
@@ -43,25 +40,26 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4 col-md-3 product mbgw" ng-repeat="product in vm.products">
-                    {# TODO html_name #}
-                    {% verbatim %}
-                    <h1 class="nm h2" ng-bind-html="product.html_name"></h1>
-                    {% endverbatim %}
-                    <a href=""
-                       class="see-more gray mbgw-05x"
-                       data-toggle="modal"
-                       data-target="#product-{% verbatim %}{{ product.id }}{% endverbatim %}"
-                            >
-                        {% trans 'Ver +' %}
-                    </a>
-                    {% verbatim %}
-                    <img ng-src="{{ product.main_picture }}" alt="{{ product.name }}" class="img-responsive"/>
-                    <h2 class="gray-light">${{ product.price_in_cop|number }} COP</h2>
-                    {% endverbatim %}
-                    <button class="btn btn-red-bordered btn-lg btn-block bebas" ng-click="vm.addProductToCart(product.id)">
-                        {% trans 'Añadir al carrito' %}
-                        <i class="fa fa-shopping-cart"></i>
-                    </button>
+                    <div class="wrapper">
+                        {% verbatim %}
+                        <h1 class="nm h2" ng-bind-html="product.html_name"></h1>
+                        {% endverbatim %}
+                        <a href=""
+                           class="see-more gray mbgw-05x"
+                           data-toggle="modal"
+                           data-target="#product-{% verbatim %}{{ product.id }}{% endverbatim %}"
+                                >
+                            {% trans 'Ver +' %}
+                        </a>
+                        {% verbatim %}
+                        <img ng-src="{{ product.main_picture }}" alt="{{ product.name }}" class="img-responsive"/>
+                        <h2 class="gray-light">${{ product.price_in_cop|number }} COP</h2>
+                        {% endverbatim %}
+                        <button class="btn btn-red-bordered btn-lg btn-block bebas" ng-click="vm.addProductToCart(product.id)">
+                            {% trans 'Añadir al carrito' %}
+                            <i class="fa fa-shopping-cart"></i>
+                        </button>
+                    </div>
 
                     <!-- Modal -->
                     {% verbatim %}
@@ -96,6 +94,22 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pagination" class="pbgw-2x ptgw">
+        <div class="container">
+            <div class="text-center">
+                <div class="centered">
+                    <button class="btn btn-pink arrow" ng-if="vm.previous" ng-click="vm.goToPreviousPage()"><i class="fa fa-caret-left"></i></button>
+                    {% verbatim %}
+                    <button class="btn btn-link number" ng-click="vm.goToPage(page);" ng-repeat="page in vm.pages" ng-class="{'current': page == vm.currentPage}">
+                        <span>{{ page }}</span>
+                    </button>
+                    {% endverbatim %}
+                    <button class="btn btn-pink arrow" ng-if="vm.next" ng-click="vm.goToNextPage()"><i class="fa fa-caret-right"></i></button>
                 </div>
             </div>
         </div>

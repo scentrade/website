@@ -48,6 +48,10 @@ section#products-nav {
 // /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 section#products-listing {
   div.product {
+    > div.wrapper {
+      padding: @grid-gutter-width-half;
+    }
+
     h1 {
       height: 66px; // 33px height * 2
       overflow: hidden;
@@ -61,6 +65,41 @@ section#products-listing {
       span {
         color: @purple;
       }
+    }
+
+    .btn {
+      font-size: @font-size-h4;
+    }
+  }
+}
+
+// @section pagination
+// /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+section#pagination {
+  button.btn {
+    background-color: transparent;
+    font-size: @font-size-h3;
+    color: #6f1749;
+    font-family: @headings-font-family;
+
+    &.number {
+      span {
+        border-bottom: 2px solid transparent;
+      }
+
+      &:hover, &.current {
+        span {
+          border-bottom: 2px solid #6f1749;
+        }
+      }
+    }
+
+    &.arrow {
+      color: @red;
+    }
+
+    &:hover {
+      text-decoration: none;
     }
   }
 }
