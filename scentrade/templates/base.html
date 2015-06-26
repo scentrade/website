@@ -162,6 +162,8 @@
     <!--SCRIPTS-->
     {# Needed because of this implementation: http://stackoverflow.com/a/19498009/923323 #}
     <script src="{% static 'js/main/detectmobilebrowser.js' %}"></script>
+    <script src="{% static 'bower_components/cryptojslib/rollups/md5.js' %}"></script>
+    <script src="{% static 'bower_components/cryptojslib/components/enc-base64.js' %}"></script>
     <script src="{% static 'bower_components/es5-shim/es5-shim.js' %}"></script>
     <script src="{% static 'bower_components/jquery/dist/jquery.js' %}"></script>
     <script src="{% static 'bower_components/bootstrap/dist/js/bootstrap.js' %}"></script>
@@ -191,11 +193,12 @@
     <script src="{% static 'ng_app/js/controllers/blog.controller.js' %}"></script>
     <script src="{% static 'ng_app/js/controllers/blog.single.controller.js' %}"></script>
     <script src="{% static 'ng_app/js/controllers/contact.controller.js' %}"></script>
+    <script src="{% static 'ng_app/js/controllers/cart.controller.js' %}"></script>
     <script src="{% static 'ng_app/js/controllers/modal.free.trial.controller.js' %}"></script>
     <script src="{% static 'ng_app/js/controllers/main.menu.controller.js' %}"></script>
     <!--SCRIPTS END-->
     {% else %}
-    <script type="text/javascript" src="{% static 'dist/scentrade.base.1435257328080.js' %}?version=4c0a2d55ba63a983f117906a0e6a6d1e"></script>
+    <script type="text/javascript" src="{% static 'dist/scentrade.base.1435355417997.js' %}?version=27c668cf20b1b83da354a1db6b2a3688"></script>
     {% endif %}
     {# GRUNT_DJANGO_COMPRESSOR JS END #}
 

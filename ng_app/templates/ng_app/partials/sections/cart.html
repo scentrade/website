@@ -1,0 +1,20 @@
+<h1>cart</h1>
+<form method="post" action="https://stg.gateway.payulatam.com/ppp-web-gateway/">
+    <input name="merchantId"      type="hidden"  value="505378"   >
+    <input name="ApiKey"          type="hidden"  value="26ta6kdhkhqmt5v64o12gh43hl"   >
+    <input name="referenceCode"   type="hidden"  value="ScentradeWebSitePayment109090" >
+    <input name="accountId"       type="hidden"  value="506347" >
+    <input name="description"     type="hidden"  value="Test PAYU"  >
+    <input name="amount"          type="hidden"  value="20000"   >
+    <input name="tax"             type="hidden"  value="0"  >
+    <input name="taxReturnBase"   type="hidden"  value="0" >
+    <input name="currency"        type="hidden"  value="COP" >
+    {% verbatim %}
+    <input name="signature"       type="hidden"  value="{{ vm.signature }}"  >
+    {% endverbatim %}
+    <input name="test"            type="hidden"  value="1" >
+    <input name="buyerEmail"      type="hidden"  value="cristian@cristianrojas.com" >
+    <input name="responseUrl"     type="hidden"  value="http://localhost:8003/xxx" >
+    <input name="confirmationUrl" type="hidden"  value="http://localhost:8003/es/productos" >
+    <input name="Submit"          type="submit"  value="Enviar" >
+</form>

@@ -60,6 +60,11 @@
         controller: 'ContactController',
         controllerAs: 'vm'
       })
+      .when('/carrito', {
+        templateUrl: currentLanguage + '/partials/sections/cart.html',
+        controller: 'CartController',
+        controllerAs: 'vm'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -1,6 +1,6 @@
 {
     "created": null,
-    "modified": 1435258138087,
+    "modified": 1435355425038,
     "./scentrade/templates/base.html": {
         "js": {
             "scentrade/static/bower_components/es5-shim/es5-shim.js": "d8a4aac0a0591d07f07a2173e0dd1da5",
@@ -14,7 +14,7 @@
             "ng_app/static/ng_app/js/scentrade.js": "949f96d727a9846468205e54c111a33c",
             "ng_app/static/ng_app/js/scentrade.config.js": "fe0c0e6b4036e891e8f893a3d2a52ca2",
             "ng_app/static/ng_app/js/constants.js": "5799ff018c2651793cc9908022725b85",
-            "ng_app/static/ng_app/js/scentrade.routes.js": "413047bf586787a0f97059f2e572568b",
+            "ng_app/static/ng_app/js/scentrade.routes.js": "77526740949efca64f0b3b298d77e078",
             "ng_app/static/ng_app/js/directives/owl.carousel.directive.js": "cfb793cc62f9f40145dd53aa8eff05a7",
             "ng_app/static/ng_app/js/services/api.service.js": "d7c7deee5aedd379dd4d9a0f73a782f9",
             "ng_app/static/ng_app/js/controllers/shopping.cart.controller.js": "f45c14822d1a41ab2ee1f864647fc787",
@@ -24,7 +24,7 @@
             "ng_app/static/ng_app/js/controllers/services.controller.js": "71312b9d43f914cd17acea6993b08434",
             "ng_app/static/ng_app/js/controllers/home.controller.js": "4110c36cf71bd2b1940672dfd38afce0",
             "ng_app/static/ng_app/js/controllers/blog.controller.js": "fe4d9f012b8cfa4bdaf73979384c3f86",
-            "version": "84e190f23b815062dec6a14f4cac8bf9",
+            "version": "676baca6356625bd018fdc524e42fcf1",
             "scentrade/static/js/temp/django-angular.js": "62177d8a834180a028ea214d3b5ccbfb",
             "ng_app/static/ng_app/js/services/forms.utils.service.js": "a96e3f70bc33d873d03bd88174761682",
             "ng_app/static/ng_app/js/controllers/contact.controller.js": "69f64aadffb5f39d7f8eea9740205825",
@@ -37,7 +37,10 @@
             "scentrade/static/bower_components/fox-angular-scrollreveal.js/dist/fox-angular-scrollreveal.js": "10e097b95fce30bcefac098c033fad20",
             "scentrade/static/js/main/detectmobilebrowser.js": "032147d727092b2f467e9ada5fac4baa",
             "scentrade/static/js/main/jquery.viewport.js": "318ed33bbdee2ef7181386682cdf6e63",
-            "scentrade/static/js/main/reveal-items.js": "bf13b10933fdebebd434e2c4471a9ae0"
+            "scentrade/static/js/main/reveal-items.js": "bf13b10933fdebebd434e2c4471a9ae0",
+            "scentrade/static/bower_components/cryptojslib/rollups/md5.js": "a6b81a1b266ec15dee03287742c3fd2b",
+            "scentrade/static/bower_components/cryptojslib/components/enc-base64.js": "a5fb8f1f2d8134e0ed8d0ddd6e2ed216",
+            "ng_app/static/ng_app/js/controllers/cart.controller.js": "8ff5aa6460895aed5c97f5feb02fc09e"
         },
         "css": {
             "scentrade/static/bower_components/bootstrap/dist/css/bootstrap.min.css": "eedf9ee80c2faa4e1b9ab9017cdfcb88",
