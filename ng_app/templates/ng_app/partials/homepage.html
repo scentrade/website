@@ -122,7 +122,9 @@
                             <span ng-if="! testimony.url">
                                 {{ testimony.client_name }},&nbsp;
                             </span>
-                            {{ testimony.client_age }}
+                            <span ng-if="testimony.client_age">
+                                {{ testimony.client_age }}
+                            </span>
                             {% endverbatim %}
                             {% trans 'años' %},
                             <br>
