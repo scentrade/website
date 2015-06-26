@@ -12,6 +12,7 @@
     <title ng-bind="$root.title + ' | Scentrade - Marketing olfativo'">Scentrade - Marketing olfativo</title>
     {% verbatim %}
     <meta name="description" content="{{ $root.metaDescription }}" ng-if="$root.metaDescription">
+    <meta name="description" content="Scentrade es el socio estratégico de su departamento de marketing, canalizando su estrategia de mercadeo a través de experiencias basadas en aromas" ng-if="! $root.metaDescription">
     {% endverbatim %}
     {# GRUNT_DJANGO_COMPRESSOR CSS #}
         {% if DEBUG %}
