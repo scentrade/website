@@ -1,10 +1,11 @@
-{% load staticfiles i18n %}
+{% load staticfiles i18n django_seo_js %}
 
 {% get_current_language as CURRENT_LANGUAGE %}
 
 <!DOCTYPE html>
 <html lang="{{ CURRENT_LANGUAGE }}" ng-app="scentrade">
 <head>
+    {% seo_js_head %}
     <base href="{% url 'home' %}">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

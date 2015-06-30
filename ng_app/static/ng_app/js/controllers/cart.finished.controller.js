@@ -11,8 +11,6 @@
 
     // -----------------------------------------------------------------------------
 
-    console.log($routeParams);
-
     $http.get(API.makeURL('store/purchases/' + $routeParams['purchase']))
       .success(function(response){
         response.cart = JSON.parse(response.cart);

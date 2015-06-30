@@ -57,6 +57,7 @@ INSTALLED_APPS = (
     'rosetta',
     'ckeditor',
     'djangular',
+    'django_seo_js',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -69,6 +70,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'django_seo_js.middleware.EscapedFragmentMiddleware',
+    'django_seo_js.middleware.UserAgentMiddleware',
 )
 
 ROOT_URLCONF = 'scentrade.urls'
