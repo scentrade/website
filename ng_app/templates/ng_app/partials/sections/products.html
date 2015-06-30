@@ -1,6 +1,6 @@
 {% extends 'ng_app/partials/sections/base_sections.html' %}
 
-{% load i18n staticfiles %}
+{% load i18n staticfiles get_current_city %}
 
 {% block header_title %}{% trans 'Productos' %}{% endblock %}
 
@@ -9,6 +9,7 @@
 {% endblock %}
 
 {% block content %}
+    {% get_current_city %}
     <section id="products-nav" class="mtgw">
         <div class="container">
             <nav class="row mbgw">
