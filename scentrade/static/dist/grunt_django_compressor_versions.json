@@ -1,6 +1,6 @@
 {
     "created": null,
-    "modified": 1435695957131,
+    "modified": 1435696875751,
     "./scentrade/templates/base.html": {
         "js": {
             "scentrade/static/bower_components/es5-shim/es5-shim.js": "d8a4aac0a0591d07f07a2173e0dd1da5",
@@ -41,7 +41,7 @@
             "scentrade/static/bower_components/cryptojslib/rollups/md5.js": "a6b81a1b266ec15dee03287742c3fd2b",
             "scentrade/static/bower_components/cryptojslib/components/enc-base64.js": "a5fb8f1f2d8134e0ed8d0ddd6e2ed216",
             "ng_app/static/ng_app/js/controllers/cart.controller.js": "af3cc73a8b887bd6e684abf7b2aa6b29",
-            "ng_app/static/ng_app/js/controllers/cart.finished.controller.js": "7378283b0cf45b772e93eab851fba838",
+            "ng_app/static/ng_app/js/controllers/cart.finished.controller.js": "1ef64721303ec3369ea9e2a819e6d46c",
             "scentrade/static/bower_components/sugarjs/release/sugar-full.development.js": "05169cdede99ce7e8e5946905f2bcfa7"
         },
         "css": {
