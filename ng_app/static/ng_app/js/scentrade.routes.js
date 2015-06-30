@@ -65,6 +65,11 @@
         controller: 'CartController',
         controllerAs: 'vm'
       })
+      .when('/carrito/finalizado', {
+        templateUrl: currentLanguage + '/partials/sections/cart-finished.html',
+        controller: 'CartFinishedController',
+        controllerAs: 'vm'
+      })
       .otherwise({
         redirectTo: '/'
       });

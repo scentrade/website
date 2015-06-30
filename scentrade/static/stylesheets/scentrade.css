@@ -1054,6 +1054,15 @@ ul.djng-field-errors li.invalid {
   color: #333333;
   font-weight: 500;
 }
+ul.errorlist {
+  padding-left: 0;
+  list-style: none;
+}
+ul.errorlist li {
+  color: #b81f3a;
+  font-size: 14px;
+  padding-top: 5px;
+}
 form#contact-form ul.djng-field-errors li.invalid {
   color: #ff9933;
 }

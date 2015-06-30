@@ -11,7 +11,7 @@ def get_client_ip(request):
     return ip
 
 
-def get_current_city(request):
+def get_current_country(request):
     ip = get_client_ip(request)
     g = GeoIP()
     country = g.country(ip)
@@ -28,6 +28,6 @@ def global_variables(request):
     """
     data = {
         'DEBUG': settings.DEBUG,
-        'CURRENT_CITY': get_current_city(request)
+        'CURRENT_COUNTRY': get_current_country(request),
     }
     return data

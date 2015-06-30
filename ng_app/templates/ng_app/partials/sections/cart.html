@@ -1,20 +1,204 @@
-<h1>cart</h1>
-<form method="post" action="https://stg.gateway.payulatam.com/ppp-web-gateway/">
-    <input name="merchantId"      type="hidden"  value="505378"   >
-    <input name="ApiKey"          type="hidden"  value="26ta6kdhkhqmt5v64o12gh43hl"   >
-    <input name="referenceCode"   type="hidden"  value="ScentradeWebSitePayment109090" >
-    <input name="accountId"       type="hidden"  value="506347" >
-    <input name="description"     type="hidden"  value="Test PAYU"  >
-    <input name="amount"          type="hidden"  value="20000"   >
-    <input name="tax"             type="hidden"  value="0"  >
-    <input name="taxReturnBase"   type="hidden"  value="0" >
-    <input name="currency"        type="hidden"  value="COP" >
-    {% verbatim %}
-    <input name="signature"       type="hidden"  value="{{ vm.signature }}"  >
-    {% endverbatim %}
-    <input name="test"            type="hidden"  value="1" >
-    <input name="buyerEmail"      type="hidden"  value="cristian@cristianrojas.com" >
-    <input name="responseUrl"     type="hidden"  value="http://localhost:8003/xxx" >
-    <input name="confirmationUrl" type="hidden"  value="http://localhost:8003/es/productos" >
-    <input name="Submit"          type="submit"  value="Enviar" >
-</form>
+{% extends 'ng_app/partials/sections/base_sections.html' %}
+
+{% load i18n %}
+
+{% block section_hero %}{% endblock %}
+
+{% block content %}
+    <div class="container ptgw-2x pbgw-2x">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-sm-12">
+                <h1>{% trans 'Resumen de tu compra' %}</h1>
+                <p class="mbgw">
+                    {% blocktrans %}
+                        Puedes editar la cantidad de productos o remover algunos de la lista antes de proceder con el pago.
+                        Cuando modificas la cantidad los cambios se guardan automáticamente.
+                    {% endblocktrans %}
+                </p>
+                <table class="table">
+                    <colgroup>
+                        <col style="width: 20%;">
+                        <col style="width: 40%;">
+                        <col style="width: 20%;">
+                        <col style="width: 20%;">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>{% trans 'Cantidad' %}</th>
+                        <th>{% trans 'Producto' %}</th>
+                        <th>{% trans 'Precio' %}</th>
+                        <th>{% trans 'Eliminar' %}</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th colspan="4">
+                            Total&nbsp;
+                            {% verbatim %}
+                            ${{ vm.cart.total|number }}
+                            {% endverbatim %}
+                            {% if CURRENT_COUNTRY == 'MX' %}
+                                MXN
+                            {% elif CURRENT_COUNTRY == 'CO' %}
+                                COP
+                            {% endif %}
+                        </th>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+                    <tr ng-if="! vm.cart.products.length">
+                        <td colspan="3">
+                            {% trans 'Aún no hay productos en el carrito' %}
+                        </td>
+                    </tr>
+                    <tr ng-repeat="product in vm.cart.products">
+                        <td>
+                            {% verbatim %}
+                            <input type="number" class="form-control input-sm" ng-value="product.quantity" ng-model="product.quantity"
+                                   ng-change="vm.updateProduct(product.id, product.quantity)">
+                            {% endverbatim %}
+                        </td>
+                        <td ng-bind-html="product.name"></td>
+                        <td>
+                            {% verbatim %}
+                            ${{ product.price|number }}
+                            {% endverbatim %}
+                            {% if CURRENT_COUNTRY == 'MX' %}
+                                MXN
+                            {% elif CURRENT_COUNTRY == 'CO' %}
+                                COP
+                            {% endif %}
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-link" ng-click="vm.deleteProduct(product.id)">
+                                <i class="fa fa-times"></i> {% trans 'Eliminar' %}
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <hr class="mbgw mtgw">
+                <section id="contact-info" class="mbgw">
+                    <h2>{% trans 'Información de contacto' %}</h2>
+                    <p>
+                        {% blocktrans %}
+                            Por favor llena los siguientes datos para contactarte con respecto a tu pedido.
+                        {% endblocktrans %}
+                    </p>
+                    <form id="personal-info" name="personal_info_form" ng-submit="vm.submitForm();" novalidate>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label" for="id_first_name">Nombres</label>
+                                    <input class="form-control" id="id_first_name" name="first_name" ng-model="vm.buyer_data['first_name']" type="text" required>
+                                    <ul class="errorlist" ng-show="personal_info_form.$submitted || personal_info_form.first_name.$touched">
+                                        <li ng-show="personal_info_form.first_name.$error.required">Este campo es obligatorio</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label" for="id_last_name">Apellidos</label>
+                                    <input class="form-control" id="id_last_name" name="last_name" ng-model="vm.buyer_data['last_name']" type="text" required>
+                                    <ul class="errorlist" ng-show="personal_info_form.$submitted || personal_info_form.last_name.$touched">
+                                        <li ng-show="personal_info_form.last_name.$error.required">Este campo es obligatorio</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label" for="id_email">Correo electrónico</label>
+                                    <input class="form-control" id="id_email" name="email" ng-model="vm.buyer_data['email']" type="email" required>
+                                    <ul class="errorlist" ng-show="personal_info_form.$submitted || personal_info_form.email.$touched">
+                                        <li ng-show="personal_info_form.email.$error.required">Este campo es obligatorio</li>
+                                        <li ng-show="personal_info_form.email.$error.email">Dirección de correo inválida</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label" for="id_phone">Teléfono</label>
+                                    <input class="form-control" id="id_phone" name="phone" ng-model="vm.buyer_data['phone']" type="number" required>
+                                    <ul class="errorlist" ng-show="personal_info_form.$submitted || personal_info_form.phone.$touched">
+                                        <li ng-show="personal_info_form.phone.$error.required">Este campo es obligatorio</li>
+                                        <li ng-show="personal_info_form.phone.$error.number">Debe ser un número, no puede contener espacios ni letras.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label" for="id_city">Ciudad</label>
+                                    <input class="form-control" id="id_city" name="city" ng-model="vm.buyer_data['city']" type="text" required>
+                                    <ul class="errorlist" ng-show="personal_info_form.$submitted || personal_info_form.city.$touched">
+                                        <li ng-show="personal_info_form.city.$error.required">Este campo es obligatorio</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="control-label" for="id_address">Dirección</label>
+                                    <input class="form-control" id="id_address" name="address" ng-model="vm.buyer_data['address']" type="text" required>
+                                    <ul class="errorlist" ng-show="personal_info_form.$submitted || personal_info_form.address.$touched">
+                                        <li ng-show="personal_info_form.address.$error.required">Este campo es obligatorio</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <a href="productos" class="btn btn-link"><i class="fa fa-angle-left"></i> Seguir comprando</a>
+                            <button type="submit" class="btn btn-red-bordered">
+                                <span ng-if="! vm.loading">{% trans 'Proceder al pago' %}</span>
+                                <span ng-if="vm.loading"><i class="fa fa-spinner fa-spin"></i> {% trans 'Guardando información...' %}</span>
+                            </button>
+                        </div>
+                    </form>
+                </section>
+                <form id="payu-payment" method="post" action="https://stg.gateway.payulatam.com/ppp-web-gateway/">
+                    <input name="merchantId"      type="hidden"  value="505378"   >
+                    <input name="ApiKey"          type="hidden"  value="26ta6kdhkhqmt5v64o12gh43hl"   >
+                    {% verbatim %}
+                    <input name="referenceCode"   type="hidden"  value="{{ vm.reference }}" >
+                    {% endverbatim %}
+                    <input name="accountId"       type="hidden"  value="506347" >
+                    <input name="description"     type="hidden"  value="Compra en Scentrade.co"  >
+                    {% verbatim %}
+                    <input name="amount"          type="hidden"  value="{{ vm.cart.total }}"   >
+                    {% endverbatim %}
+                    <input name="tax"             type="hidden"  value="0"  >
+                    <input name="taxReturnBase"   type="hidden"  value="0" >
+                    <input name="currency"        type="hidden"  value="COP" >
+                    {% verbatim %}
+                    <input name="signature"       type="hidden"  value="{{ vm.signature }}"  >
+                    {% endverbatim %}
+                    {% verbatim %}
+                    <input name="buyerEmail"      type="hidden"  value="{{ vm.buyer_email }}" >
+                    <input name="responseUrl"     type="hidden"  value="{{ vm.response_url }}" >
+                    {% endverbatim %}
+                    {% comment %}<input name="merchantId"      type="hidden"  value="500238"   >
+                    <input name="ApiKey"          type="hidden"  value="6u39nqhq8ftd0hlvnjfs66eh8c"   >
+                    {% verbatim %}
+                    <input name="referenceCode"   type="hidden"  value="{{ vm.reference }}" >
+                    {% endverbatim %}
+                    <input name="accountId"       type="hidden"  value="500538" >
+                    <input name="description"     type="hidden"  value="Test PAYU"  >
+                    <input name="amount"          type="hidden"  value="3"   >
+                    <input name="tax"             type="hidden"  value="0"  >
+                    <input name="taxReturnBase"   type="hidden"  value="0" >
+                    <input name="currency"        type="hidden"  value="USD" >
+                    {% verbatim %}
+                    <input name="signature"       type="hidden"  value="{{ vm.test_signature }}"  >
+                    <input name="test"            type="hidden"  value="1" >
+                    <input name="buyerEmail"      type="hidden"  value="cristian@cristianrojas.com" >
+                    <input name="responseUrl"     type="hidden"  value="{{ vm.response_url }}" >
+                    {% endverbatim %}
+                    {#    <input name="confirmationUrl" type="hidden"  value="http://localhost:8003/es/productos" >#}
+                    <input name="Submit"          type="submit"  value="Enviar" >{% endcomment %}
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

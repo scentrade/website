@@ -82,11 +82,11 @@
                                             {% verbatim %}
                                             <p class="mbgw"><i>{{ product.description }}</i></p>
                                             {% endverbatim %}
-                                            {% if CURRENT_CITY == 'MX' %}
+                                            {% if CURRENT_COUNTRY == 'MX' %}
                                                 {% verbatim %}
                                                 <h2 class="gray-light mbgw">${{ product.price_in_mx|number }} MXN</h2>
                                                 {% endverbatim %}
-                                            {% elif CURRENT_CITY == 'CO' %}
+                                            {% elif CURRENT_COUNTRY == 'CO' %}
                                                 {% verbatim %}
                                                 <h2 class="gray-light mbgw">${{ product.price_in_cop|number }} COP</h2>
                                                 {% endverbatim %}

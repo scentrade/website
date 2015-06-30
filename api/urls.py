@@ -3,8 +3,9 @@ from rest_framework import routers
 from api.views import ContactFormView, FreeTrialFormView
 from company.viewsets import (ClientViewSet, TestimonyViewSet)
 from store.views import (AddProductToCartView, RemoveProductFromCartView,
-                         ShoppingCartView)
-from store.viewsets import (CategoryViewSet, ProductViewSet)
+                         ShoppingCartView, UpdateQuantityCartView)
+from store.viewsets import (CategoryViewSet, ProductViewSet, BuyerViewSet,
+                            PurchaseViewSet)
 from blog.viewsets import (CategoryViewSet as BlogCategoryViewSet, PostViewSet)
 
 
@@ -13,6 +14,8 @@ router.register(r'clients', ClientViewSet)
 router.register(r'testimonials', TestimonyViewSet)
 router.register(r'store/categories', CategoryViewSet)
 router.register(r'store/products', ProductViewSet)
+router.register(r'store/buyers', BuyerViewSet)
+router.register(r'store/purchases', PurchaseViewSet)
 router.register(r'blog/categories', BlogCategoryViewSet)
 router.register(r'blog/posts', PostViewSet)
 
@@ -23,6 +26,8 @@ urlpatterns = [
             name='list'),
         url(r'^/add$', AddProductToCartView.as_view(),
             name='add'),
+        url(r'^/update$', UpdateQuantityCartView.as_view(),
+            name='update'),
         url(r'^/remove$', RemoveProductFromCartView.as_view(),
             name='remove'),
     ], namespace='cart')),

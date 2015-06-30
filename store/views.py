@@ -21,7 +21,8 @@ class ShoppingCartView(generics.GenericAPIView):
                 # TODO get in right language
                 'name': item.product.get_html_name(),
                 'price': item.price,
-                'quantity': item.quantity
+                'quantity': item.quantity,
+                'id': item.product.id
             })
         return Response({
             'products': products,
@@ -46,6 +47,29 @@ class AddProductToCartView(generics.GenericAPIView):
 
         response_data = {
             'detail': 'Product was added to cart.'
+        }
+        response_status = status.HTTP_201_CREATED
+
+        return Response(response_data, status=response_status)
+
+
+class UpdateQuantityCartView(generics.GenericAPIView):
+    """
+    Add a product to the cart.
+    Send a valid product_id
+    """
+    serializer_class = CartProductSerializer
+
+    def post(self, request):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        cart = Cart(request.session)
+        product = get_object_or_404(Product, id=serializer.data['product_id'])
+        cart.set_quantity(product, quantity=serializer.data['product_quantity'])
+
+        response_data = {
+            'detail': 'Product was updated.'
         }
         response_status = status.HTTP_201_CREATED
 

@@ -1,0 +1,64 @@
+{% extends 'ng_app/partials/sections/base_sections.html' %}
+
+{% load i18n %}
+
+{% block section_hero %}{% endblock %}
+
+{% block content %}
+    <div class="container ptgw-2x pbgw-2x">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-sm-12">
+                <h1>{% trans 'Resumen de tu compra' %}</h1>
+                <table class="table">
+                    <colgroup>
+                        <col style="width: 20%;">
+                        <col style="width: 60%;">
+                        <col style="width: 20%;">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>{% trans 'Cantidad' %}</th>
+                        <th>{% trans 'Producto' %}</th>
+                        <th>{% trans 'Precio' %}</th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <th colspan="4">
+                            Total&nbsp;
+                            {% verbatim %}
+                            ${{ vm.purchase.cart.total|number }}
+                            {% endverbatim %}
+                            {% if CURRENT_COUNTRY == 'MX' %}
+                                MXN
+                            {% elif CURRENT_COUNTRY == 'CO' %}
+                                COP
+                            {% endif %}
+                        </th>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+                    <tr ng-repeat="product in vm.purchase.cart.products">
+                        <td>
+                            {% verbatim %}
+                            {{ product.quantity }}
+                            {% endverbatim %}
+                        </td>
+                        <td ng-bind-html="product.name"></td>
+                        <td>
+                            {% verbatim %}
+                            ${{ product.price|number }}
+                            {% endverbatim %}
+                            {% if CURRENT_COUNTRY == 'MX' %}
+                                MXN
+                            {% elif CURRENT_COUNTRY == 'CO' %}
+                                COP
+                            {% endif %}
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

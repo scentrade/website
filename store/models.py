@@ -2,6 +2,7 @@
 from django.db import models
 from django_extensions.db.fields import AutoSlugField
 from django.utils.translation import ugettext, ugettext_lazy as _
+from django_extensions.db.fields.json import JSONField
 from easy_thumbnails.fields import ThumbnailerImageField
 from easy_thumbnails.files import get_thumbnailer
 from hvad.models import TranslatableModel, TranslatedFields
@@ -95,3 +96,46 @@ class Product(TranslatableModel):
     @property
     def price(self):
         return self.price_in_cop
+
+
+class Buyer(models.Model):
+    first_name = models.CharField(
+        max_length=200
+    )
+    last_name = models.CharField(
+        max_length=200
+    )
+    email = models.EmailField(
+
+    )
+    city = models.CharField(
+        max_length=100
+    )
+    address = models.CharField(
+        max_length=100
+    )
+    phone = models.BigIntegerField()
+
+    class Meta:
+        verbose_name = _(u'Comprador')
+        verbose_name_plural = _(u'Compradores')
+
+    def __unicode__(self):
+        return u'{0} {1}'.format(
+            self.first_name,
+            self.last_name
+        )
+
+
+class Purchase(models.Model):
+    buyer = models.ForeignKey(
+        Buyer, related_name='purchases'
+    )
+    cart = JSONField()
+
+    class Meta:
+        verbose_name = _(u'Compra')
+        verbose_name_plural = _(u'Compras')
+
+    def __unicode__(self):
+        return u'{0}'.format(self.buyer)
