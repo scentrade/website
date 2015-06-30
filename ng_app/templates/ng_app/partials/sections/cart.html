@@ -157,7 +157,7 @@
                         </div>
                     </form>
                 </section>
-                <form id="payu-payment" method="post" action="https://gateway.payulatam.com/ppp-web-gateway/">
+                <form id="payu-payment" method="post" action="https://stg.gateway.payulatam.com/ppp-web-gateway/">
                     <input name="merchantId"      type="hidden"  value="505378"   >
                     <input name="ApiKey"          type="hidden"  value="26ta6kdhkhqmt5v64o12gh43hl"   >
                     {% verbatim %}
@@ -193,7 +193,7 @@
                     <input name="signature"       type="hidden"  value="{{ vm.test_signature }}"  >
                     <input name="test"            type="hidden"  value="1" >
                     <input name="buyerEmail"      type="hidden"  value="cristian@cristianrojas.com" >
-                    <input name="responseUrl"     type="hidden"  value="{{ vm.response_url }}" >
+                    <input name="responseUrl"     type="hidden"  value="{{ vm.test_response_url }}" >
                     {% endverbatim %}
                     {#    <input name="confirmationUrl" type="hidden"  value="http://localhost:8003/es/productos" >#}
                     <input name="Submit"          type="submit"  value="Enviar" >{% endcomment %}

@@ -27,11 +27,6 @@
           } else {
             vm.cart = response;
           }
-
-          var reference = 'Compra en Scentrade.co ' + new Date().getTime();
-          var signature = "26ta6kdhkhqmt5v64o12gh43hl~505378~" + reference + "~" + response.total + "~COP";
-          vm.reference = reference;
-          vm.signature = CryptoJS.MD5(signature).toString();
         });
     }
 
@@ -61,7 +56,35 @@
             $http.post(API.makeURL('store/purchases'), {'buyer': response['id'], 'cart': JSON.stringify(vm.cart)})
               .success(function(response){
                 vm['response_url'] = 'http://www.scentrade.co/es/carrito/finalizado?purchase=' + response['id'];
-                $('form#payu-payment').trigger('submit');
+
+                var signatureTemplate = '{ApiKey}~{merchantId}~{referenceCode}~{amount}~{currency}';
+
+                var reference = 'Compra en Scentrade.co ' + new Date().getTime();
+                var signature = signatureTemplate.assign({
+                  ApiKey: '26ta6kdhkhqmt5v64o12gh43hl',
+                  merchantId: '505378',
+                  referenceCode: reference,
+                  amount: vm.cart.total,
+                  currency: 'COP'
+                });
+
+                vm.reference = reference;
+                vm.signature = CryptoJS.MD5(signature).toString();
+
+                var testSignature = signatureTemplate.assign({
+                  ApiKey: '6u39nqhq8ftd0hlvnjfs66eh8c',
+                  merchantId: '500238',
+                  referenceCode: reference,
+                  amount: 3,
+                  currency: 'USD'
+                });
+
+                vm['test_signature'] = CryptoJS.MD5(testSignature).toString();
+                vm['test_response_url'] = 'http://localhost:8003/es/carrito/finalizado?purchase=' + response['id'];
+
+                $timeout(function(){
+                  $('form#payu-payment').trigger('submit');
+                }, 1000);
               });
           })
           .error(function(response){

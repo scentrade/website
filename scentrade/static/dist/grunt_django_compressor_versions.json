@@ -1,6 +1,6 @@
 {
     "created": null,
-    "modified": 1435681284963,
+    "modified": 1435695957131,
     "./scentrade/templates/base.html": {
         "js": {
             "scentrade/static/bower_components/es5-shim/es5-shim.js": "d8a4aac0a0591d07f07a2173e0dd1da5",
@@ -24,7 +24,7 @@
             "ng_app/static/ng_app/js/controllers/services.controller.js": "71312b9d43f914cd17acea6993b08434",
             "ng_app/static/ng_app/js/controllers/home.controller.js": "4110c36cf71bd2b1940672dfd38afce0",
             "ng_app/static/ng_app/js/controllers/blog.controller.js": "fe4d9f012b8cfa4bdaf73979384c3f86",
-            "version": "313bcda788a8bdbd26ad4c6c01c6fca2",
+            "version": "10f827a6e51799949fc749a7afa77b1b",
             "scentrade/static/js/temp/django-angular.js": "62177d8a834180a028ea214d3b5ccbfb",
             "ng_app/static/ng_app/js/services/forms.utils.service.js": "a96e3f70bc33d873d03bd88174761682",
             "ng_app/static/ng_app/js/controllers/contact.controller.js": "69f64aadffb5f39d7f8eea9740205825",
@@ -40,8 +40,9 @@
             "scentrade/static/js/main/reveal-items.js": "bf13b10933fdebebd434e2c4471a9ae0",
             "scentrade/static/bower_components/cryptojslib/rollups/md5.js": "a6b81a1b266ec15dee03287742c3fd2b",
             "scentrade/static/bower_components/cryptojslib/components/enc-base64.js": "a5fb8f1f2d8134e0ed8d0ddd6e2ed216",
-            "ng_app/static/ng_app/js/controllers/cart.controller.js": "64b27416dca6e66e0a2910b2cda201bc",
-            "ng_app/static/ng_app/js/controllers/cart.finished.controller.js": "1ef64721303ec3369ea9e2a819e6d46c"
+            "ng_app/static/ng_app/js/controllers/cart.controller.js": "af3cc73a8b887bd6e684abf7b2aa6b29",
+            "ng_app/static/ng_app/js/controllers/cart.finished.controller.js": "7378283b0cf45b772e93eab851fba838",
+            "scentrade/static/bower_components/sugarjs/release/sugar-full.development.js": "05169cdede99ce7e8e5946905f2bcfa7"
         },
         "css": {
             "scentrade/static/bower_components/bootstrap/dist/css/bootstrap.min.css": "eedf9ee80c2faa4e1b9ab9017cdfcb88",
