@@ -1,6 +1,6 @@
 {% extends 'ng_app/partials/sections/base_sections.html' %}
 
-{% load i18n staticfiles get_current_city %}
+{% load i18n staticfiles %}
 
 {% block header_title %}{% trans 'Productos' %}{% endblock %}
 
@@ -9,7 +9,6 @@
 {% endblock %}
 
 {% block content %}
-    {% get_current_city %}
     <section id="products-nav" class="mtgw">
         <div class="container">
             <nav class="row mbgw">
@@ -82,8 +81,16 @@
                                             <h1 class="h2 mtgw mbgw" ng-bind-html="product.html_name"></h1>
                                             {% verbatim %}
                                             <p class="mbgw"><i>{{ product.description }}</i></p>
-                                            <h2 class="gray-light mbgw">${{ product.price_in_cop|number }} COP</h2>
                                             {% endverbatim %}
+                                            {% if CURRENT_CITY == 'MX' %}
+                                                {% verbatim %}
+                                                <h2 class="gray-light mbgw">${{ product.price_in_mx|number }} MXN</h2>
+                                                {% endverbatim %}
+                                            {% elif CURRENT_CITY == 'CO' %}
+                                                {% verbatim %}
+                                                <h2 class="gray-light mbgw">${{ product.price_in_cop|number }} COP</h2>
+                                                {% endverbatim %}
+                                            {% endif %}
                                             <button class="btn btn-red-bordered btn-lg bebas" ng-click="vm.addProductToCart(product.id)">
                                                 {% trans 'Añadir al carrito' %}
                                                 <i class="fa fa-shopping-cart"></i>
