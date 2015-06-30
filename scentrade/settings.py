@@ -58,6 +58,7 @@ INSTALLED_APPS = (
     'ckeditor',
     'djangular',
     'django_seo_js',
+    'adminsortable',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -88,6 +89,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'utils.context_processors.global_variables',
+                'django.core.context_processors.static',
             ],
         },
     },

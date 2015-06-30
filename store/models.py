@@ -1,4 +1,5 @@
 # encoding: utf-8
+from adminsortable.models import Sortable
 from django.db import models
 from django_extensions.db.fields import AutoSlugField
 from django.utils.translation import ugettext, ugettext_lazy as _
@@ -31,7 +32,7 @@ class Category(TranslatableModel):
         return self.lazy_translation_getter('name', str(self.pk))
 
 
-class Product(TranslatableModel):
+class Product(TranslatableModel, Sortable):
     category = models.ForeignKey(
         Category,
         related_name='products',
@@ -68,7 +69,7 @@ class Product(TranslatableModel):
         populate_from='name'
     )
 
-    class Meta:
+    class Meta(Sortable.Meta):
         verbose_name = _(u'Producto')
         verbose_name_plural = _(u'Productos')
 
