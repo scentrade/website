@@ -1,8 +1,23 @@
+SITE_ID = 1
+
+
 # scentrade email defaults
 
 CONTACT_FORM_SEND_TO = 'Cristian <cristian@cristianrojas.com>'
 
+PAYMENT_EMAIL_SEND_TO = 'Cristian <cristian@cristianrojas.com>'
+
 
 # Djrill configuration
 
-MANDRILL_API_KEY = "<your Mandrill key>"
+MANDRILL_API_KEY = "[api_key]"
+
+
+# geoip
+
+GEOIP_PATH = '/Users/cristianrojas/Desktop/geoip'
+
+
+# Seo
+
+SEO_JS_PRERENDER_TOKEN = "[prerender_token]"
