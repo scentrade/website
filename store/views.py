@@ -1,11 +1,14 @@
 # encoding: utf-8
 from carton.cart import Cart
 from django.conf import settings
+from django.core.mail import EmailMultiAlternatives
 from django.shortcuts import get_object_or_404
+from django.template.loader import render_to_string
 from django.utils.translation import ugettext, ugettext_lazy as _
 from rest_framework import generics, status
 from rest_framework.response import Response
-from store.models import Product
+from rest_framework.views import APIView
+from store.models import Product, Purchase
 from store.serializers import CartProductSerializer
 
 
@@ -95,5 +98,47 @@ class RemoveProductFromCartView(generics.GenericAPIView):
             'detail': 'Product was removed from cart.'
         }
         response_status = status.HTTP_200_OK
+
+        return Response(response_data, status=response_status)
+
+
+class PaymentEmailView(APIView):
+    """
+    The API view that sends an email each time a user make a payment
+    """
+    def post(self, request):
+        response_data = {}
+        response_status = None
+
+        data = request.data
+        purchase_id = request.data.get('purchase', None)
+
+        if purchase_id:
+            purchase = Purchase.objects.get(id=int(purchase_id))
+            from_email = u'{name} <{email}>'.format(
+                name=u'Pagos scentrade',
+                email=u'pagos@scentrade.co'
+            )
+            msg = EmailMultiAlternatives(
+                subject=_(u'[scentrade/pagos] Nuevo pago de {name}').format(
+                    name=purchase.buyer.first_name
+                ),
+                body=render_to_string(
+                    'store/emails/payment.txt',
+                    {'purchase': purchase}),
+                from_email=from_email,
+                to=[
+                    settings.PAYMENT_EMAIL_SEND_TO
+                ],
+                headers={
+                    'Reply-To': from_email
+                }
+            )
+            msg.send()
+            response_data['detail'] = u'Email sent'
+            response_status = status.HTTP_200_OK
+        else:
+            response_data['detail'] = u'Purchase ID not sent'
+            response_status = status.HTTP_400_BAD_REQUEST
 
         return Response(response_data, status=response_status)

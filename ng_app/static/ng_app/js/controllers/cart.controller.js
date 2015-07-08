@@ -59,7 +59,7 @@
 
                 var signatureTemplate = '{ApiKey}~{merchantId}~{referenceCode}~{amount}~{currency}';
 
-                var reference = 'Compra en Scentrade.co ' + new Date().getTime();
+                var reference = 'Compra en Scentrade.co ' + response['id'];
                 var signature = signatureTemplate.assign({
                   ApiKey: '26ta6kdhkhqmt5v64o12gh43hl',
                   merchantId: '505378',

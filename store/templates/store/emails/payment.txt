@@ -1,0 +1,16 @@
+{{ purchase.buyer.first_name }} acaba de hcacer una compra en nuestra tienda.
+
+Número de identificación de esta compra: {{ purchase.id }}
+
+Sus datos son:
+
+Nombre: {{ purchase.buyer.first_name }}
+Apellidos: {{ purchase.buyer.last_name }}
+Email: {{ purchase.buyer.email }}
+Ciudad: {{ purchase.buyer.city }}
+Dirección: {{ purchase.buyer.address }}
+Teléfono: {{ purchase.buyer.phone }}
+
+Cordialmente,
+
+El equipo de Scentrade.co

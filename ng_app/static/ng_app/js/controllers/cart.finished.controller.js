@@ -16,5 +16,10 @@
         response.cart = JSON.parse(response.cart);
         vm.purchase = response;
       });
+
+    $http.post(API.makeURL('payment-email'), {'purchase': $routeParams['purchase']})
+      .success(function(response){
+
+      });
   }
 })();

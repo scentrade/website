@@ -3,7 +3,8 @@ from rest_framework import routers
 from api.views import ContactFormView, FreeTrialFormView
 from company.viewsets import (ClientViewSet, TestimonyViewSet)
 from store.views import (AddProductToCartView, RemoveProductFromCartView,
-                         ShoppingCartView, UpdateQuantityCartView)
+                         ShoppingCartView, UpdateQuantityCartView,
+                         PaymentEmailView)
 from store.viewsets import (CategoryViewSet, ProductViewSet, BuyerViewSet,
                             PurchaseViewSet)
 from blog.viewsets import (CategoryViewSet as BlogCategoryViewSet, PostViewSet)
@@ -35,4 +36,6 @@ urlpatterns = [
         name='contact'),
     url(r'^free-trial$', FreeTrialFormView.as_view(),
         name='free-trial'),
+    url(r'^payment-email$', PaymentEmailView.as_view(),
+        name='payment-email'),
 ]
