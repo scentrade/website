@@ -20,7 +20,7 @@
                                     <a ng-href="productos/commercial" class="btn btn-white-transparent btn-lg bebas">{% trans 'Para tu empresa' %}</a>
                                 </span>
                                 <span class="btn-wrapper">
-                                    <a ng-href="productos/home" class="btn btn-white-transparent btn-lg bebas">{% trans 'Para tu hogar' %}</a>
+                                    <a ng-href="productos/home" class="btn btn-white-transparent btn-lg bebas">{% trans 'Para uso personal' %}</a>
                                 </span>
                             </nav>
                         </div>
@@ -108,7 +108,7 @@
                 {% verbatim %}
                 <p>
                     <i class="fa fa-quote-left"></i>
-                    {{ testimony.text }}
+                    <span ng-bind-html="testimony.text"></span>
                     <i class="fa fa-quote-right"></i>
                 </p>
                 {% endverbatim %}

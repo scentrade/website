@@ -1,4 +1,5 @@
 # encoding: utf-8
+from ckeditor.fields import RichTextField
 from django.db import models
 from django.utils.translation import ugettext, ugettext_lazy as _
 from easy_thumbnails.fields import ThumbnailerImageField
@@ -55,7 +56,7 @@ class Testimony(TranslatableModel):
             max_length=100,
             verbose_name=_(u'Profesión del cliente')
         ),
-        text=models.TextField(
+        text=RichTextField(
             verbose_name=_(u'Testimonio')
         )
     )

@@ -10,6 +10,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{% static "img/main/favicon.gif" %}" type="image/gif">
     <title ng-bind="$root.title + ' | Scentrade - Marketing olfativo'">Scentrade - Marketing olfativo</title>
     {% verbatim %}
     <meta name="description" content="{{ $root.metaDescription }}" ng-if="$root.metaDescription">
@@ -77,12 +78,12 @@
                     </li>
                     <li ng-class="{ active: isActive('/servicios')}">
                         <a ng-href="servicios">
-                            {% trans 'Servicios' %}
+                            {% trans 'Empresas' %}
                         </a>
                     </li>
                     <li ng-class="{ active: isActive('/hogar')}">
                         <a ng-href="hogar">
-                            {% trans 'Hogar' %}
+                            {% trans 'Personal' %}
                         </a>
                     </li>
                     <li ng-class="{ active: isActive('/blog')}">
@@ -120,7 +121,7 @@
                 <p class="gray-light">
                     Cra 43 A No 19A-87 Of 235<br>
                     Tel: (57)(4) 2327656<br>
-                    Cel: (57) 310 3466805
+                    Cel: (57) 310 3436423
                 </p>
             </div>
             <div class="col-sm-4 text-center mbgw">
@@ -136,9 +137,9 @@
             <nav id="footer-links">
                 <a ng-href="inicio">{% trans 'Inicio' %}</a>
                 <a ng-href="nosotros">{% trans 'Nosotros' %}</a>
-                <a ng-href="productos">{% trans 'Productos' %}</a>
-                <a ng-href="servicios">{% trans 'Servicios' %}</a>
-                <a ng-href="hogar">{% trans 'Hogar' %}</a>
+                <a ng-href="productos">{% trans 'Tienda' %}</a>
+                <a ng-href="servicios">{% trans 'Empresas' %}</a>
+                <a ng-href="hogar">{% trans 'Personal' %}</a>
                 <a ng-href="blog">{% trans 'Blog' %}</a>
                 <a ng-href="contacto">{% trans 'Contacto' %}</a>
             </nav>
