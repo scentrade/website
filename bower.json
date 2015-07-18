@@ -28,6 +28,7 @@
     "cryptojslib": "~3.1.2",
     "sugarjs": "~1.4.1",
     "angulartics": "~0.19.0",
-    "angularjs-socialshare": "~0.1.9"
+    "angularjs-socialshare": "~0.1.9",
+    "underscore": "~1.8.3"
   }
 }

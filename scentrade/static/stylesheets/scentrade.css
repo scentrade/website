@@ -2635,6 +2635,16 @@ form#contact-form .form-control::-webkit-input-placeholder {
     padding-right: 0 !important;
   }
 }
+div#social-buttons-white h1 a {
+  color: white;
+  -webkit-transition: all ease-out 100ms;
+  -o-transition: all ease-out 100ms;
+  transition: all ease-out 100ms;
+}
+div#social-buttons-white h1 a:hover {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
 @media (max-width: 767px) {
   div#how-we-do-it h1 {
     margin-bottom: 10px !important;

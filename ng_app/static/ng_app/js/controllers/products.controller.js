@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('scentrade.controllers')
-    .controller('ProductsController', ProductsController);
+      .controller('ProductsController', ProductsController);
 
   ProductsController.$inject = ['$scope', '$rootScope', '$http', 'API', '$location', '$routeParams', 'API_PAGE_SIZE'];
 
@@ -20,8 +20,21 @@
     vm.goToNextPage = goToNextPage;
     vm.goToPage = goToPage;
     vm.currentPage = $routeParams['page'] || 1;
+    vm.categoryChanged = categoryChanged;
+    vm.loadingProducts = false;
 
     // -----------------------------------------------------------------------------
+
+    $http.get(API.makeURL('store/categories'))
+        .success(function(response){
+          vm.categories = response.results;
+
+          if( $routeParams['category'] ){
+            vm.category = _.findWhere(vm.categories, {
+              id: parseInt($routeParams['category'])
+            });
+          }
+        });
 
     if( $routeParams['target'] ){
       vm.selectedTab = $routeParams['target'];
@@ -29,29 +42,31 @@
 
     function fetchProducts(target){
       var page = $routeParams['page'] - 1 || 0,
-        offset = API_PAGE_SIZE * page;
+          offset = API_PAGE_SIZE * page;
 
       if( angular.isUndefined(target) ) target = 'all';
       var url = API.makeURL('store/products') + '?offset=' + offset;
       if( target != 'all' ) url += '&target=' + target;
+      if( $routeParams['category'] ) url += '&category=' + $routeParams['category'];
+
+      vm.loadingProducts = true;
 
       $http.get(url)
-        .success(function(response, status){
-          vm.products = response.results;
-          vm.next = response.next;
-          vm.previous = response.previous;
+          .success(function(response, status){
+            vm.loadingProducts = false;
 
-          vm.pages = function(){
-            var pages = [];
-            console.log(response.count);
-            console.log(API_PAGE_SIZE);
-            console.log(response.count/API_PAGE_SIZE);
-            for(var i=0; i<response.count/API_PAGE_SIZE; i++){
-              pages.push(i+1);
-            }
-            return pages;
-          }();
-        });
+            vm.products = response.results;
+            vm.next = response.next;
+            vm.previous = response.previous;
+
+            vm.pages = function(){
+              var pages = [];
+              for(var i=0; i<response.count/API_PAGE_SIZE; i++){
+                pages.push(i+1);
+              }
+              return pages;
+            }();
+          });
     }
 
     function goToPreviousPage(){
@@ -72,9 +87,20 @@
 
     function addProductToCart(id){
       $http.post(API.makeURL('cart/add'), {'product_id': id})
-        .success(function(response, status){
-          $rootScope.$broadcast('cart.update', true);
-        });
+          .success(function(response, status){
+            $rootScope.$broadcast('cart.update', true);
+          });
+    }
+
+    function categoryChanged(){
+      if( vm.category ){
+        $location.search('category', vm.category.id);
+      } else {
+        $location.search('category', null);
+      }
+      $scope.$on('$routeUpdate', function(){
+        if( vm.loadingProducts === false ) fetchProducts($routeParams['target']);
+      });
     }
   }
 })();

@@ -28,7 +28,7 @@
         <link href="{% static 'stylesheets/scentrade.css' %}" rel="stylesheet">
         <!--STYLES END-->
         {% else %}
-        <link rel="stylesheet" type="text/css" href="{% static 'dist/scentrade.base.1437188074629.css' %}?version=4ea2d2bdbab328c67e4e20173fc8ad5f">
+        <link rel="stylesheet" type="text/css" href="{% static 'dist/scentrade.base.1437189529507.css' %}?version=b7b4833ccfd1bfc99fa52763d4ba5679">
         {% endif %}
         {# GRUNT_DJANGO_COMPRESSOR CSS END #}
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -174,6 +174,7 @@
     <!--SCRIPTS-->
     {# Needed because of this implementation: http://stackoverflow.com/a/19498009/923323 #}
     <script src="{% static 'js/main/detectmobilebrowser.js' %}"></script>
+    <script src="{% static 'bower_components/underscore/underscore.js' %}"></script>
     <script src="{% static 'bower_components/cryptojslib/rollups/md5.js' %}"></script>
     <script src="{% static 'bower_components/cryptojslib/components/enc-base64.js' %}"></script>
     <script src="{% static 'bower_components/es5-shim/es5-shim.js' %}"></script>
@@ -215,7 +216,7 @@
     <script src="{% static 'ng_app/js/controllers/main.menu.controller.js' %}"></script>
     <!--SCRIPTS END-->
     {% else %}
-    <script type="text/javascript" src="{% static 'dist/scentrade.base.1437188057340.js' %}?version=8f13a879a53b57a2967436cc209b0192"></script>
+    <script type="text/javascript" src="{% static 'dist/scentrade.base.1437191571797.js' %}?version=77b77c5801781d7fa161facd4e73f146"></script>
     {% endif %}
     {# GRUNT_DJANGO_COMPRESSOR JS END #}
 
