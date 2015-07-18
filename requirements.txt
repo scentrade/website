@@ -1,5 +1,4 @@
 Django==1.8
-PIL==1.1.7
 Pillow==2.8.1
 Pygments==2.0.2
 blessings==1.6

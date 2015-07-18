@@ -13,6 +13,8 @@
 //      'ngFileUpload',
       'ng.django.forms',
       'ui.bootstrap',
+      'angulartics.google.analytics',
+      '720kb.socialshare',
 
       // scentrade modules
       'scentrade.config',

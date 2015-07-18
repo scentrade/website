@@ -18,8 +18,15 @@
     <section id="blog-single">
         <div class="container ptgw-2x pbgw-2x">
             <div class="row">
-                <div class="col-sm-2">
-
+                <div id="share-urls" class="col-sm-2">
+                    {% verbatim %}
+                    <a href="#" socialshare="" class="mbgw" socialshare-provider="facebook" socialshare-text="" socialshare-url="{{ vm.sharePath }}">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#" socialshare="" class="btn btn-twitter pull-left mrgw-05x" socialshare-provider="twitter" socialshare-text="{{ vm.post.title }}" socialshare-url="{{ vm.sharePath }}">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    {% endverbatim %}
                 </div>
                 {% verbatim %}
                 <div class="col-sm-8">

@@ -63,4 +63,23 @@ body.blog-single {
   h1#header-title {
     line-height: 1;
   }
+
+  div#share-urls {
+    a {
+      display: block;
+      text-align: center;
+      width: 100%;
+      color: #455C72;
+      .transition(all ease-out 100ms);
+
+      i {
+        font-size: @font-size-h1;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: darken(#455C72, 10%);
+      }
+    }
+  }
 }
