@@ -116,6 +116,14 @@ class Buyer(models.Model):
         max_length=100
     )
     phone = models.BigIntegerField()
+    delivery_preference = models.CharField(
+        max_length=50,
+        choices=[
+            ('in_store', u'Recoger en la tienda'),
+            ('shipping_in_capital', u'Envío en Bogotá'),
+            # ('shipping_out_bogota', u'Envío fuera de Bogotá'),
+        ]
+    )
 
     class Meta:
         verbose_name = _(u'Comprador')
@@ -125,6 +133,12 @@ class Buyer(models.Model):
         return u'{0} {1}'.format(
             self.first_name,
             self.last_name
+        )
+
+    def get_full_name(self):
+        return u'{first} {last}'.format(
+            first=self.first_name,
+            last=self.last_name
         )
 
 

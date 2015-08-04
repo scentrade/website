@@ -10,6 +10,7 @@ Correo: {{ purchase.buyer.email }}
 Ciudad: {{ purchase.buyer.city }}
 Dirección: {{ purchase.buyer.address }}
 Teléfono: {{ purchase.buyer.phone }}
+Método de envío: {{ purchase.buyer.get_delivery_preference_display }}
 
 Cordialmente,
 

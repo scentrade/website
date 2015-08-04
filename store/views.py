@@ -115,6 +115,8 @@ class PaymentEmailView(APIView):
 
         if purchase_id:
             purchase = Purchase.objects.get(id=int(purchase_id))
+
+            # Send the payment email to Scentrade's team
             from_email = u'{name} <{email}>'.format(
                 name=u'Pagos scentrade',
                 email=u'pagos@scentrade.co'
@@ -135,6 +137,30 @@ class PaymentEmailView(APIView):
                 }
             )
             msg.send()
+
+            # Send the payment email to Client
+            from_email = u'{name} <{email}>'.format(
+                name=u'Pagos scentrade',
+                email=u'pagos@scentrade.co'
+            )
+            msg = EmailMultiAlternatives(
+                subject=u'Información de tu compra en Scentrade.co',
+                body=render_to_string(
+                    'store/emails/payment_client.txt',
+                    {'purchase': purchase}),
+                from_email=from_email,
+                to=[
+                    '{name} <{email}>'.format(
+                        name=purchase.buyer.get_full_name(),
+                        email=purchase.buyer.email
+                    )
+                ],
+                headers={
+                    'Reply-To': from_email
+                }
+            )
+            msg.send()
+
             response_data['detail'] = u'Email sent'
             response_status = status.HTTP_200_OK
         else:

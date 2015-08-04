@@ -1,0 +1,21 @@
+Hola {{ purchase.buyer.first_name }},
+
+Muchas gracias por tu compra.
+
+Tu solicitud ha sido recibida y en breve uno de nuestros asesores se
+pondrá en contacto contigo para gestionar la entrega de tu producto.
+
+El número de tu compra es {{ purchase.id }}.
+
+{% if purchase.buyer.delivery_preference == 'in_store' %}
+Como elegiste recoger tus productos personalmente en nuestra tienda
+te recordamos a continuación la dirección de nuestra oficina:
+
+Carrera 11 # 96 - 43 Oficina 501
+Tel: (571) 8050100
+Cel: (57) 321 4973074
+{% endif %}
+
+Gracias
+
+Scentrade.co
