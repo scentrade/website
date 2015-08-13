@@ -69,8 +69,18 @@
                         </a>
                         {% verbatim %}
                         <img ng-src="{{ product.main_picture }}" alt="{{ product.name }}" class="img-responsive"/>
-                        <h2 class="gray-light">${{ product.price_in_cop|number }} COP</h2>
                         {% endverbatim %}
+                        <h2 class="gray-light">
+                            {% if CURRENT_COUNTRY == 'MX' %}
+                                {% verbatim %}
+                                ${{ product.price_in_mx|number }} COP
+                                {% endverbatim %}
+                            {% else %}
+                                {% verbatim %}
+                                ${{ product.price_in_cop|number }} COP
+                                {% endverbatim %}
+                            {% endif %}
+                        </h2>
                         <button class="btn btn-red-bordered btn-lg btn-block bebas" ng-click="vm.addProductToCart(product.id)">
                             {% trans 'Añadir al carrito' %}
                             <i class="fa fa-shopping-cart"></i>
@@ -102,7 +112,7 @@
                                                 {% verbatim %}
                                                 <h2 class="gray-light mbgw">${{ product.price_in_mx|number }} MXN</h2>
                                                 {% endverbatim %}
-                                            {% elif CURRENT_COUNTRY == 'CO' %}
+                                            {% else %}
                                                 {% verbatim %}
                                                 <h2 class="gray-light mbgw">${{ product.price_in_cop|number }} COP</h2>
                                                 {% endverbatim %}
