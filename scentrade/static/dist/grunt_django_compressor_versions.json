@@ -1,6 +1,6 @@
 {
     "created": null,
-    "modified": 1438699880598,
+    "modified": 1439559528889,
     "./scentrade/templates/base.html": {
         "js": {
             "scentrade/static/bower_components/es5-shim/es5-shim.js": "2e08ebc9697aa90c000f658688e1ddbc",
@@ -28,7 +28,7 @@
             "scentrade/static/js/temp/django-angular.js": "62177d8a834180a028ea214d3b5ccbfb",
             "ng_app/static/ng_app/js/services/forms.utils.service.js": "a96e3f70bc33d873d03bd88174761682",
             "ng_app/static/ng_app/js/controllers/contact.controller.js": "69f64aadffb5f39d7f8eea9740205825",
-            "ng_app/static/ng_app/js/controllers/blog.single.controller.js": "925e30d5576cb4ade4985b345dcf0cff",
+            "ng_app/static/ng_app/js/controllers/blog.single.controller.js": "adc580abcaac0fe451f519bdc90cea01",
             "scentrade/static/js/main/header-nav-active.js": "94a842a1cec7898bb18869b8fae58e82",
             "scentrade/static/bower_components/angular-bootstrap/ui-bootstrap-tpls.js": "065fda175b158d2aa10f82aa0e82d16e",
             "ng_app/static/ng_app/js/controllers/modal.free.trial.controller.js": "dff52f27d6e2e6cc3a13973948fa59fb",

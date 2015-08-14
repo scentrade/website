@@ -16,6 +16,8 @@
 
     $http.get(API.makeURL('blog/posts/' + $routeParams['postSlug']))
       .success(function(response){
+        $rootScope.title = response['title'];
+        $rootScope.metaDescription = response['meta_description'];
         vm.post = response;
       });
   }
