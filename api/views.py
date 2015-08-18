@@ -6,6 +6,7 @@ from django.utils.translation import ugettext, ugettext_lazy as _
 from rest_framework import generics, status
 from rest_framework.response import Response
 from ng_app.forms import ContactForm, FreeTrialForm
+from utils.context_processors import get_current_country
 
 
 class ContactFormView(generics.GenericAPIView):
@@ -22,6 +23,11 @@ class ContactFormView(generics.GenericAPIView):
                 name=contact_form.cleaned_data['name'],
                 email=contact_form.cleaned_data['email']
             )
+            country = get_current_country(request)
+            if country == 'MX':
+                to = [settings.CONTACT_FORM_SEND_TO_MX]
+            else:
+                to = [settings.CONTACT_FORM_SEND_TO_CO]
             msg = EmailMultiAlternatives(
                 subject=_(u'[scentrade/contacto] Nuevo mensaje de {name}').format(
                     name=contact_form.cleaned_data['name']
@@ -30,9 +36,7 @@ class ContactFormView(generics.GenericAPIView):
                     'ng_app/emails/contact.txt',
                     request.data),
                 from_email=from_email,
-                to=[
-                    settings.CONTACT_FORM_SEND_TO
-                ],
+                to=to,
                 headers={
                     'Reply-To': from_email
                 }
@@ -64,6 +68,11 @@ class FreeTrialFormView(generics.GenericAPIView):
                 name=contact_form.cleaned_data['name'],
                 email=contact_form.cleaned_data['email']
             )
+            country = get_current_country(request)
+            if country == 'MX':
+                to = [settings.CONTACT_FORM_SEND_TO_MX]
+            else:
+                to = [settings.CONTACT_FORM_SEND_TO_CO]
             msg = EmailMultiAlternatives(
                 subject=_(u'[scentrade/muestra gratis] Nuevo mensaje de {name}').format(
                     name=contact_form.cleaned_data['name']
@@ -72,9 +81,7 @@ class FreeTrialFormView(generics.GenericAPIView):
                     'ng_app/emails/free-trial.txt',
                     request.data),
                 from_email=from_email,
-                to=[
-                    settings.CONTACT_FORM_SEND_TO
-                ],
+                to=to,
                 headers={
                     'Reply-To': from_email
                 }

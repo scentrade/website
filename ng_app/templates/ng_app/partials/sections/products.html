@@ -73,7 +73,8 @@
                         <h2 class="gray-light">
                             {% if CURRENT_COUNTRY == 'MX' %}
                                 {% verbatim %}
-                                ${{ product.price_in_mx|number }} MXN
+                                <span ng-if="product.price_in_mx != 0">${{ product.price_in_mx|number }} MXN</span>
+                                <span ng-if="product.price_in_mx == 0">Próximamente</span>
                                 {% endverbatim %}
                             {% else %}
                                 {% verbatim %}
@@ -110,7 +111,10 @@
                                             {% endverbatim %}
                                             {% if CURRENT_COUNTRY == 'MX' %}
                                                 {% verbatim %}
-                                                <h2 class="gray-light mbgw">${{ product.price_in_mx|number }} MXN</h2>
+                                                <h2 class="gray-light mbgw">
+                                                    <span ng-if="product.price_in_mx != 0">${{ product.price_in_mx|number }} MXN</span>
+                                                    <span ng-if="product.price_in_mx == 0">Próximamente</span>
+                                                </h2>
                                                 {% endverbatim %}
                                             {% else %}
                                                 {% verbatim %}

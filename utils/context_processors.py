@@ -29,5 +29,6 @@ def global_variables(request):
     data = {
         'DEBUG': settings.DEBUG,
         'CURRENT_COUNTRY': get_current_country(request),
+        # 'CURRENT_COUNTRY': 'MX',
     }
     return data
