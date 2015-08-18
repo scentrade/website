@@ -86,6 +86,12 @@ class Product(TranslatableModel, Sortable):
             .replace('[', '<span>')\
             .replace(']', '</span>')
 
+    def get_name_cleaned(self):
+        translated_name = self.lazy_translation_getter('name')
+        return translated_name\
+            .replace('[', '')\
+            .replace(']', '')
+
     def get_main_picture_cropped(self):
         """
         Returns the main picture with proper size

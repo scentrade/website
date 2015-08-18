@@ -12,6 +12,7 @@ class CategorySerializer(TranslatableModelSerializer):
 class ProductSerializer(TranslatableModelSerializer):
     main_picture = ReadOnlyField(source='get_main_picture_cropped')
     html_name = ReadOnlyField(source='get_html_name')
+    name_cleaned = ReadOnlyField(source='get_name_cleaned')
 
     class Meta:
         model = Product

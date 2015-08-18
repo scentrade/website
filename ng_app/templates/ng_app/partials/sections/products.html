@@ -68,7 +68,7 @@
                             {% trans 'Ver +' %}
                         </a>
                         {% verbatim %}
-                        <img ng-src="{{ product.main_picture }}" alt="{{ product.name }}" class="img-responsive"/>
+                        <img ng-src="{{ product.main_picture }}" alt="{{ product.name_cleaned }}" class="img-responsive"/>
                         {% endverbatim %}
                         <h2 class="gray-light">
                             {% if CURRENT_COUNTRY == 'MX' %}
@@ -101,7 +101,7 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             {% verbatim %}
-                                            <img ng-src="{{ product.main_picture }}" alt="{{ product.name }}" class="img-responsive"/>
+                                            <img ng-src="{{ product.main_picture }}" alt="{{ product.name_cleaned }}" class="img-responsive"/>
                                             {% endverbatim %}
                                         </div>
                                         <div class="col-sm-6 text-right">
