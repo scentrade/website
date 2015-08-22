@@ -9,6 +9,7 @@
   function ContactController($scope, $rootScope, $http, API, djangoForm, formUtils){
     $rootScope.bodyClass = 'contact';
     $rootScope.title = 'Contacto';
+    $rootScope.metaDescription = 'Lo invitamos a recibir una prueba Gratis de nuestros productos. Escríbanos.';
 
     var vm = this;
 

@@ -9,6 +9,7 @@
   function ProductsController($scope, $rootScope, $http, API, $location, $routeParams, API_PAGE_SIZE){
     $rootScope.bodyClass = 'products';
     $rootScope.title = 'Productos';
+    $rootScope.metaDescription = 'Productos para empresas y para el hogar con aromas únicos y personalizados.';
 
     var vm = this;
     vm.addProductToCart = addProductToCart;

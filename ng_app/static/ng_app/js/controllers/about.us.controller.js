@@ -9,5 +9,6 @@
   function AboutUsController($scope, $rootScope){
     $rootScope.bodyClass = 'about-us';
     $rootScope.title = 'Nosotros';
+    $rootScope.metaDescription = 'Conozca lo que nos inspira, descubra la razón detrás de nuestras estrategias.';
   }
 })();

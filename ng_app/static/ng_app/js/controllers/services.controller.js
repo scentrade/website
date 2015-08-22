@@ -9,6 +9,7 @@
   function ServicesController($scope, $rootScope, $modal){
     $rootScope.bodyClass = 'services';
     $rootScope.title = 'Servicios';
+    $rootScope.metaDescription = 'Descubra los servicios y productos para crear una estrategia integral de comunicación olfativa.';
 
     var vm = this;
 

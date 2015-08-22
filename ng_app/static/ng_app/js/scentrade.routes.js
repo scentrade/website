@@ -29,7 +29,7 @@
           templateUrl: currentLanguage + '/partials/sections/products.html',
           controller: 'ProductsController',
           controllerAs: 'vm',
-          reloadOnSearch: false
+          //reloadOnSearch: false
         })
         .when('/productos/:target', {
           templateUrl: currentLanguage + '/partials/sections/products.html',

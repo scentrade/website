@@ -9,6 +9,7 @@
   function BlogController($scope, $rootScope, $http, API){
     $rootScope.bodyClass = 'blog';
     $rootScope.title = 'Blog';
+    $rootScope.metaDescription = 'Descubra las ventajas del Marketing Olfativo para aumentar las ventas, y el poder de los aromas para crear impacto.';
 
     var vm = this;
     vm.filterBy = ''; // select ng-model, default to empty
